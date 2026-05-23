@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リーダーシップ開発プログラム | Morgenrot Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #fff;
+  color: #1a1a1a;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #f0e8e8;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 5vw;
+}
+.nav-logo {
+  font-family: 'Raleway', sans-serif; font-size: 0.7rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #1a1a1a; text-decoration: none;
+}
+.nav-back {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #7a6a60; text-decoration: none;
+  transition: color 0.25s;
+}
+.nav-back:hover { color: #e8334a; }
+
+/* HERO */
+#hero {
+  padding-top: 80px;
+  min-height: 60vh;
+  display: flex; flex-direction: column; justify-content: center;
+  text-align: center;
+  background: #fff;
+  position: relative; overflow: hidden;
+}
+.hero-inner { padding: 5rem 5vw 4rem; position: relative; z-index: 1; }
+.hero-eyebrow {
+  font-family: 'Raleway', sans-serif; font-weight: 300;
+  font-size: 0.68rem; letter-spacing: 0.5em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1.8rem;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.15; color: #1a1a1a;
+  margin-bottom: 1.8rem; letter-spacing: -0.01em;
+}
+.hero-title em { font-style: italic; color: #e8334a; }
+.hero-sub {
+  font-size: 0.95rem; line-height: 2;
+  color: #666; max-width: 560px; margin: 0 auto 2.5rem;
+}
+.hero-price {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif; font-size: 0.7rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: #fff; background: #e8334a;
+  padding: 0.8rem 2rem;
+}
+
+/* SECTIONS */
+section { padding: 5rem 5vw; }
+section:nth-child(even) { background: #fdf8f8; }
+.section-inner { max-width: 900px; margin: 0 auto; }
+
+.section-label {
+  font-family: 'Raleway', sans-serif; font-weight: 300;
+  font-size: 0.62rem; letter-spacing: 0.55em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.section-label::before { content: ''; width: 24px; height: 1px; background: #e8334a; }
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.2; color: #1a1a1a; margin-bottom: 0.8rem;
+}
+.section-title em { font-style: italic; color: #e8334a; }
+.section-rule { width: 40px; height: 2px; background: #e8334a; margin: 1.2rem 0 2rem; }
+
+/* OVERVIEW */
+.overview-text {
+  font-size: 0.95rem; line-height: 2.2; color: #444; max-width: 700px;
+}
+.overview-text p { margin-bottom: 1.2rem; }
+
+/* PROGRAM FLOW */
+.phases { display: flex; flex-direction: column; gap: 0; margin-top: 3rem; }
+
+.phase {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0;
+  position: relative;
+}
+.phase:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 56px;
+  top: 100%;
+  width: 1px;
+  height: 2rem;
+  background: rgba(232,51,74,0.3);
+  z-index: 1;
+}
+.phase-num-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.phase-circle {
+  width: 48px; height: 48px;
+  border: 2px solid #e8334a;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.6rem; letter-spacing: 0.15em;
+  color: #e8334a; flex-shrink: 0;
+  background: #fff; position: relative; z-index: 2;
+}
+.phase-line {
+  width: 1px; flex: 1;
+  background: rgba(232,51,74,0.2);
+  margin-top: 0.5rem;
+}
+
+.phase-body {
+  padding: 2rem 0 2rem 2rem;
+  border-left: 1px solid #f0e8e8;
+}
+.phase-tag {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 0.6rem;
+}
+.phase-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; font-weight: 400; color: #1a1a1a;
+  line-height: 1.2; margin-bottom: 0.4rem;
+}
+.phase-name em { font-style: italic; color: #e8334a; }
+.phase-meta {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.2em; color: #999; margin-bottom: 1rem;
+}
+.phase-desc {
+  font-size: 0.88rem; line-height: 1.9; color: #555;
+  margin-bottom: 1.2rem;
+}
+.phase-points {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.4rem;
+}
+.phase-points li {
+  font-size: 0.82rem; color: #777;
+  display: flex; align-items: flex-start; gap: 0.7rem;
+}
+.phase-points li::before {
+  content: '';
+  width: 14px; height: 1px; background: #e8334a;
+  flex-shrink: 0; margin-top: 0.65em; opacity: 0.5;
+}
+
+/* KICKOFF DETAIL */
+.kickoff-grid {
+  display: flex; flex-direction: column; gap: 0;
+  margin-top: 2rem;
+  border: 1px solid #f0e8e8;
+}
+.kickoff-row {
+  display: grid;
+  grid-template-columns: 48px 1fr 64px;
+  align-items: stretch;
+  border-bottom: 1px solid #f0e8e8;
+}
+.kickoff-row:last-child { border-bottom: none; }
+.kickoff-row.break-row { background: #fdf8f8; }
+
+.kickoff-num {
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Raleway', sans-serif; font-size: 0.6rem;
+  color: rgba(232,51,74,0.5);
+  border-right: 1px solid #f0e8e8;
+  padding: 1rem 0;
+}
+.kickoff-content {
+  padding: 1.2rem 1.4rem;
+}
+.kickoff-title {
+  font-size: 0.88rem; font-weight: 500; color: #1a1a1a;
+  margin-bottom: 0.3rem;
+}
+.kickoff-sub {
+  font-size: 0.78rem; color: #888; line-height: 1.7;
+}
+.kickoff-time {
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.1em; color: #aaa;
+  border-left: 1px solid #f0e8e8;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* WORK DETAIL */
+.work-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+.work-card {
+  border: 1px solid #f0e8e8;
+  padding: 2rem;
+  background: #fff;
+}
+.work-card-num {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.3em; color: rgba(232,51,74,0.4);
+  margin-bottom: 1rem;
+}
+.work-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 400; color: #1a1a1a;
+  margin-bottom: 1rem; line-height: 1.3;
+}
+.work-steps {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.6rem;
+}
+.work-steps li {
+  font-size: 0.8rem; color: #777; line-height: 1.7;
+  display: flex; align-items: flex-start; gap: 0.6rem;
+}
+.work-steps li::before {
+  content: ''; width: 14px; height: 1px; background: #e8334a;
+  flex-shrink: 0; margin-top: 0.65em; opacity: 0.5;
+}
+
+/* COACHING LINK */
+.coaching-ref {
+  background: #fff;
+  border: 1px solid #f0e8e8;
+  border-top: 3px solid #e8334a;
+  padding: 2.4rem;
+  margin-top: 2rem;
+}
+.coaching-ref-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.6rem;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1rem;
+}
+.coaching-ref-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 400; color: #1a1a1a;
+  margin-bottom: 0.8rem;
+}
+.coaching-ref-desc {
+  font-size: 0.88rem; line-height: 1.9; color: #555;
+  margin-bottom: 1.4rem;
+}
+.coaching-ref-link {
+  font-family: 'Raleway', sans-serif; font-size: 0.68rem;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: #e8334a; text-decoration: none;
+  border-bottom: 1px solid rgba(232,51,74,0.3);
+  padding-bottom: 0.2rem;
+  transition: color 0.25s, border-color 0.25s;
+}
+.coaching-ref-link:hover { color: #c0192e; border-color: #c0192e; }
+
+/* PRICE */
+.price-box {
+  background: #1a1a1a;
+  padding: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+.price-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.6rem;
+  letter-spacing: 0.5em; text-transform: uppercase;
+  color: rgba(232,51,74,0.8); margin-bottom: 1.2rem;
+}
+.price-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300; color: #fff;
+  letter-spacing: -0.02em; margin-bottom: 0.5rem;
+}
+.price-amount em { font-style: italic; color: #e8334a; }
+.price-period {
+  font-family: 'Raleway', sans-serif; font-size: 0.7rem;
+  letter-spacing: 0.3em; color: #888; margin-bottom: 2rem;
+}
+.price-notes {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.price-notes li {
+  font-size: 0.78rem; color: #777; letter-spacing: 0.03em;
+}
+
+/* CONTACT */
+#contact { background: #1a1a1a; color: #fff; padding: 5rem 5vw; }
+#contact .section-label { color: rgba(232,51,74,0.8); }
+#contact .section-label::before { background: rgba(232,51,74,0.8); }
+#contact .section-title { color: #fff; }
+#contact .section-rule { background: #e8334a; }
+.contact-text { font-size: 0.92rem; line-height: 2.1; color: #aaa; margin-bottom: 2.5rem; max-width: 520px; }
+.btn-contact {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif; font-weight: 400;
+  font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: #fff; background: #e8334a; text-decoration: none;
+  padding: 1rem 2.4rem; transition: background 0.25s;
+}
+.btn-contact:hover { background: #c0192e; }
+
+/* FOOTER */
+footer {
+  background: #111; color: #555;
+  padding: 2rem 5vw;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.15em;
+}
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
+.d4 { transition-delay: 0.4s; }
+
+/* RESPONSIVE */
+@media (max-width: 680px) {
+  .phase { grid-template-columns: 80px 1fr; }
+  .phase-circle { width: 36px; height: 36px; font-size: 0.5rem; }
+  .phase:not(:last-child)::after { left: 36px; }
+  .work-cards { grid-template-columns: 1fr; }
+  .kickoff-row { grid-template-columns: 36px 1fr 56px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://morgenrotadvisory.com" class="nav-logo">Morgenrot Advisory</a>
+  <a href="https://morgenrotadvisory.com" class="nav-back">← サイトに戻る</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Leadership Development Program</p>
+    <h1 class="hero-title">組織の意図を、<br>個人の<em>変容</em>へ。</h1>
+    <p class="hero-sub">
+      経営陣が描く「ありたい姿」を起点に、次世代リーダーや経営幹部の変容を支援する法人向けプログラム。単なる研修ではなく、経営の意図を個人の変化まで一気通貫でつなげます。
+    </p>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="section-inner">
+    <p class="section-label reveal">Program Overview</p>
+    <h2 class="section-title reveal d1">なぜ、このプログラムか</h2>
+    <div class="section-rule reveal d2"></div>
+    <div class="overview-text reveal d2">
+      <p>多くのリーダーシップ研修は、スキルや知識を届けることに終始する。しかしリーダーが変わるためには、「何を学ぶか」より先に、「なぜ変わるのか」が腹落ちしていなければならない。</p>
+      <p>このプログラムは、会社が目指す組織文化・リーダーシップ像を丁寧に紐解くことから始まる。経営陣の言葉でそれを語り、対象者一人ひとりが自分事として受け取るプロセスを設計する。そのうえで、エグゼクティブコーチングと同質の1on1で、個人の変容を深く支える。</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM FLOW -->
+<section id="program">
+  <div class="section-inner">
+    <p class="section-label reveal">Program Structure</p>
+    <h2 class="section-title reveal d1">プログラム<em>全体設計</em></h2>
+    <div class="section-rule reveal d2"></div>
+
+    <div class="phases">
+
+      <!-- Phase 1 -->
+      <div class="phase reveal">
+        <div class="phase-num-col">
+          <div class="phase-circle">Ph.1</div>
+          <div class="phase-line"></div>
+        </div>
+        <div class="phase-body">
+          <p class="phase-tag">ありたい姿の明確化</p>
+          <h3 class="phase-name">ヒアリング<em>セッション</em></h3>
+          <p class="phase-meta">90分 × 人数分｜社長・CEO・経営陣・人事 各1on1</p>
+          <p class="phase-desc">プログラムの土台となる「ありたい姿」を、経営陣・人事との個別セッションで丁寧に引き出します。</p>
+          <ul class="phase-points">
+            <li>会社が目指す組織文化・バリューの言語化</li>
+            <li>現状のリーダーシップの課題・ギャップの把握</li>
+            <li>対象者一人ひとりへの期待値の確認</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="phase reveal d1">
+        <div class="phase-num-col">
+          <div class="phase-circle">Ph.2</div>
+          <div class="phase-line"></div>
+        </div>
+        <div class="phase-body">
+          <p class="phase-tag">キックオフ</p>
+          <h3 class="phase-name">全員が揃う、<em>はじまりの場。</em></h3>
+          <p class="phase-meta">3時間｜対象者全員</p>
+          <p class="phase-desc">「決める場」ではなく「探る場」として設計されたキックオフ。経営陣の言葉で「ありたい姿」を届け、参加者一人ひとりが自分事として受け取るプロセスを丁寧につくります。</p>
+          <ul class="phase-points">
+            <li>経営陣の思いを対象者に届ける</li>
+            <li>ありたい姿を自分事として落としてもらう</li>
+            <li>プログラムへの期待感・モチベーションを高める</li>
+            <li>グループとしての心理的安全性の土台をつくる</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="phase reveal d2">
+        <div class="phase-num-col">
+          <div class="phase-circle">Ph.3</div>
+        </div>
+        <div class="phase-body">
+          <p class="phase-tag">個人の変容</p>
+          <h3 class="phase-name">1on1<em>コーチング</em></h3>
+          <p class="phase-meta">90分 × 6回（月2回 × 3ヶ月）｜対象者 最大5名</p>
+          <p class="phase-desc">エグゼクティブコーチングと同質の1on1を、対象者一人ひとりに提供します。キックオフで見えてきたテーマを個人レベルで深め、リーダーとしての変容を支えます。</p>
+          <ul class="phase-points">
+            <li>観察・プラン・アクション・振り返りのサイクルを定着</li>
+            <li>リーダーシップスタイルの構築と言語化</li>
+            <li>自分の言葉で語れるスタイルを3ヶ月で確立</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- KICKOFF DETAIL -->
+<section id="kickoff">
+  <div class="section-inner">
+    <p class="section-label reveal">Phase 2 — Detail</p>
+    <h2 class="section-title reveal d1">キックオフの<em>流れ</em></h2>
+    <div class="section-rule reveal d2"></div>
+    <p class="overview-text reveal d2" style="margin-bottom:0;">「正解を出す場」ではなく「可能性を一緒に探る場」として、3時間を設計しています。</p>
+
+    <div class="kickoff-grid reveal d3">
+      <div class="kickoff-row">
+        <div class="kickoff-num">①</div>
+        <div class="kickoff-content">
+          <div class="kickoff-title">オープニング</div>
+          <div class="kickoff-sub">信濃さん＋経営陣でプログラムの目的・この場の約束事を共有。経営陣から一言。</div>
+        </div>
+        <div class="kickoff-time">15分</div>
+      </div>
+      <div class="kickoff-row">
+        <div class="kickoff-num">②</div>
+        <div class="kickoff-content">
+          <div class="kickoff-title">Energizer</div>
+          <div class="kickoff-sub">場を温めるアクティビティ。緊張をほぐし、対話の土台をつくる。</div>
+        </div>
+        <div class="kickoff-time">10分</div>
+      </div>
+      <div class="kickoff-row">
+        <div class="kickoff-num">③</div>
+        <div class="kickoff-content">
+          <div class="kickoff-title">自己紹介・相互理解ワーク</div>
+          <div class="kickoff-sub">お互いを知る場。心理的安全性の土台をつくる。</div>
+        </div>
+        <div class="kickoff-time">30分</div>
+      </div>
+      <div class="kickoff-row">
+        <div class="kickoff-num">④</div>
+        <div class="kickoff-content">
+          <div class="kickoff-title">経営陣：ありたい姿の共有</div>
+          <div class="kickoff-sub">温まった場で、経営陣が「なぜこのプログラムをやるのか」「対象者への期待」を語る。</div>
+        </div>
+        <div class="kickoff-time">20分</div>
+      </div>
+      <div class="kickoff-row">
+        <div class="kickoff-num">⑤</div>
+        <div class="kickoff-content">
+          <div class="kickoff-title">ワーク① ｜ ありたい姿の自分事化</div>
+          <div class="kickoff-sub">「これは自分にとってどういう意味か」「自分が体現するとしたらどんな姿か」を内省・対話する。</div>
+        </div>
+        <div class="kickoff-time">40分</div>
+      </div>
+      <div class="kickoff-row break-row">
+        <div class="kickoff-num">—</div>
+        <div class="kickoff-content">
+          <div class="kickoff-title" style="color:#aaa;">休憩</div>
+        </div>
+        <div class="kickoff-time">10分</div>
+      </div>
+      <div class="kickoff-row">
+        <div class="kickoff-num">⑥</div>
+        <div class="kickoff-content">
+          <div class="kickoff-title">ワーク② ｜ 可能性と方向性の探求</div>
+          <div class="kickoff-sub">「できそうなこと」「探求してみたいテーマ」をグループで共有・対話。コミットではなく、可能性を一緒に探る。</div>
+        </div>
+        <div class="kickoff-time">40分</div>
+      </div>
+      <div class="kickoff-row">
+        <div class="kickoff-num">⑦</div>
+        <div class="kickoff-content">
+          <div class="kickoff-title">クロージング</div>
+          <div class="kickoff-sub">Phase 3の1on1に向けての期待感醸成。</div>
+        </div>
+        <div class="kickoff-time">10分</div>
+      </div>
+    </div>
+
+    <!-- Work detail -->
+    <div class="work-cards">
+      <div class="work-card reveal d1">
+        <div class="work-card-num">WORK 01</div>
+        <div class="work-card-title">ありたい姿の自分事化</div>
+        <ul class="work-steps">
+          <li>経営陣が示した「ありたい姿」を個人で咀嚼する（5分）</li>
+          <li>「これはあなたにとってどういう意味ですか？」個人内省（10分）</li>
+          <li>「あなたが体現するとしたら、どんな行動・姿勢ですか？」個人内省（10分）</li>
+          <li>ペアまたは小グループで共有・対話（15分）</li>
+        </ul>
+      </div>
+      <div class="work-card reveal d2">
+        <div class="work-card-num">WORK 02</div>
+        <div class="work-card-title">可能性と方向性の探求</div>
+        <ul class="work-steps">
+          <li>「ありたい姿に向けて、自分にできそうなことは？」個人内省（10分）</li>
+          <li>「このプログラムで探求したいテーマや方向性は？」個人内省（10分）</li>
+          <li>グループで共有・対話（20分）</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 3 COACHING -->
+<section id="coaching">
+  <div class="section-inner">
+    <p class="section-label reveal">Phase 3 — Detail</p>
+    <h2 class="section-title reveal d1">1on1<em>コーチング</em></h2>
+    <div class="section-rule reveal d2"></div>
+
+    <div class="coaching-ref reveal d2">
+      <p class="coaching-ref-label">Executive Coaching</p>
+      <h3 class="coaching-ref-title">エグゼクティブコーチングと同質の1on1を、組織の文脈で。</h3>
+      <p class="coaching-ref-desc">Phase 3の1on1は、Morgenrot Advisoryが個人向けに提供するエグゼクティブコーチングと同質のセッションです。観察・プラン・アクション・振り返りのサイクルを3ヶ月で定着させ、「自分の言葉で語れるリーダーシップスタイル」を構築します。<br><br>法人向けプログラムでは、Phase 1・2で明確になった「会社のありたい姿」を文脈として持ちながら、個人の変容を深めていきます。</p>
+      <a href="https://morgenrotadvisory.com/coaching.html" class="coaching-ref-link">エグゼクティブコーチングの詳細を見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-label reveal">Contact</p>
+    <h2 class="section-title reveal d1">まず、<em>話してみましょう。</em></h2>
+    <div class="section-rule reveal d2"></div>
+    <p class="contact-text reveal d2">どんな組織を目指しているか。どんなリーダーを育てたいか。そんな話から始めましょう。</p>
+    <a href="https://morgenrotadvisory.com/#contact" class="btn-contact reveal d3">お問い合わせ →</a>
+  </div>
+</section>
+
+<footer>
+  <a href="https://morgenrotadvisory.com" style="color:#555;text-decoration:none;font-family:'Raleway',sans-serif;font-size:0.58rem;letter-spacing:0.15em;">Morgenrot Advisory</a>
+  <p>© 2025 Morgenrot Advisory. All rights reserved.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
