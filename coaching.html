@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>エグゼクティブコーチング | Morgenrot Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #fff;
+  color: #1a1a1a;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #f0e8e8;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 5vw;
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 400; letter-spacing: 0.1em;
+  color: #1a1a1a; text-decoration: none;
+}
+.nav-back {
+  font-family: 'Raleway', sans-serif; font-size: 0.7rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #e8334a; text-decoration: none;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+.nav-back:hover { opacity: 0.7; }
+.nav-back::before { content: '←'; }
+
+/* HERO */
+#hero {
+  padding-top: 80px;
+  min-height: 65vh;
+  display: flex; flex-direction: column; justify-content: center;
+  background: #fff;
+  position: relative; overflow: hidden;
+}
+.hero-inner {
+  padding: 5rem 5vw 3rem;
+  position: relative; z-index: 1;
+  max-width: 960px; margin: 0 auto; width: 100%;
+}
+.hero-eyebrow {
+  font-family: 'Raleway', sans-serif; font-weight: 300;
+  font-size: 0.68rem; letter-spacing: 0.5em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1.8rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: #e8334a; }
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.15; color: #1a1a1a;
+  margin-bottom: 1.2rem; letter-spacing: -0.01em;
+}
+.hero-title em { font-style: italic; color: #e8334a; }
+.hero-rule { width: 40px; height: 2px; background: #e8334a; margin: 1.5rem 0; }
+.hero-sub {
+  font-size: 1rem; line-height: 2.1;
+  color: #555; max-width: 600px;
+}
+.hero-deco {
+  position: absolute; right: 5vw; top: 50%; transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(8rem, 18vw, 16rem);
+  font-weight: 300; font-style: italic;
+  color: rgba(232,51,74,0.04);
+  line-height: 1; pointer-events: none; user-select: none;
+  z-index: 0;
+}
+
+/* COURSE CARDS */
+#courses {
+  background: #fdf8f8;
+  padding: 4rem 5vw;
+}
+.courses-label {
+  font-family: 'Raleway', sans-serif; font-weight: 300;
+  font-size: 0.62rem; letter-spacing: 0.55em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 2.5rem;
+  display: flex; align-items: center; gap: 1rem;
+  max-width: 960px; margin-left: auto; margin-right: auto;
+}
+.courses-label::before { content: ''; width: 24px; height: 1px; background: #e8334a; }
+.courses-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; max-width: 960px; margin: 0 auto;
+}
+.course-card {
+  border: 1px solid #f0e8e8;
+  background: #fff;
+  padding: 2.4rem 2rem;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(232,51,74,0.1);
+  border-color: rgba(232,51,74,0.3);
+}
+.course-card-accent {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px; background: #e8334a;
+}
+.course-card-num {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.3em; color: rgba(232,51,74,0.4); margin-bottom: 1.2rem;
+}
+.course-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-weight: 400; color: #1a1a1a;
+  line-height: 1.2; margin-bottom: 0.4rem;
+}
+.course-card-name em { font-style: italic; color: #e8334a; display: block; }
+.course-card-format {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #aaa; margin-bottom: 1.2rem;
+}
+.course-card-desc {
+  font-size: 0.86rem; line-height: 1.9; color: #666;
+  margin-bottom: 1.5rem;
+}
+.course-card-arrow {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #e8334a; display: flex; align-items: center; gap: 0.5rem;
+}
+.course-card-arrow::after { content: '↓'; }
+
+/* SECTIONS */
+section { padding: 6rem 5vw; }
+.section-inner { max-width: 960px; margin: 0 auto; }
+.section-label {
+  font-family: 'Raleway', sans-serif; font-weight: 300;
+  font-size: 0.62rem; letter-spacing: 0.55em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.section-label::before { content: ''; width: 24px; height: 1px; background: #e8334a; }
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.15; color: #1a1a1a; margin-bottom: 0.8rem;
+}
+.section-title em { font-style: italic; color: #e8334a; }
+.section-rule { width: 40px; height: 2px; background: #e8334a; margin: 1.2rem 0 2rem; }
+
+/* PHILOSOPHY */
+#philosophy { background: #fdf8f8; }
+.philosophy-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; margin-top: 3rem;
+}
+.phil-card {
+  padding: 2.4rem 2rem; border: 1px solid #f0e8e8; background: #fff;
+  position: relative; transition: transform 0.3s, box-shadow 0.3s;
+}
+.phil-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(232,51,74,0.08); }
+.phil-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem; font-weight: 300; font-style: italic;
+  color: rgba(232,51,74,0.12); line-height: 1; margin-bottom: 1rem;
+}
+.phil-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem; font-weight: 400; color: #1a1a1a;
+  margin-bottom: 0.8rem; line-height: 1.3;
+}
+.phil-desc { font-size: 0.86rem; line-height: 1.9; color: #666; }
+.phil-accent { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #e8334a; }
+
+/* QUOTE */
+#quote { background: #1a1a1a; padding: 5rem 5vw; text-align: center; }
+.quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 300; font-style: italic;
+  color: #fff; line-height: 1.5; max-width: 760px; margin: 0 auto;
+}
+.quote-text em { color: #e8334a; font-style: normal; }
+.quote-attr {
+  margin-top: 2rem; font-family: 'Raleway', sans-serif;
+  font-size: 0.65rem; letter-spacing: 0.4em; text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+
+/* PROGRAM */
+#program { background: #fff; }
+.program-intro {
+  font-size: 0.95rem; line-height: 2.1; color: #555;
+  max-width: 620px; margin-bottom: 4rem;
+}
+.session-list { display: flex; flex-direction: column; gap: 0; }
+.session {
+  display: grid; grid-template-columns: 100px 1fr;
+  border-bottom: 1px solid #f0e8e8; padding: 2rem 0;
+  transition: background 0.2s;
+}
+.session:first-child { border-top: 1px solid #f0e8e8; }
+.session:hover { background: #fdf8f8; }
+.session-meta { padding-right: 2rem; }
+.session-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem; font-weight: 300; font-style: italic;
+  color: rgba(232,51,74,0.3); line-height: 1;
+}
+.session-format {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: #aaa; margin-top: 0.4rem; line-height: 1.6;
+}
+.session-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem; font-weight: 400; color: #1a1a1a;
+  margin-bottom: 0.5rem; line-height: 1.2;
+}
+.session-desc { font-size: 0.86rem; line-height: 1.9; color: #666; margin-bottom: 1rem; }
+.session-themes { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.theme-tag {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #e8334a; border: 1px solid rgba(232,51,74,0.3);
+  padding: 0.25rem 0.7rem;
+}
+.session-hw {
+  margin-top: 1rem; padding: 0.8rem 1rem;
+  background: rgba(232,51,74,0.04);
+  border-left: 2px solid rgba(232,51,74,0.3);
+  font-size: 0.82rem; color: #888;
+}
+.session-hw strong {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.58rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: #e8334a; display: block; margin-bottom: 0.3rem;
+}
+
+/* CYCLE */
+.cycle-box {
+  margin-top: 4rem; padding: 3rem;
+  background: #fdf8f8; border: 1px solid #f0e8e8;
+}
+.cycle-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.5em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1.5rem;
+}
+.cycle-flow { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.cycle-step {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 400; color: #1a1a1a;
+}
+.cycle-arrow { color: #e8334a; font-size: 1rem; opacity: 0.6; }
+.cycle-desc { margin-top: 1.2rem; font-size: 0.88rem; line-height: 1.9; color: #666; }
+
+/* FOLLOWUP */
+#followup { background: #fdf8f8; }
+.followup-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: start; margin-top: 3rem;
+}
+.followup-text { font-size: 0.92rem; line-height: 2.1; color: #555; }
+.followup-text p { margin-bottom: 1.2rem; }
+.followup-detail {
+  border: 1px solid #f0e8e8; background: #fff; padding: 2.4rem;
+}
+.fd-row {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  padding: 1rem 0; border-bottom: 1px solid #f0e8e8;
+}
+.fd-row:last-child { border-bottom: none; }
+.fd-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: #e8334a; width: 80px; flex-shrink: 0; padding-top: 0.1rem;
+}
+.fd-val { font-size: 0.9rem; color: #444; line-height: 1.7; }
+
+/* TRIAL */
+#trial { background: #fff; }
+.trial-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: start; margin-top: 3rem;
+}
+.trial-text { font-size: 0.92rem; line-height: 2.1; color: #555; }
+.trial-text p { margin-bottom: 1.2rem; }
+.trial-detail {
+  border: 1px solid #f0e8e8; background: #fdf8f8; padding: 2.4rem;
+}
+
+/* CONTACT */
+#contact-cta { background: #1a1a1a; padding: 6rem 5vw; }
+.cta-inner { max-width: 960px; margin: 0 auto; }
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; align-items: start; margin-top: 3rem; }
+.cta-text p { font-size: 0.92rem; line-height: 2.1; color: #aaa; margin-bottom: 1.5rem; }
+.cta-detail { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.cd-row { display: flex; gap: 1.2rem; align-items: flex-start; }
+.cd-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  color: #e8334a; width: 72px; flex-shrink: 0; padding-top: 0.15rem;
+}
+.cd-val { font-size: 0.9rem; color: #ddd; }
+.cd-val a { color: #ddd; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+.cd-val a:hover { border-color: #e8334a; }
+.cta-form { display: flex; flex-direction: column; gap: 1.2rem; }
+.fl { display: flex; flex-direction: column; gap: 0.4rem; }
+.fl label {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.35em; text-transform: uppercase; color: #888;
+}
+.fl input, .fl textarea {
+  background: #242424; border: 1px solid #333;
+  border-bottom: 1px solid rgba(232,51,74,0.4);
+  color: #fff; font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.9rem; font-weight: 300;
+  padding: 0.8rem 1rem; outline: none; resize: none;
+  transition: border-color 0.25s;
+}
+.fl input:focus, .fl textarea:focus { border-color: #e8334a; }
+.fl input::placeholder, .fl textarea::placeholder { color: #555; }
+.btn-submit {
+  font-family: 'Raleway', sans-serif; font-weight: 400;
+  font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: #fff; background: #e8334a; border: none;
+  padding: 1rem 2.4rem; cursor: pointer; align-self: flex-start;
+  margin-top: 0.4rem; transition: background 0.25s;
+}
+.btn-submit:hover { background: #c0192e; }
+
+/* FOOTER */
+footer {
+  background: #111; padding: 2rem 5vw;
+  display: flex; justify-content: space-between; align-items: center;
+}
+footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.22em; color: #555; }
+footer a { color: #e8334a; text-decoration: none; font-family: 'Raleway', sans-serif; font-size: 0.62rem; letter-spacing: 0.2em; }
+
+/* ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; } .d4 { transition-delay: 0.4s; }
+
+@media (max-width: 768px) {
+  .courses-grid { grid-template-columns: 1fr; }
+  .philosophy-grid { grid-template-columns: 1fr; }
+  .session { grid-template-columns: 1fr; }
+  .session-meta { margin-bottom: 1rem; }
+  .followup-grid, .trial-grid, .cta-grid { grid-template-columns: 1fr; }
+  .hero-deco { display: none; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://morgenrotadvisory.com" class="nav-logo">Morgenrot Advisory</a>
+  <a href="https://morgenrotadvisory.com" class="nav-back">サイトに戻る</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-deco">Coach</div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">Executive Coaching</div>
+    <h1 class="hero-title reveal d1">
+      自分だけの<br><em>リーダーシップ</em>を<br>構築する。
+    </h1>
+    <div class="hero-rule reveal d2"></div>
+    <p class="hero-sub reveal d3">
+      目の前の問題を一つ一つ片付けるのではない。<br>
+      あなた自身のリーダーシップスタイルを構築する。<br>
+      チームへの初期的な手応えを、必ず掴んでもらう。
+    </p>
+  </div>
+</section>
+
+<!-- COURSE CARDS -->
+<div id="courses">
+  <div class="courses-label reveal">Courses</div>
+  <div class="courses-grid">
+
+    <a href="#program" class="course-card reveal d1">
+      <div class="course-card-accent"></div>
+      <div class="course-card-num">01 — Main Course</div>
+      <div class="course-card-name">3ヶ月<em>インテンシブ</em></div>
+      <div class="course-card-format">全6回 / 初回対面 + オンライン</div>
+      <p class="course-card-desc">リーダーシップスタイルを構築するメインプログラム。観察・プラン・アクション・振り返りのサイクルを3ヶ月で定着させる。</p>
+      <div class="course-card-arrow">詳細を見る</div>
+    </a>
+
+    <a href="#followup" class="course-card reveal d2">
+      <div class="course-card-accent"></div>
+      <div class="course-card-num">02 — Ongoing</div>
+      <div class="course-card-name">フォローアップ<em>セッション</em></div>
+      <div class="course-card-format">月1回 / オンライン 60分</div>
+      <p class="course-card-desc">インテンシブ修了後の継続プログラム。構築したスタイルをさらに深め、新たな課題に対応し続ける。</p>
+      <div class="course-card-arrow">詳細を見る</div>
+    </a>
+
+    <a href="#trial" class="course-card reveal d3">
+      <div class="course-card-accent"></div>
+      <div class="course-card-num">03 — First Step</div>
+      <div class="course-card-name">お試し<em>セッション</em></div>
+      <div class="course-card-format">1回 / 対面 90分</div>
+      <p class="course-card-desc">コーチングが自分に合うか、まず試してみたい方へ。1回のセッションで、コーチングの実際を体験する。</p>
+      <div class="course-card-arrow">詳細を見る</div>
+    </a>
+
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="section-inner">
+    <div class="section-label reveal">Philosophy</div>
+    <h2 class="section-title reveal d1">コーチングの<em>本質</em></h2>
+    <div class="section-rule reveal d2"></div>
+    <div class="philosophy-grid">
+      <div class="phil-card reveal d2">
+        <div class="phil-accent"></div>
+        <div class="phil-num">01</div>
+        <div class="phil-title">対症療法では<br>なく、構造改善</div>
+        <p class="phil-desc">部下が動かない、チームがまとまらない。その「症状」に直接手をつけるのではなく、あなたのリーダーシップの構造を変える。</p>
+      </div>
+      <div class="phil-card reveal d3">
+        <div class="phil-accent"></div>
+        <div class="phil-num">02</div>
+        <div class="phil-title">「なぜ」が<br>腹落ちしてから</div>
+        <p class="phil-desc">コーチングの技術を頭で理解しても、「なぜ必要なのか」が腹落ちしていなければ変われない。Googleで失敗した経験から、これを骨身で知っている。</p>
+      </div>
+      <div class="phil-card reveal d4">
+        <div class="phil-accent"></div>
+        <div class="phil-num">03</div>
+        <div class="phil-title">答えを渡さない。<br>引き出す。</div>
+        <p class="phil-desc">コーチは答えを持っていない。あなたが自分の答えを見つけるプロセスに伴走する。3ヶ月後、あなたの言葉で語れるスタイルがある。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section id="quote">
+  <p class="quote-text reveal">「なぜが腹落ちしてから、<em>人は変われる。</em>」</p>
+  <p class="quote-attr reveal d2">Nobuaki Shinano — Morgenrot Advisory</p>
+</section>
+
+<!-- PROGRAM: INTENSIVE -->
+<section id="program">
+  <div class="section-inner">
+    <div class="section-label reveal">Course 01</div>
+    <h2 class="section-title reveal d1">3ヶ月<em>インテンシブ</em></h2>
+    <div class="section-rule reveal d2"></div>
+    <p class="program-intro reveal d3">
+      全6回のセッション。初回は対面で、以降はオンライン。毎回、宿題と振り返りを通じて、観察→プラン→アクション→振り返りのサイクルを回し続ける。
+    </p>
+
+    <div class="session-list">
+      <div class="session reveal">
+        <div class="session-meta">
+          <div class="session-num">01</div>
+          <div class="session-format">対面<br>90分</div>
+        </div>
+        <div class="session-content">
+          <div class="session-title">あなたを知る</div>
+          <p class="session-desc">まず「人としてのあなた」を理解する。キャリアや課題の前に、価値観・モチベーション・人生の文脈から入ることで、3ヶ月間の羅針盤を作る。</p>
+          <div class="session-themes">
+            <span class="theme-tag">相互自己紹介</span>
+            <span class="theme-tag">人としての理解</span>
+            <span class="theme-tag">キャリア・モチベーション</span>
+            <span class="theme-tag">価値観の深掘り</span>
+            <span class="theme-tag">現在の課題特定</span>
+          </div>
+          <div class="session-hw"><strong>宿題</strong>自分のリーダーシップの中で、調整・改善していくべきことは何かを考える</div>
+        </div>
+      </div>
+
+      <div class="session reveal">
+        <div class="session-meta">
+          <div class="session-num">02</div>
+          <div class="session-format">オンライン<br>60分</div>
+        </div>
+        <div class="session-content">
+          <div class="session-title">チームを知る</div>
+          <p class="session-desc">「自分」の理解から「チーム」の理解へ。チーム全体のコンディション、あなたとチームの関係性、気になる部下を深掘りする。</p>
+          <div class="session-themes">
+            <span class="theme-tag">チームのコンディション</span>
+            <span class="theme-tag">信頼関係の現在地</span>
+            <span class="theme-tag">部下の深掘り</span>
+          </div>
+          <div class="session-hw"><strong>宿題</strong>理想のチームと現状のギャップを整理する。自分のリーダーシップが影響していることは何か</div>
+        </div>
+      </div>
+
+      <div class="session reveal">
+        <div class="session-meta">
+          <div class="session-num">03</div>
+          <div class="session-format">オンライン<br>60分</div>
+        </div>
+        <div class="session-content">
+          <div class="session-title">ギャップを構造化する</div>
+          <p class="session-desc">理想と現状のギャップを、自分のリーダーシップスタイルに照らし合わせて構造的に理解する。「何が問題か」ではなく「どこを調整すれば変わるか」を明らかにし、最初のアクションを設計する。</p>
+          <div class="session-themes">
+            <span class="theme-tag">ギャップの照合</span>
+            <span class="theme-tag">調整ポイントの洗い出し</span>
+            <span class="theme-tag">アクション設計</span>
+          </div>
+          <div class="session-hw"><strong>宿題</strong>決めたアクションを実際に試す。チームの反応がどう変わったかを観察する</div>
+        </div>
+      </div>
+
+      <div class="session reveal">
+        <div class="session-meta">
+          <div class="session-num">04</div>
+          <div class="session-format">オンライン<br>60分</div>
+        </div>
+        <div class="session-content">
+          <div class="session-title">アクションを振り返る</div>
+          <p class="session-desc">実践の結果を3つの視点で構造的に振り返り、次のアクションに活かす。うまくいかなかったことも、重要な学習材料として扱う。</p>
+          <div class="session-themes">
+            <span class="theme-tag">自分の技術・質感</span>
+            <span class="theme-tag">部下の動機・背景</span>
+            <span class="theme-tag">状況・タイミング</span>
+          </div>
+          <div class="session-hw"><strong>宿題</strong>次のアクションを試す。3つの視点を意識してチームの反応を観察する</div>
+        </div>
+      </div>
+
+      <div class="session reveal">
+        <div class="session-meta">
+          <div class="session-num">05</div>
+          <div class="session-format">オンライン<br>60分</div>
+        </div>
+        <div class="session-content">
+          <div class="session-title">サイクルを定着させる</div>
+          <p class="session-desc">観察→プラン→アクション→振り返りのサイクルを、コーチとの対話なしに自分で回せるようにする。このサイクル自体を、リーダーシップ開発の習慣として身につける。</p>
+          <div class="session-themes">
+            <span class="theme-tag">サイクルの自走</span>
+            <span class="theme-tag">前回からの変化の確認</span>
+            <span class="theme-tag">最終回へ向けての準備</span>
+          </div>
+          <div class="session-hw"><strong>宿題</strong>決めたアクションを試す。3つの視点で観察する</div>
+        </div>
+      </div>
+
+      <div class="session reveal">
+        <div class="session-meta">
+          <div class="session-num">06</div>
+          <div class="session-format">オンライン<br>60分</div>
+        </div>
+        <div class="session-content">
+          <div class="session-title">統合と次のステージへ</div>
+          <p class="session-desc">3ヶ月の学びを統合し、「自分のリーダーシップスタイル」を言語化する。今後3〜6ヶ月の具体的なアクションプランを作り、次のステージへ向かう。</p>
+          <div class="session-themes">
+            <span class="theme-tag">3ヶ月の振り返り</span>
+            <span class="theme-tag">スタイルの言語化</span>
+            <span class="theme-tag">3〜6ヶ月のプラン</span>
+            <span class="theme-tag">クロージング</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cycle-box reveal">
+      <div class="cycle-label">The Cycle</div>
+      <div class="cycle-flow">
+        <span class="cycle-step">観察</span>
+        <span class="cycle-arrow">→</span>
+        <span class="cycle-step">プラン</span>
+        <span class="cycle-arrow">→</span>
+        <span class="cycle-step">アクション</span>
+        <span class="cycle-arrow">→</span>
+        <span class="cycle-step">振り返り</span>
+        <span class="cycle-arrow">→</span>
+        <span class="cycle-step" style="color:#e8334a;">また観察</span>
+      </div>
+      <p class="cycle-desc">このサイクルをコーチとともに繰り返すことで、やがて自分一人で回せるようになる。それがこのコーチングの、本当のゴールだ。</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOLLOWUP -->
+<section id="followup">
+  <div class="section-inner">
+    <div class="section-label reveal">Course 02</div>
+    <h2 class="section-title reveal d1">フォローアップ<em>セッション</em></h2>
+    <div class="section-rule reveal d2"></div>
+    <div class="followup-grid">
+      <div class="followup-text reveal d2">
+        <p>インテンシブで構築したリーダーシップスタイルを、現場で使い続けながら深めていく。月1回の対話で、新たに生まれる課題と向き合い、スタイルをアップデートし続ける。</p>
+        <p>「うまくいった」だけでなく、「なぜうまくいったのか」を言語化することで、再現性が生まれる。インテンシブで身につけたサイクルを、より高いレベルで回し続けるための場だ。</p>
+        <p>インテンシブを経ずに、まず月1回の対話から始めたい方にも対応している。</p>
+      </div>
+      <div class="followup-detail reveal d3">
+        <div class="fd-row">
+          <span class="fd-label">形式</span>
+          <span class="fd-val">オンライン・60分</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">頻度</span>
+          <span class="fd-val">月1回</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">対象</span>
+          <span class="fd-val">インテンシブ修了者、または月次での継続対話を希望する方</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">内容</span>
+          <span class="fd-val">アクションの振り返り、新たな課題への対応、リーダーシップスタイルのアップデート</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">料金</span>
+          <span class="fd-val">お問い合わせください</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIAL -->
+<section id="trial">
+  <div class="section-inner">
+    <div class="section-label reveal">Course 03</div>
+    <h2 class="section-title reveal d1">お試し<em>セッション</em></h2>
+    <div class="section-rule reveal d2"></div>
+    <div class="trial-grid">
+      <div class="trial-text reveal d2">
+        <p>「コーチングに興味はあるけど、自分に合うかわからない」。そんな方のための1回完結のセッション。</p>
+        <p>コーチとどんな対話が生まれるのか、自分がどんなことに気づくのか。まず体験してみることが、一番の近道だ。</p>
+        <p>セッション後に、インテンシブへの移行も、フォローアップへの移行も可能。もちろん、1回で終わっても構わない。</p>
+      </div>
+      <div class="trial-detail reveal d3">
+        <div class="fd-row">
+          <span class="fd-label">形式</span>
+          <span class="fd-val">対面・90分</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">回数</span>
+          <span class="fd-val">1回完結</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">対象</span>
+          <span class="fd-val">コーチングを初めて体験したい方、まず話してみたい方</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">内容</span>
+          <span class="fd-val">現状の課題・リーダーシップへの向き合い方・今後の方向性について対話する</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">料金</span>
+          <span class="fd-val">お問い合わせください</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact-cta">
+  <div class="cta-inner">
+    <div class="section-label reveal" style="color:rgba(232,51,74,0.8);">
+      <span style="display:inline-block;width:24px;height:1px;background:rgba(232,51,74,0.8);margin-right:1rem;vertical-align:middle;"></span>Contact
+    </div>
+    <h2 class="section-title reveal d1" style="color:#fff;">まず、<em>話してみましょう。</em></h2>
+    <div class="section-rule reveal d2"></div>
+    <div class="cta-grid">
+      <div class="cta-text reveal d2">
+        <p>どのコースが合うか、まずはお気軽にご連絡ください。料金・期間・進め方など、詳細はお問い合わせいただいた後にご案内します。</p>
+        <p>どんなリーダーでありたいか。チームとの関係で何に悩んでいるか。そんな話から始めましょう。</p>
+        <div class="cta-detail">
+          <div class="cd-row">
+            <span class="cd-label">Email</span>
+            <span class="cd-val"><a href="mailto:Info@morgenrotadvisory.com">Info@morgenrotadvisory.com</a></span>
+          </div>
+          <div class="cd-row">
+            <span class="cd-label">Note</span>
+            <span class="cd-val"><a href="https://note.com/morgenrotadv" target="_blank">note.com/morgenrotadv</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d3">
+        <form class="cta-form" onsubmit="handleSubmit(event)">
+          <div class="fl">
+            <label>お名前</label>
+            <input type="text" placeholder="山田 太郎" required>
+          </div>
+          <div class="fl">
+            <label>メールアドレス</label>
+            <input type="email" placeholder="your@email.com" required>
+          </div>
+          <div class="fl">
+            <label>ご興味のあるコース</label>
+            <input type="text" placeholder="インテンシブ / フォローアップ / お試し / まだ迷っている">
+          </div>
+          <div class="fl">
+            <label>現在のご状況・ご相談内容</label>
+            <textarea rows="4" placeholder="現在のお立場や、コーチングに期待することなど、お気軽にお書きください。"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">送信する</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Morgenrot Advisory. All rights reserved.</p>
+  <a href="https://morgenrotadvisory.com">morgenrotadvisory.com</a>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.btn-submit');
+  btn.textContent = '送信しました';
+  btn.style.background = '#555';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
