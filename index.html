@@ -163,6 +163,16 @@ section:nth-child(even) { background: #fdf8f8; }
   content: ''; width: 14px; height: 1px; background: #e8334a;
   flex-shrink: 0; margin-top: 0.6em; opacity: 0.5;
 }
+.svc-link {
+  display: inline-block; margin-top: 1.4rem;
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: #e8334a; text-decoration: none;
+  border-bottom: 1px solid rgba(232,51,74,0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.2s, opacity 0.2s;
+}
+.svc-link:hover { border-color: #e8334a; opacity: 0.7; }
 
 /* PROFILE */
 .profile-grid {
@@ -338,7 +348,6 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
     <div class="section-rule reveal d2"></div>
     <div class="services-grid">
 
-      <a href="coaching.html" style="text-decoration:none;color:inherit;display:block;">
       <div class="svc featured reveal d1">
         <div class="svc-num">01</div>
         <div class="svc-icon">
@@ -352,10 +361,9 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
           <li>意思決定・危機対応の伴走</li>
           <li>サクセッション・次世代リーダー育成</li>
         </ul>
+        <a href="coaching.html" class="svc-link">詳細はこちら →</a>
       </div>
-      </a>
-
-      <a href="leadership.html" style="text-decoration:none;color:inherit;display:block;">
+      
       <div class="svc featured reveal d2">
         <div class="svc-num">02</div>
         <div class="svc-icon">
@@ -369,8 +377,8 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
           <li>リーダーシップ開発プログラム</li>
           <li>エンゲージメント・変革推進</li>
         </ul>
+        <a href="leadership.html" class="svc-link">詳細はこちら →</a>
       </div>
-      </a>
 
       <div class="svc reveal d3">
         <div class="svc-num">03</div>
