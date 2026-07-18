@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-20RLYML04D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-20RLYML04D');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>セッション事例 | Morgenrot Advisory</title>
+<meta name="description" content="Morgenrot Advisoryのコーチングセッション事例。実際のセッションでの変化を、ご本人の許可を得て匿名でご紹介します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #fff; color: #1a1a1a;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300; line-height: 1.8;
+}
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);
+  border-bottom: 1px solid #f0e8e8;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 5vw;
+}
+.nav-back {
+  font-family: 'Raleway', sans-serif; font-size: 0.7rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #e8334a; text-decoration: none; transition: opacity 0.2s;
+}
+.nav-back:hover { opacity: 0.7; }
+.nav-back::before { content: '← '; }
+#hero { padding: 120px 5vw 4rem; max-width: 960px; margin: 0 auto; }
+.hero-eyebrow {
+  font-family: 'Raleway', sans-serif; font-weight: 300;
+  font-size: 0.68rem; letter-spacing: 0.5em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1.8rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: #e8334a; }
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1.15; margin-bottom: 1.2rem;
+}
+.hero-title em { font-style: italic; color: #e8334a; }
+.hero-rule { width: 40px; height: 2px; background: #e8334a; margin: 1.5rem 0; }
+.hero-sub { font-size: 0.92rem; line-height: 2.1; color: #666; max-width: 600px; }
+#cases { padding: 2rem 5vw 6rem; }
+.cases-inner { max-width: 960px; margin: 0 auto; display: grid; gap: 3.5rem; }
+.case-card {
+  border: 1px solid #f0e8e8; background: #fff;
+  padding: 3rem 2.8rem; position: relative;
+}
+.case-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: #e8334a;
+}
+.case-tag {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: #e8334a; border: 1px solid rgba(232,51,74,0.3);
+  padding: 0.3rem 0.8rem; display: inline-block; margin-bottom: 1.4rem;
+}
+.case-card h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 2.8vw, 2rem); font-weight: 400;
+  line-height: 1.5; margin-bottom: 0.5rem;
+}
+.case-profile { font-size: 0.82rem; color: #888; letter-spacing: 0.05em; margin-bottom: 2.5rem; }
+.case-block { margin-bottom: 2.5rem; }
+.case-block:last-of-type { margin-bottom: 0; }
+.case-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: #e8334a; font-weight: 500; margin-bottom: 0.8rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.case-label::before { content: ''; width: 16px; height: 1px; background: #e8334a; }
+.case-block p { font-size: 0.88rem; line-height: 2.1; color: #444; margin-bottom: 0.8rem; }
+.case-block p:last-child { margin-bottom: 0; }
+.case-dialog {
+  background: #faf8f8; border: 1px solid #f0e8e8;
+  padding: 1.4rem 1.6rem; margin: 1.2rem 0;
+}
+.case-dialog p { font-size: 0.85rem; line-height: 2.0; margin-bottom: 0.6rem; }
+.case-dialog p:last-child { margin-bottom: 0; }
+.case-dialog .q { color: #e8334a; font-weight: 500; }
+.case-quote {
+  border-left: 3px solid #e8334a;
+  padding: 0.4rem 0 0.4rem 1.6rem; margin: 2rem 0;
+}
+.case-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem); line-height: 1.9;
+  margin-bottom: 0.4rem;
+}
+.case-quote span { font-size: 0.78rem; color: #888; letter-spacing: 0.06em; }
+.case-quote--voice p {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.88rem; line-height: 2.1; font-weight: 400;
+}
+.case-steps { list-style: none; margin: 1rem 0 0; padding: 0; }
+.case-steps li {
+  position: relative; padding: 0 0 1.2rem 1.8rem;
+  font-size: 0.88rem; line-height: 1.9; color: #444;
+}
+.case-steps li::before {
+  content: ''; position: absolute; left: 0.4rem; top: 0.7em;
+  width: 6px; height: 6px; border-radius: 50%; background: #e8334a;
+}
+.case-steps li::after {
+  content: ''; position: absolute; left: 0.64rem; top: 1.2em; bottom: -0.2rem;
+  width: 1px; background: #f0e8e8;
+}
+.case-steps li:last-child::after { display: none; }
+#policy { padding: 0 5vw 3rem; }
+.policy-inner {
+  max-width: 960px; margin: 0 auto;
+  font-size: 0.78rem; line-height: 2; color: #aaa;
+  border-top: 1px solid #f0e8e8; padding-top: 2rem;
+}
+#cta { background: #1a1a1a; padding: 5rem 5vw; }
+.cta-inner { max-width: 960px; margin: 0 auto; text-align: center; }
+.cta-eyebrow {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.5em; text-transform: uppercase;
+  color: rgba(232,51,74,0.8); margin-bottom: 1.2rem;
+  display: flex; align-items: center; justify-content: center; gap: 1rem;
+}
+.cta-eyebrow::before, .cta-eyebrow::after { content: ''; width: 24px; height: 1px; background: rgba(232,51,74,0.8); }
+.cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300;
+  color: #fff; line-height: 1.4; margin-bottom: 1rem;
+}
+.cta-title em { font-style: italic; color: #e8334a; }
+.cta-text { font-size: 0.88rem; line-height: 2; color: #aaa; max-width: 520px; margin: 0 auto 2rem; }
+.cta-btn {
+  display: inline-block; font-family: 'Raleway', sans-serif; font-size: 0.72rem;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: #fff; background: #e8334a; text-decoration: none;
+  padding: 1.1rem 2.4rem; transition: background 0.25s;
+}
+.cta-btn:hover { background: #c0192e; }
+footer {
+  background: #111; padding: 2rem 5vw;
+  display: flex; justify-content: space-between; align-items: center;
+}
+footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.22em; color: #555; }
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; } .d3 { transition-delay: 0.3s; }
+@media (max-width: 768px) {
+  nav { padding: 0.8rem 5vw; }
+  #hero { padding: 100px 5vw 3rem; }
+  .hero-title { font-size: 2rem; }
+  .case-card { padding: 2rem 1.4rem; }
+  #cases { padding: 2rem 5vw 4rem; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://morgenrotadvisory.com">
+    <img src="Logo_Morgenrot.png" alt="Morgenrot Advisory" style="height:44px;width:auto;">
+  </a>
+  <a href="https://morgenrotadvisory.com" class="nav-back">サイトに戻る</a>
+</nav>
+
+<section id="hero">
+  <p class="hero-eyebrow reveal">Case Studies</p>
+  <h1 class="hero-title reveal d1">セッション<em>事例</em></h1>
+  <div class="hero-rule reveal d2"></div>
+  <p class="hero-sub reveal d2">実際のセッションでの変化を、ご本人の許可を得たうえでご紹介します。すべての事例は、個人・企業が特定されない形に抽象化しています。</p>
+</section>
+
+<section id="cases">
+  <div class="cases-inner">
+    <article class="case-card reveal" id="case-01">
+      <span class="case-tag">キャリアコーチング</span>
+      <h2>「人生迷子」だったキャリアが、<br>行動計画に変わるまで。</h2>
+      <p class="case-profile">40代・スタートアップ EC事業責任者</p>
+
+      <div class="case-block">
+        <p class="case-label">Before — ご相談時</p>
+        <p>事業責任者としてスタートアップに入社し、事業を約2倍に成長させてきた実績のある方。しかし事前アンケートに書かれていたのは、「会社や役割とのミスマッチがあり、キャリアに困っている」という言葉でした。</p>
+        <p>お話を伺うと、悩みは三つのギャップに整理されました。会社として掲げるゴールと、実際に創業社長が進む方向や求められる評価のギャップ。スタートアップで働こうとした意味と、直面するスタートアップの実態のギャップ。そしてその中で、個人として期待される役割のギャップ。どれも一つずつなら向き合えるものが、三つ重なって「何から考えればいいのか分からない」状態——ご本人の言葉では「人生迷子」でした。</p>
+      </div>
+
+      <div class="case-block">
+        <p class="case-label">Session — 対話の実際</p>
+        <p>「どの会社に行きたいか」をいきなり考えても、答えは出ません。実際、セッション序盤でこう伺ったときも、答えは「わからない」でした。そこで、未来ではなく過去に降りることにしました。</p>
+        <div class="case-dialog">
+          <p><span class="q">コーチ：</span>これまでの仕事で、一番楽しかった瞬間はいつですか？</p>
+          <p><span class="q">ご本人：</span>コンサル時代ですね。自分で問いを立てて、勝手に解いていればよかった。あれは向いていました。</p>
+          <p><span class="q">コーチ：</span>逆に、何が起きると仕事はつまらなくなりますか？</p>
+          <p><span class="q">ご本人：</span>勝手に進められないとき。誰かに邪魔されるときです。</p>
+        </div>
+        <p>「自分で問いを立て、自分で解く」——一貫した価値観が言葉になると、ありたい姿も自然と輪郭を持ち始めました。「シンプルに、ゴールに向かってビジネスをやりたい」。それがこの方の望む働き方でした。そしてこの視点から自身のキャリアを振り返ったとき、対話の終盤、ご本人の口から本質的な気づきが生まれました。</p>
+        <div class="case-quote">
+          <p>「他力本願で、誰かの船に乗ってきたことが、これまでの失敗の本質だった」</p>
+          <span>セッション中の、ご本人の言葉</span>
+        </div>
+        <p>ならば、最終的に目指すのは「自分の船を持つこと」。ご本人から「50歳で独立したい」という時間軸が語られ、現在の年齢から逆算して、残り約6年をどう設計するかという問いに、悩みの形が変わりました。</p>
+      </div>
+
+      <div class="case-block">
+        <p class="case-label">After — 決まった行動計画</p>
+        <p>セッションの終わりには、次の三段構えの計画がご本人の言葉で語られる状態になりました。</p>
+        <ul class="case-steps">
+          <li><strong>短期：</strong>転職により経済的な基盤を固める。すでに動いているエージェント経由の選考を進める</li>
+          <li><strong>並行：</strong>独立の足場となる個人事業の立ち上げ準備に、翌日から着手する（第一弾のWebサイト構築）</li>
+          <li><strong>中期：</strong>転職先が決まったタイミングで、二つ目の事業（業務効率化アプリケーションの開発）の準備を開始する</li>
+        </ul>
+        <p>「どこかに良い会社はないか」という他力の問いが、「50歳の独立から逆算して、いま何を仕込むか」という自分の問いに変わる。漠然としたキャリアの不安が、期日と順序のある行動計画になったセッションでした。</p>
+      </div>
+
+      <div class="case-block">
+        <p class="case-label">Voice — ご本人の感想</p>
+        <div class="case-quote case-quote--voice">
+          <p>「『とにかく転職したい』という一心と、なんとなく『自分でやりたい』という希望が、会話を通じて明確になった。モヤモヤしていた自分のやりたいことが、コーチングの時間を経て、スッキリと明確になった」</p>
+          <span>40代・スタートアップ EC事業責任者</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="policy">
+  <div class="policy-inner">
+    ※掲載しているすべての事例は、ご本人の同意のもと、個人・企業が特定されないよう一部の情報を抽象化しています。セッション内容の守秘を最優先としており、掲載前にはすべての記述についてご本人に確認をいただいています。
+  </div>
+</section>
+
+<section id="cta">
+  <div class="cta-inner">
+    <p class="cta-eyebrow reveal">Contact</p>
+    <h2 class="cta-title reveal d1">まずは、<em>話す</em>ことから。</h2>
+    <p class="cta-text reveal d2">キャリアの迷い、マネジメントの悩み、まだ言葉になっていないモヤモヤ。それを一緒に言葉にするところから始めましょう。</p>
+    <a href="https://calendly.com/nobuaki-shinano-morgenrotadvisory/30min" target="_blank" rel="noopener" class="cta-btn reveal d3">まずはご相談ください（30分無料）</a>
+  </div>
+</section>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:1.6rem;">
+    <a href="https://morgenrotadvisory.com" style="color:#555;text-decoration:none;font-family:'Raleway',sans-serif;font-size:0.58rem;letter-spacing:0.15em;">Morgenrot Advisory</a>
+    <a href="https://note.com/morgenrotadv" target="_blank" rel="noopener" style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;" onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">Note ↗</a>
+    <a href="https://x.com/morgenrotadv" target="_blank" rel="noopener" style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;" onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">X ↗</a>
+    <a href="https://www.linkedin.com/in/nobuaki-shinano-5375a7b" target="_blank" rel="noopener" style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;" onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">LinkedIn ↗</a>
+  </div>
+  <p>© 2025 Morgenrot Advisory. All rights reserved.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
