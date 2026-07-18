@@ -309,7 +309,39 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
 .btn-cta:hover { background: #c0192e; }
 @media (max-width: 768px) { .pain-grid { grid-template-columns: 1fr; } }
 
-/* NOTE */
+/* CASE TEASER */
+#case-teaser { background: #faf8f8; padding: 5rem 5vw; }
+#case-teaser .section-inner { max-width: 960px; margin: 0 auto; }
+.case-teaser-card {
+  display: block; text-decoration: none; color: #1a1a1a;
+  border: 1px solid #f0e8e8; background: #fff;
+  padding: 2.4rem 2.8rem; position: relative;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.case-teaser-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: #e8334a;
+}
+.case-teaser-card:hover { border-color: rgba(232,51,74,0.4); transform: translateY(-2px); }
+.case-teaser-eyebrow {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.case-teaser-eyebrow::before { content: ''; width: 16px; height: 1px; background: #e8334a; }
+.case-teaser-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem); font-weight: 400;
+  line-height: 1.9; color: #1a1a1a; margin-bottom: 0.8rem;
+}
+.case-teaser-who { font-size: 0.78rem; color: #888; letter-spacing: 0.05em; margin-bottom: 1.4rem; }
+.case-teaser-link {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: #e8334a; border-bottom: 1px solid rgba(232,51,74,0.3);
+  padding-bottom: 2px;
+}
 #note { background: #fff; padding: 5rem 5vw; }
 #note .section-inner { max-width: 960px; margin: 0 auto; }
 .note-title {
@@ -481,6 +513,7 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
       <div class="pain-item reveal d1">チームの雰囲気が悪化し、離職が続いている</div>
       <div class="pain-item reveal d2">マネージャーの育成に、課題を感じている</div>
       <div class="pain-item reveal d1">自分のキャリアの方向性がわからない</div>
+      <div class="pain-item reveal d2">自分のキャリアを実現するために、自己能力開発プラン（PDP）を構築したい</div>
     </div>
   </div>
 </section>
@@ -599,6 +632,21 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- CASE TEASER -->
+<section id="case-teaser">
+  <div class="section-inner">
+    <p class="section-label reveal">Case Study</p>
+    <h2 class="section-title reveal d1">セッション<em>事例</em></h2>
+    <div class="section-rule reveal d2"></div>
+    <a href="cases.html" class="case-teaser-card reveal d2">
+      <p class="case-teaser-eyebrow">Case Study 01 · キャリアコーチング</p>
+      <p class="case-teaser-quote">「モヤモヤしていた自分のやりたいことが、コーチングの時間を経て、スッキリと明確になった」</p>
+      <p class="case-teaser-who">40代・スタートアップ EC事業責任者</p>
+      <span class="case-teaser-link">セッション事例を読む →</span>
+    </a>
   </div>
 </section>
 
