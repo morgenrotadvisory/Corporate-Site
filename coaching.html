@@ -783,26 +783,13 @@ footer a { color: #e8334a; text-decoration: none; font-family: 'Raleway', sans-s
           </div>
         </div>
       </div>
-      <div class="reveal d3">
-        <form class="cta-form" onsubmit="handleSubmit(event)">
-          <div class="fl">
-            <label>お名前</label>
-            <input type="text" placeholder="山田 太郎" required>
-          </div>
-          <div class="fl">
-            <label>メールアドレス</label>
-            <input type="email" placeholder="your@email.com" required>
-          </div>
-          <div class="fl">
-            <label>ご興味のあるコース</label>
-            <input type="text" placeholder="インテンシブ / フォローアップ / お試し / まだ迷っている">
-          </div>
-          <div class="fl">
-            <label>現在のご状況・ご相談内容</label>
-            <textarea rows="4" placeholder="現在のお立場や、コーチングに期待することなど、お気軽にお書きください。"></textarea>
-          </div>
-          <button type="submit" class="btn-submit">送信する</button>
-        </form>
+      <div class="reveal d3" style="display:flex;flex-direction:column;justify-content:center;gap:1.5rem;">
+        <p style="font-size:0.88rem;color:#aaa;line-height:1.9;">下のボタンから、30分の無料相談をご予約いただけます。日程調整なしで、そのままご予約が完結します。</p>
+        <a href="https://calendly.com/nobuaki-shinano-morgenrotadvisory/30min" target="_blank" rel="noopener"
+          style="display:inline-block;font-family:'Raleway',sans-serif;font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:#fff;background:#e8334a;text-decoration:none;padding:1.1rem 2.4rem;transition:background 0.25s;text-align:center;"
+          onmouseover="this.style.background='#c0192e'" onmouseout="this.style.background='#e8334a'">
+          まずはご相談ください（30分無料）
+        </a>
       </div>
     </div>
   </div>
@@ -810,8 +797,19 @@ footer a { color: #e8334a; text-decoration: none; font-family: 'Raleway', sans-s
 
 <!-- FOOTER -->
 <footer>
+  <div style="display:flex;align-items:center;gap:1.6rem;">
+    <a href="https://morgenrotadvisory.com" style="color:#555;text-decoration:none;font-family:'Raleway',sans-serif;font-size:0.58rem;letter-spacing:0.15em;">Morgenrot Advisory</a>
+    <a href="https://note.com/morgenrotadv" target="_blank" rel="noopener"
+      style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;"
+      onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">Note ↗</a>
+    <a href="https://x.com/morgenrotadv" target="_blank" rel="noopener"
+      style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;"
+      onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">X ↗</a>
+    <a href="https://www.linkedin.com/in/nobuaki-shinano-5375a7b" target="_blank" rel="noopener"
+      style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;"
+      onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">LinkedIn ↗</a>
+  </div>
   <p>© 2025 Morgenrot Advisory. All rights reserved.</p>
-  <a href="https://morgenrotadvisory.com">morgenrotadvisory.com</a>
 </footer>
 
 <script>
@@ -821,14 +819,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('.btn-submit');
-  btn.textContent = '送信しました';
-  btn.style.background = '#555';
-  btn.disabled = true;
-}
 </script>
 </body>
 </html>

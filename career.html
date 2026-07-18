@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-20RLYML04D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-20RLYML04D');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キャリアコーチング | Morgenrot Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #fff;
+  color: #1a1a1a;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #f0e8e8;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 5vw;
+}
+.nav-logo { text-decoration: none; }
+.nav-back {
+  font-family: 'Raleway', sans-serif; font-size: 0.7rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #e8334a; text-decoration: none;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: opacity 0.2s;
+}
+.nav-back:hover { opacity: 0.7; }
+.nav-back::before { content: '←'; }
+
+/* HERO */
+#hero {
+  padding-top: 80px;
+  min-height: 65vh;
+  display: flex; flex-direction: column; justify-content: center;
+  background: #fff;
+  position: relative; overflow: hidden;
+}
+.hero-inner {
+  padding: 5rem 5vw 3rem;
+  position: relative; z-index: 1;
+  max-width: 960px; margin: 0 auto; width: 100%;
+}
+.hero-eyebrow {
+  font-family: 'Raleway', sans-serif; font-weight: 300;
+  font-size: 0.68rem; letter-spacing: 0.5em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1.8rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: #e8334a; }
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.15; color: #1a1a1a;
+  margin-bottom: 1.2rem; letter-spacing: -0.01em;
+}
+.hero-title em { font-style: italic; color: #e8334a; }
+.hero-rule { width: 40px; height: 2px; background: #e8334a; margin: 1.5rem 0; }
+.hero-sub {
+  font-size: 1rem; line-height: 2.1;
+  color: #555; max-width: 600px;
+}
+.hero-deco {
+  position: absolute; right: 5vw; top: 50%; transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(8rem, 18vw, 16rem);
+  font-weight: 300; font-style: italic;
+  color: rgba(232,51,74,0.04);
+  line-height: 1; pointer-events: none; user-select: none;
+  z-index: 0;
+}
+
+/* SECTIONS */
+section { padding: 6rem 5vw; }
+.section-inner { max-width: 960px; margin: 0 auto; }
+.section-label {
+  font-family: 'Raleway', sans-serif; font-weight: 300;
+  font-size: 0.62rem; letter-spacing: 0.55em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.section-label::before { content: ''; width: 24px; height: 1px; background: #e8334a; }
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.15; color: #1a1a1a; margin-bottom: 0.8rem;
+}
+.section-title em { font-style: italic; color: #e8334a; }
+.section-rule { width: 40px; height: 2px; background: #e8334a; margin: 1.2rem 0 2rem; }
+
+/* TARGET */
+#target { background: #fff; }
+.target-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem; margin-top: 2.5rem;
+}
+.target-card {
+  border: 1px solid #f0e8e8; padding: 1.8rem 1.6rem;
+  background: #fff; position: relative;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.target-card:hover { box-shadow: 0 8px 32px rgba(232,51,74,0.08); border-color: rgba(232,51,74,0.3); }
+.target-card-accent { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #e8334a; }
+.target-card-num {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.3em; color: rgba(232,51,74,0.4); margin-bottom: 0.8rem;
+}
+.target-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem; font-weight: 400; color: #1a1a1a;
+  line-height: 1.4; margin-bottom: 0.6rem;
+}
+.target-card-desc { font-size: 0.85rem; line-height: 1.9; color: #666; }
+
+/* SESSION */
+#session { background: #fdf8f8; }
+.session-card {
+  border: 1px solid #f0e8e8; background: #fff;
+  padding: 2.4rem 2rem; margin-bottom: 1.5rem;
+  position: relative;
+}
+.session-card-accent { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #e8334a; }
+.session-card-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(232,51,74,0.6); margin-bottom: 0.8rem;
+}
+.session-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem; font-weight: 400; color: #1a1a1a;
+  margin-bottom: 0.4rem; line-height: 1.3;
+}
+.session-card-title em { font-style: italic; color: #e8334a; }
+.session-card-format {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #aaa; margin-bottom: 1.2rem;
+}
+.session-card-desc { font-size: 0.88rem; line-height: 2.0; color: #555; margin-bottom: 1.4rem; }
+.session-card-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.session-card-list li {
+  font-size: 0.85rem; color: #555; line-height: 1.7;
+  display: flex; align-items: flex-start; gap: 0.8rem;
+}
+.session-card-list li::before {
+  content: ''; width: 14px; height: 1px; background: #e8334a;
+  flex-shrink: 0; margin-top: 0.7em; opacity: 0.5;
+}
+
+/* PHILOSOPHY */
+#philosophy { background: #fff; }
+.philosophy-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; margin-top: 3rem;
+}
+.phil-card {
+  padding: 2.4rem 2rem; border: 1px solid #f0e8e8; background: #fff;
+  position: relative; transition: transform 0.3s, box-shadow 0.3s;
+}
+.phil-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(232,51,74,0.08); }
+.phil-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem; font-weight: 300; font-style: italic;
+  color: rgba(232,51,74,0.12); line-height: 1; margin-bottom: 1rem;
+}
+.phil-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 400; color: #1a1a1a;
+  margin-bottom: 0.8rem; line-height: 1.3;
+}
+.phil-desc { font-size: 0.86rem; line-height: 1.9; color: #666; }
+.phil-accent { position: absolute; top: 0; left: 0; right: 0; height: 2px; background: #e8334a; }
+
+/* CONTACT */
+#contact { background: #1a1a1a; color: #fff; padding: 6rem 5vw; }
+.contact-inner { max-width: 960px; margin: 0 auto; }
+.contact-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.55em; text-transform: uppercase;
+  color: rgba(232,51,74,0.8); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.contact-label::before { content: ''; width: 24px; height: 1px; background: rgba(232,51,74,0.8); }
+.contact-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(2rem, 3.5vw, 3rem);
+  color: #fff; line-height: 1.15; margin-bottom: 0.8rem;
+}
+.contact-title em { font-style: italic; color: #e8334a; }
+.contact-rule { width: 40px; height: 2px; background: #e8334a; margin: 1.2rem 0 2.5rem; }
+.contact-text { font-size: 0.92rem; line-height: 2.1; color: #aaa; margin-bottom: 2.5rem; max-width: 520px; }
+.cd-row { display: flex; gap: 2rem; margin-bottom: 0.8rem; align-items: baseline; }
+.cd-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.6rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(232,51,74,0.6); width: 80px; flex-shrink: 0;
+}
+.cd-val { font-size: 0.92rem; color: #ccc; }
+.cd-val a { color: #e8334a; text-decoration: none; }
+
+/* FOOTER */
+footer {
+  background: #111; padding: 2rem 5vw;
+  display: flex; justify-content: space-between; align-items: center;
+}
+footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.22em; color: #555; }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; } .d4 { transition-delay: 0.4s; }
+
+@media (max-width: 768px) {
+  nav { padding: 0.8rem 5vw; }
+  .nav-logo img { height: 36px; }
+  #hero { padding: 4rem 5vw 3rem; }
+  .hero-deco { display: none; }
+  .hero-title { font-size: 2rem; line-height: 1.4; }
+  .hero-sub { font-size: 0.82rem; }
+  section { padding: 3.5rem 5vw; }
+  .section-title { font-size: 1.5rem; }
+  .target-grid { grid-template-columns: 1fr; }
+  .philosophy-grid { grid-template-columns: 1fr; }
+  .cd-row { flex-direction: column; gap: 0.3rem; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://morgenrotadvisory.com" class="nav-logo">
+    <img src="Logo_Morgenrot.png" alt="Morgenrot Advisory" style="height:44px;width:auto;">
+  </a>
+  <a href="https://morgenrotadvisory.com" class="nav-back">サイトに戻る</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-deco">Career</div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">Career Coaching</div>
+    <h1 class="hero-title reveal d1">
+      あなたらしい<br><em>キャリアを、</em><br>ここから。
+    </h1>
+    <div class="hero-rule reveal d2"></div>
+    <p class="hero-sub reveal d3">
+      転職、キャリアの方向性、管理職へのステップアップ。<br>
+      次の一手に迷うビジネスパーソンに寄り添い、<br>
+      あなたらしいキャリアを共に描きます。
+    </p>
+  </div>
+</section>
+
+<!-- TARGET -->
+<section id="target">
+  <div class="section-inner">
+    <p class="section-label reveal">For You</p>
+    <h2 class="section-title reveal d1">こんな方に<br><em>おすすめです。</em></h2>
+    <div class="section-rule reveal d2"></div>
+    <div class="target-grid">
+      <div class="target-card reveal d1">
+        <div class="target-card-accent"></div>
+        <div class="target-card-num">01</div>
+        <div class="target-card-title">転職を検討している<br>ビジネスパーソン</div>
+        <p class="target-card-desc">転職を考えているが、次の一手が見えない方。自分のキャリアの棚卸しから始めたい方。</p>
+      </div>
+      <div class="target-card reveal d2">
+        <div class="target-card-accent"></div>
+        <div class="target-card-num">02</div>
+        <div class="target-card-title">キャリアの方向性に<br>悩む若手・中堅</div>
+        <p class="target-card-desc">このまま今の会社にいていいのか、自分が本当にやりたいことが何かわからない方。</p>
+      </div>
+      <div class="target-card reveal d1">
+        <div class="target-card-accent"></div>
+        <div class="target-card-num">03</div>
+        <div class="target-card-title">管理職へのステップアップを<br>目指す若手</div>
+        <p class="target-card-desc">マネージャーを志しているが、何が足りないかわからない方。キャリアの方向性を整理したい方。</p>
+      </div>
+      <div class="target-card reveal d2">
+        <div class="target-card-accent"></div>
+        <div class="target-card-num">04</div>
+        <div class="target-card-title">長期的なキャリアを<br>設計したい方</div>
+        <p class="target-card-desc">目先の転職ではなく、5年・10年先を見据えたキャリアの軸を持ちたい方。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SESSION -->
+<section id="session">
+  <div class="section-inner">
+    <p class="section-label reveal">Program</p>
+    <h2 class="section-title reveal d1">セッション<em>構成</em></h2>
+    <div class="section-rule reveal d2"></div>
+
+    <div class="session-card reveal d2">
+      <div class="session-card-accent"></div>
+      <div class="session-card-label">First Session</div>
+      <h3 class="session-card-title">キャリア棚卸し<em>セッション</em></h3>
+      <div class="session-card-format">90 min · 初回セッション</div>
+      <p class="session-card-desc">まず、ここから始めましょう。90分で、あなたのキャリアの棚卸しから、ありたい姿の仮説まで一緒に辿り着きます。</p>
+      <ul class="session-card-list">
+        <li>これまでのキャリアの棚卸し</li>
+        <li>仕事に求めること・価値観の明確化</li>
+        <li>やりたいことの言語化</li>
+        <li>ありたいキャリアの姿・方向性の仮説</li>
+      </ul>
+    </div>
+
+    <div class="session-card reveal d2">
+      <div class="session-card-accent"></div>
+      <div class="session-card-label">Continuation 01</div>
+      <h3 class="session-card-title">インテンシブ<em>転職サポート</em></h3>
+      <div class="session-card-format">隔週 60 min · 3ヶ月パッケージ</div>
+      <p class="session-card-desc">転職活動を集中的にサポートします。セッションとメール/チャットサポートで、書類から面接まで伴走します。</p>
+      <ul class="session-card-list">
+        <li>隔週60分コーチングセッション</li>
+        <li>メール/チャットによる随時サポート</li>
+        <li>職務経歴書・レジュメのアドバイス</li>
+        <li>面接対策・フィードバック</li>
+      </ul>
+    </div>
+
+    <div class="session-card reveal d2">
+      <div class="session-card-accent"></div>
+      <div class="session-card-label">Continuation 02</div>
+      <h3 class="session-card-title">長期キャリア<em>構築サポート</em></h3>
+      <div class="session-card-format">月1回 60 min · 継続プラン</div>
+      <p class="session-card-desc">転職ではなく、社内でのキャリア構築や長期的なキャリア設計を支援します。PDPを共に構築し、ありたい姿に向けて伴走します。</p>
+      <ul class="session-card-list">
+        <li>月1回コーチングセッション</li>
+        <li>PDP（個人開発計画）の構築</li>
+        <li>社内キャリアの設計と実行支援</li>
+        <li>長期的なキャリアの軸づくり</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="section-inner">
+    <p class="section-label reveal">Philosophy</p>
+    <h2 class="section-title reveal d1">コーチングの<em>考え方</em></h2>
+    <div class="section-rule reveal d2"></div>
+    <div class="philosophy-grid">
+      <div class="phil-card reveal d1">
+        <div class="phil-accent"></div>
+        <div class="phil-num">01</div>
+        <div class="phil-title">答えは、<br>あなたの中にある</div>
+        <p class="phil-desc">キャリアの答えは外にあるのではなく、あなた自身の中にあります。コーチはその答えを引き出すパートナーです。</p>
+      </div>
+      <div class="phil-card reveal d2">
+        <div class="phil-accent"></div>
+        <div class="phil-num">02</div>
+        <div class="phil-title">価値観から<br>キャリアを描く</div>
+        <p class="phil-desc">仕事に何を求めるか。何が自分を突き動かすか。価値観を明確にすることで、ぶれないキャリアの軸が生まれます。</p>
+      </div>
+      <div class="phil-card reveal d3">
+        <div class="phil-accent"></div>
+        <div class="phil-num">03</div>
+        <div class="phil-title">現場経験者として<br>伴走する</div>
+        <p class="phil-desc">Google・Uber Eats・Booking.comなどで実際にキャリアを築いてきた経験者として、リアルな視点で伴走します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:#1a1a1a; color:#fff; padding:6rem 5vw;">
+  <div class="section-inner">
+    <div class="section-label reveal" style="color:rgba(232,51,74,0.8);">
+      <span style="display:inline-block;width:24px;height:1px;background:rgba(232,51,74,0.8);margin-right:1rem;vertical-align:middle;"></span>Contact
+    </div>
+    <div class="section-rule reveal d2"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start;margin-top:3rem;">
+      <div class="reveal d2">
+        <p style="font-size:0.92rem;line-height:2.1;color:#aaa;margin-bottom:1.5rem;">どのプランが合うか、まずはお気軽にご連絡ください。料金・進め方など、詳細はご相談のうえご案内します。</p>
+        <p style="font-size:0.92rem;line-height:2.1;color:#aaa;margin-bottom:2rem;">転職のこと、キャリアの方向性、管理職へのステップアップ——そんな話から始めましょう。</p>
+        <div style="display:flex;flex-direction:column;gap:0.8rem;">
+          <div style="display:flex;gap:2rem;align-items:baseline;">
+            <span style="font-family:'Raleway',sans-serif;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(232,51,74,0.6);width:80px;flex-shrink:0;">Email</span>
+            <span style="font-size:0.92rem;color:#ccc;">Info@morgenrotadvisory.com</span>
+          </div>
+          <div style="display:flex;gap:2rem;align-items:baseline;">
+            <span style="font-family:'Raleway',sans-serif;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(232,51,74,0.6);width:80px;flex-shrink:0;">Note</span>
+            <span style="font-size:0.92rem;color:#ccc;"><a href="https://note.com/morgenrotadv" target="_blank" style="color:#e8334a;text-decoration:none;">note.com/morgenrotadv</a></span>
+          </div>
+          <div style="display:flex;gap:2rem;align-items:baseline;">
+            <span style="font-family:'Raleway',sans-serif;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(232,51,74,0.6);width:80px;flex-shrink:0;">X</span>
+            <span style="font-size:0.92rem;color:#ccc;"><a href="https://x.com/morgenrotadv" target="_blank" style="color:#e8334a;text-decoration:none;">x.com/morgenrotadv</a></span>
+          </div>
+          <div style="display:flex;gap:2rem;align-items:baseline;">
+            <span style="font-family:'Raleway',sans-serif;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(232,51,74,0.6);width:80px;flex-shrink:0;">LinkedIn</span>
+            <span style="font-size:0.92rem;color:#ccc;"><a href="https://www.linkedin.com/in/nobuaki-shinano-5375a7b" target="_blank" style="color:#e8334a;text-decoration:none;">linkedin.com/in/nobuaki-shinano ↗</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d3" style="display:flex;flex-direction:column;justify-content:center;gap:1.5rem;">
+        <p style="font-size:0.88rem;color:#aaa;line-height:1.9;">下のボタンから、30分の無料相談をご予約いただけます。日程調整なしで、そのままご予約が完結します。</p>
+        <a href="https://calendly.com/nobuaki-shinano-morgenrotadvisory/30min" target="_blank" rel="noopener"
+          style="display:inline-block;font-family:'Raleway',sans-serif;font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:#fff;background:#e8334a;text-decoration:none;padding:1.1rem 2.4rem;transition:background 0.25s;text-align:center;"
+          onmouseover="this.style.background='#c0192e'" onmouseout="this.style.background='#e8334a'">
+          まずはご相談ください（30分無料）
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:1.6rem;">
+    <a href="https://morgenrotadvisory.com" style="color:#555;text-decoration:none;font-family:'Raleway',sans-serif;font-size:0.58rem;letter-spacing:0.15em;">Morgenrot Advisory</a>
+    <a href="https://note.com/morgenrotadv" target="_blank" rel="noopener"
+      style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;"
+      onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">Note ↗</a>
+    <a href="https://x.com/morgenrotadv" target="_blank" rel="noopener"
+      style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;"
+      onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">X ↗</a>
+    <a href="https://www.linkedin.com/in/nobuaki-shinano-5375a7b" target="_blank" rel="noopener"
+      style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;"
+      onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">LinkedIn ↗</a>
+  </div>
+  <p>© 2025 Morgenrot Advisory. All rights reserved.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
