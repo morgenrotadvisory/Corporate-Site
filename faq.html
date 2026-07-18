@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-20RLYML04D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-20RLYML04D');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>よくあるご質問 | Morgenrot Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #fff; color: #1a1a1a;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300; line-height: 1.8;
+}
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);
+  border-bottom: 1px solid #f0e8e8;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 5vw;
+}
+.nav-back {
+  font-family: 'Raleway', sans-serif; font-size: 0.7rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #e8334a; text-decoration: none; transition: opacity 0.2s;
+}
+.nav-back:hover { opacity: 0.7; }
+.nav-back::before { content: '← '; }
+
+#hero { padding: 120px 5vw 4rem; max-width: 960px; margin: 0 auto; }
+.hero-eyebrow {
+  font-family: 'Raleway', sans-serif; font-weight: 300;
+  font-size: 0.68rem; letter-spacing: 0.5em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1.8rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-eyebrow::before { content: ''; width: 24px; height: 1px; background: #e8334a; }
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300; font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1.15; margin-bottom: 1.2rem;
+}
+.hero-title em { font-style: italic; color: #e8334a; }
+.hero-rule { width: 40px; height: 2px; background: #e8334a; margin: 1.5rem 0; }
+.hero-sub { font-size: 0.92rem; line-height: 2.1; color: #666; max-width: 600px; }
+
+#faq { padding: 2rem 5vw 6rem; }
+.faq-inner { max-width: 960px; margin: 0 auto; }
+
+.faq-group { margin-bottom: 4rem; }
+.faq-group-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  color: #e8334a; margin-bottom: 1.6rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.faq-group-label::before { content: ''; width: 24px; height: 1px; background: #e8334a; }
+
+.faq-item {
+  border-bottom: 1px solid #f0e8e8; padding: 1.8rem 0;
+}
+.faq-item:first-of-type { border-top: 1px solid #f0e8e8; }
+.faq-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 1.8vw, 1.2rem); font-weight: 400;
+  color: #1a1a1a; line-height: 1.6; margin-bottom: 1rem;
+  cursor: pointer;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
+}
+.faq-q::after {
+  content: '+'; font-family: 'Raleway', sans-serif; font-size: 1.2rem;
+  color: #e8334a; flex-shrink: 0; transition: transform 0.3s;
+}
+.faq-item.open .faq-q::after { transform: rotate(45deg); }
+.faq-a {
+  font-size: 0.88rem; line-height: 2.1; color: #555;
+  display: none; padding-bottom: 0.5rem;
+}
+.faq-item.open .faq-a { display: block; }
+
+#cta { background: #1a1a1a; padding: 5rem 5vw; }
+.cta-inner { max-width: 960px; margin: 0 auto; text-align: center; }
+.cta-eyebrow {
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.5em; text-transform: uppercase;
+  color: rgba(232,51,74,0.8); margin-bottom: 1.2rem;
+  display: flex; align-items: center; justify-content: center; gap: 1rem;
+}
+.cta-eyebrow::before, .cta-eyebrow::after { content: ''; width: 24px; height: 1px; background: rgba(232,51,74,0.8); }
+.cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 300;
+  color: #fff; line-height: 1.4; margin-bottom: 1rem;
+}
+.cta-title em { font-style: italic; color: #e8334a; }
+.cta-text { font-size: 0.88rem; line-height: 2; color: #aaa; max-width: 520px; margin: 0 auto 2rem; }
+.cta-btn {
+  display: inline-block; font-family: 'Raleway', sans-serif; font-size: 0.72rem;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: #fff; background: #e8334a; text-decoration: none;
+  padding: 1.1rem 2.4rem; transition: background 0.25s;
+}
+.cta-btn:hover { background: #c0192e; }
+
+footer {
+  background: #111; padding: 2rem 5vw;
+  display: flex; justify-content: space-between; align-items: center;
+}
+footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.22em; color: #555; }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; }
+
+@media (max-width: 768px) {
+  nav { padding: 0.8rem 5vw; }
+  #hero { padding: 100px 5vw 3rem; }
+  .hero-title { font-size: 2rem; }
+  #faq { padding: 2rem 5vw 4rem; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://morgenrotadvisory.com">
+    <img src="Logo_Morgenrot.png" alt="Morgenrot Advisory" style="height:44px;width:auto;">
+  </a>
+  <a href="https://morgenrotadvisory.com" class="nav-back">サイトに戻る</a>
+</nav>
+
+<section id="hero">
+  <p class="hero-eyebrow reveal">FAQ</p>
+  <h1 class="hero-title reveal d1">よくある<em>ご質問</em></h1>
+  <div class="hero-rule reveal d2"></div>
+  <p class="hero-sub reveal d2">コーチングについて、よくいただくご質問をまとめました。気になることがあれば、まずは無料相談でお気軽にどうぞ。</p>
+</section>
+
+<section id="faq">
+  <div class="faq-inner">
+
+    <div class="faq-group reveal">
+      <p class="faq-group-label">コーチングについて</p>
+
+      <div class="faq-item">
+        <div class="faq-q">研修やコンサルティングとは何が違うのですか？</div>
+        <div class="faq-a">研修は一律の知識をインプットするもの、コンサルティングは外部の専門家が答えを提示するものです。コーチングでは、あなた自身の現場にあるリアルな課題を扱い、対話を通じてあなたの中にある答えを引き出します。外から答えを持ってくるのではなく、自走できる力を内側から育てるアプローチです。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">コーチングが自分に合うか分からない段階で、無料相談を申し込んでも大丈夫ですか？</div>
+        <div class="faq-a">もちろん歓迎します。まず30分の無料相談で、現在の状況や課題感をカジュアルにお聞かせください。コーチングが有効かどうかを一緒に確認するところから始めましょう。強引なご案内は一切しません。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">セッション内で話した内容が、外部や会社に漏れることはありませんか？</div>
+        <div class="faq-a">守秘義務を徹底しています。セッション内で共有された情報は一切外部に漏洩しません。法人契約の場合であっても、受講者本人の同意なく、具体的な対話内容を企業側に報告することはありません。</div>
+      </div>
+    </div>
+
+    <div class="faq-group reveal">
+      <p class="faq-group-label">プログラム・受講について</p>
+
+      <div class="faq-item">
+        <div class="faq-q">日常の業務が非常に忙しいのですが、両立できますか？</div>
+        <div class="faq-a">無理なく両立いただけます。プログラムで行うことは、机に向かう座学ではありません。「翌日のミーティングで部下の反応を特定の視点で観察する」「設計したアクションを日常業務の中で試す」など、日々のマネジメント実務そのものを学びの場に変える設計になっています。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">3ヶ月のプログラムで、本当に変われるのでしょうか？</div>
+        <div class="faq-a">3ヶ月で完璧なリーダーを目指すのではなく、「観察→プラン→アクション→振り返り」というサイクルを、自分一人で回せる状態をつくることがゴールです。このサイクルが習慣化することで、現場での手応えと継続的な変化を実感していただけます。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">掲載されているコース以外に、期間や内容をカスタマイズできますか？</div>
+        <div class="faq-a">はい、柔軟に対応します。掲載しているコースは標準的なプログラムですが、期間の延長、複数名への同時並行実施、セッション頻度の調整など、状況に合わせたオーダーメイドの設計も承っています。まずはご相談ください。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">急な会議や出張が入った場合、スケジュール変更は可能ですか？</div>
+        <div class="faq-a">はい、柔軟に対応します。原則としてセッション前日の24時間前までにご連絡いただければ、別日程への振替対応が可能です。多忙なマネージャーの方でも安心して継続いただける運用を心がけています。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">セッションはオンラインですか？対面での実施も可能ですか？</div>
+        <div class="faq-a">初回セッションは原則として対面での実施を推奨しています（遠方の場合はオンラインも可）。深いコンテキストを共有したうえで、2回目以降の定期セッションはオンライン（Zoom等）でスムーズに進めます。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">まだマネージャーではありませんが、受講できますか？</div>
+        <div class="faq-a">はい、受講いただけます。将来マネージャーを目指す若手・中堅の方から、新任マネージャー、さらなる成長を目指す現役マネージャー、シニアリーダーまで、それぞれのステージに応じたプログラムをご用意しています。</div>
+      </div>
+    </div>
+
+    <div class="faq-group reveal">
+      <p class="faq-group-label">契約・法人導入について</p>
+
+      <div class="faq-item">
+        <div class="faq-q">法人契約や請求書払いに対応していますか？</div>
+        <div class="faq-a">はい、対応しています。法人名義での業務委託契約の締結や、請求書の発行が可能です。稟議に必要な書類への対応も個別に承りますので、無料相談時にお申し付けください。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">会社の研修費で申請するため、提案資料をいただくことはできますか？</div>
+        <div class="faq-a">はい、可能です。プログラムの導入目的、カリキュラム詳細、期待される効果などをまとめた稟議用の資料をご用意しています。お問い合わせ後または無料相談後に個別にお送りします。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="cta">
+  <div class="cta-inner">
+    <p class="cta-eyebrow reveal">Contact</p>
+    <h2 class="cta-title reveal d1">他にご質問があれば、<br><em>お気軽にどうぞ。</em></h2>
+    <p class="cta-text reveal d2">ここに載っていない質問も、無料相談でお気軽にお聞きください。</p>
+    <a href="https://calendly.com/nobuaki-shinano-morgenrotadvisory/30min" target="_blank" rel="noopener" class="cta-btn reveal">まずはご相談ください（30分無料）</a>
+  </div>
+</section>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:1.6rem;">
+    <a href="https://morgenrotadvisory.com" style="color:#555;text-decoration:none;font-family:'Raleway',sans-serif;font-size:0.58rem;letter-spacing:0.15em;">Morgenrot Advisory</a>
+    <a href="https://note.com/morgenrotadv" target="_blank" rel="noopener" style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;" onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">Note ↗</a>
+    <a href="https://x.com/morgenrotadv" target="_blank" rel="noopener" style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;" onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">X ↗</a>
+    <a href="https://www.linkedin.com/in/nobuaki-shinano-5375a7b" target="_blank" rel="noopener" style="font-family:'Raleway',sans-serif;font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:#7a6a60;text-decoration:none;" onmouseover="this.style.color='#e8334a'" onmouseout="this.style.color='#7a6a60'">LinkedIn ↗</a>
+  </div>
+  <p>© 2025 Morgenrot Advisory. All rights reserved.</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
