@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://morgenrotadvisory.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://morgenrotadvisory.com/coaching.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://morgenrotadvisory.com/leadership.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morgenrotadvisory.com/career.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://morgenrotadvisory.com/cases.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://morgenrotadvisory.com/faq.html</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
