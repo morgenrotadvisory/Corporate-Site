@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マネージャー行動セルフチェック20 | Morgenrot Advisory</title>
+<meta name="description" content="この2週間の自分の行動を20項目でチェック。マネージャーとしての現在地を「夜明け」で診断します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2B2320;
+  --sub:#6E625B;
+  --accent:#E4572E;
+  --sun:#E8A24B;
+  --line:#E7DCD0;
+  --bg:#FBF7F1;
+  --card:#FFFFFF;
+  --night:#3A2F2A;
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ transition:none !important; animation:none !important; }
+}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'Zen Kaku Gothic New', sans-serif;
+  line-height:1.9;
+}
+
+.wrap{ max-width:680px; margin:0 auto; padding:0 22px; }
+
+/* ヒーロー */
+.hero{ padding:72px 0 44px; }
+.eyebrow{
+  font-size:12px; letter-spacing:.28em; text-transform:uppercase;
+  color:var(--accent); font-weight:700; margin:0 0 18px;
+}
+.hero h1{
+  font-family:'Shippori Mincho', serif;
+  font-size:clamp(27px,6vw,40px); font-weight:600;
+  line-height:1.5; margin:0 0 18px; letter-spacing:.02em;
+}
+.hero h1 em{ font-style:italic; color:var(--accent); }
+.hero p{
+  font-size:14.5px; color:var(--sub); margin:0 0 10px;
+}
+.hero .how{
+  margin-top:22px;
+  border-left:3px solid var(--accent);
+  padding:4px 0 4px 18px;
+  font-size:14px; color:var(--ink);
+}
+
+/* セクション */
+.section{ padding:10px 0 8px; }
+.sec-head{
+  display:flex; align-items:baseline; gap:14px;
+  margin:34px 0 6px;
+}
+.sec-head h2{
+  font-family:'Shippori Mincho', serif;
+  font-size:20px; font-weight:600; margin:0; letter-spacing:.04em;
+}
+.sec-head .count{
+  font-size:12px; color:var(--sub); letter-spacing:.1em;
+}
+.sec-desc{ font-size:13px; color:var(--sub); margin:0 0 14px; }
+
+/* チェック項目 */
+.item{
+  display:flex; align-items:flex-start; gap:14px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:15px 18px;
+  margin:0 0 10px;
+  cursor:pointer;
+  transition:border-color .18s ease, background .18s ease;
+  user-select:none;
+}
+.item:hover{ border-color:var(--accent); }
+.item .box{
+  flex:0 0 auto;
+  width:22px; height:22px; margin-top:4px;
+  border:2px solid var(--line);
+  border-radius:3px;
+  position:relative;
+  transition:border-color .18s ease, background .18s ease;
+}
+.item .box::after{
+  content:"";
+  position:absolute; left:6px; top:2px;
+  width:5px; height:10px;
+  border:solid #fff; border-width:0 2.5px 2.5px 0;
+  transform:rotate(45deg) scale(0);
+  transition:transform .15s ease;
+}
+.item.on{ border-color:var(--accent); background:#FFF6F0; }
+.item.on .box{ background:var(--accent); border-color:var(--accent); }
+.item.on .box::after{ transform:rotate(45deg) scale(1); }
+.item .txt{ font-size:14.5px; line-height:1.85; }
+
+/* 診断ボタン */
+.actions{ padding:30px 0 80px; text-align:center; }
+.actions .progress{
+  font-size:13px; color:var(--sub); letter-spacing:.08em; margin:0 0 16px;
+}
+.btn{
+  display:inline-block;
+  background:var(--accent); color:#fff;
+  border:none; cursor:pointer;
+  font-family:'Zen Kaku Gothic New', sans-serif;
+  font-size:15px; font-weight:700; letter-spacing:.1em;
+  padding:16px 48px; border-radius:2px;
+  transition:opacity .18s ease;
+}
+.btn:hover{ opacity:.88; }
+.btn:focus-visible{ outline:3px solid var(--sun); outline-offset:2px; }
+
+/* 結果 */
+#result{ display:none; padding:0 0 40px; }
+.result-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:44px 38px;
+}
+@media (max-width:560px){ .result-card{ padding:30px 20px; } }
+.result-card .label{
+  font-size:12px; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--accent); font-weight:700; margin:0 0 14px;
+}
+
+/* 夜明けゲージ(シグネチャー) */
+.dawn{
+  position:relative;
+  height:14px; border-radius:7px;
+  background:linear-gradient(90deg, var(--night) 0%, #7A4436 35%, var(--accent) 68%, var(--sun) 100%);
+  margin:8px 0 6px;
+}
+.dawn .marker{
+  position:absolute; top:-7px;
+  width:28px; height:28px; border-radius:50%;
+  background:#fff;
+  border:3px solid var(--accent);
+  transform:translateX(-50%);
+  transition:left .8s cubic-bezier(.2,.7,.3,1);
+  box-shadow:0 2px 8px rgba(43,35,32,.18);
+}
+.dawn-scale{
+  display:flex; justify-content:space-between;
+  font-size:11px; color:var(--sub); letter-spacing:.06em;
+  margin-bottom:26px;
+}
+.stage{
+  font-family:'Shippori Mincho', serif;
+  font-size:clamp(24px,5vw,32px); font-weight:600;
+  line-height:1.5; margin:0 0 4px;
+}
+.stage em{ font-style:italic; color:var(--accent); }
+.score-line{ font-size:14px; color:var(--sub); margin:0 0 18px; }
+.stage-msg{ font-size:14.5px; margin:0 0 30px; }
+
+/* カテゴリ内訳 */
+.cat{ margin:0 0 16px; }
+.cat .cat-top{
+  display:flex; justify-content:space-between; align-items:baseline;
+  font-size:13.5px; margin-bottom:6px;
+}
+.cat .cat-top b{ font-weight:700; }
+.cat .cat-top span{ color:var(--sub); font-size:12.5px; }
+.cat .bar{
+  height:8px; border-radius:4px; background:var(--bg);
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+.cat .bar i{
+  display:block; height:100%;
+  background:var(--accent);
+  width:0%;
+  transition:width .7s ease;
+}
+.focus-note{
+  margin:26px 0 0; padding:18px 20px;
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:4px;
+  font-size:14px;
+}
+.focus-note b{ color:var(--accent); }
+
+/* CTA */
+.cta{
+  margin:36px 0 0; padding-top:30px;
+  border-top:1px solid var(--line);
+}
+.cta p{ font-size:14px; margin:0 0 18px; }
+.cta .links{ display:flex; flex-wrap:wrap; gap:12px; }
+.cta a{
+  display:inline-block;
+  text-decoration:none;
+  font-size:13.5px; font-weight:700; letter-spacing:.06em;
+  padding:13px 24px; border-radius:2px;
+}
+.cta a.primary{ background:var(--accent); color:#fff; }
+.cta a.secondary{ border:1px solid var(--ink); color:var(--ink); }
+.cta a:hover{ opacity:.85; }
+
+.retry{
+  text-align:center; padding:26px 0 70px;
+}
+.retry button{
+  background:none; border:none; cursor:pointer;
+  font-family:'Zen Kaku Gothic New', sans-serif;
+  font-size:13px; color:var(--sub); letter-spacing:.08em;
+  text-decoration:underline; text-underline-offset:3px;
+}
+.retry button:hover{ color:var(--accent); }
+
+footer{
+  padding:24px 0 40px; text-align:center;
+  font-size:12px; color:var(--sub); letter-spacing:.06em;
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <section class="hero">
+    <p class="eyebrow">Self Check</p>
+    <h1>マネージャー行動<br>セルフチェック<em>20</em></h1>
+    <p>マネジメントは、才能ではなく日々の行動です。最初の3カテゴリは「この2週間」、最後の「四半期・年間アクション」は「この半年〜1年」のご自身を振り返って、当てはまるものにチェックを入れてください。</p>
+    <p class="how">全20項目・約2分。できていない項目は、あなたの「伸びしろ」です。ちなみに、全部できているマネージャーはいません。私もできていませんでした。</p>
+  </section>
+
+  <section class="section" id="quiz">
+
+    <div class="sec-head"><h2>コミュニケーション</h2><span class="count">5項目</span></div>
+    <p class="sec-desc">マネジメントの土台は、日常の小さな接点から。</p>
+    <div class="item" data-cat="0"><span class="box"></span><span class="txt">朝、オフィスやチャットで、自分から「おはよう」と挨拶した</span></div>
+    <div class="item" data-cat="0"><span class="box"></span><span class="txt">すれ違ったメンバーに、自分から声をかけた</span></div>
+    <div class="item" data-cat="0"><span class="box"></span><span class="txt">仕事に関係のない雑談をした</span></div>
+    <div class="item" data-cat="0"><span class="box"></span><span class="txt">メンバーの業務上の成功を、言葉にして称えた</span></div>
+    <div class="item" data-cat="0"><span class="box"></span><span class="txt">チームメンバーに「ありがとう」と感謝を言葉にして伝えた</span></div>
+
+    <div class="sec-head"><h2>1on1</h2><span class="count">5項目</span></div>
+    <p class="sec-desc">報告会ではなく、部下のための時間になっていますか。</p>
+    <div class="item" data-cat="1"><span class="box"></span><span class="txt">本題に入る前に、業務以外の会話から始めた</span></div>
+    <div class="item" data-cat="1"><span class="box"></span><span class="txt">自分の考えを言う前に、部下の考えを先に聞いた</span></div>
+    <div class="item" data-cat="1"><span class="box"></span><span class="txt">部下の話を、遮らず・否定せず、最後まで聞いた</span></div>
+    <div class="item" data-cat="1"><span class="box"></span><span class="txt">部下の行動や成果の良かった点を、具体的に伝えた</span></div>
+    <div class="item" data-cat="1"><span class="box"></span><span class="txt">さらに良くなるためのフィードバックを、建設的に伝えた</span></div>
+
+    <div class="sec-head"><h2>チームミーティング</h2><span class="count">5項目</span></div>
+    <p class="sec-desc">チームが同じ方向を向くための、週に一度の設計の場。</p>
+    <div class="item" data-cat="2"><span class="box"></span><span class="txt">メンバー全員が発言できる場をつくった</span></div>
+    <div class="item" data-cat="2"><span class="box"></span><span class="txt">チームの現状と、今後の方向性を明確に示した</span></div>
+    <div class="item" data-cat="2"><span class="box"></span><span class="txt">前週の課題と成功をチームで明確にし、共通認識をもった</span></div>
+    <div class="item" data-cat="2"><span class="box"></span><span class="txt">今週やるべきことを、チーム全員で合意した</span></div>
+    <div class="item" data-cat="2"><span class="box"></span><span class="txt">業務の優先順位と、それぞれの役割を明確に伝えた</span></div>
+
+    <div class="sec-head"><h2>四半期・年間アクション</h2><span class="count">5項目</span></div>
+    <p class="sec-desc">日々の行動に加えて、節目の対話ができているか。こちらは直近の半年〜1年を振り返ってチェックしてください。</p>
+    <div class="item" data-cat="3"><span class="box"></span><span class="txt">チームの戦略や優先順位について、メンバーと話し合って合意した</span></div>
+    <div class="item" data-cat="3"><span class="box"></span><span class="txt">評価の基軸となる目標設定について話し合い、合意した</span></div>
+    <div class="item" data-cat="3"><span class="box"></span><span class="txt">評価のフィードバックを明確に伝え、次のプランを話し合って合意した</span></div>
+    <div class="item" data-cat="3"><span class="box"></span><span class="txt">部下のキャリアやスキルの開発について、じっくり話す時間をもった</span></div>
+    <div class="item" data-cat="3"><span class="box"></span><span class="txt">マネージャーとしての自分へのフィードバックを、部下に求めた</span></div>
+
+    <div class="actions">
+      <p class="progress"><span id="checked">0</span> / 20 チェック中</p>
+      <button class="btn" id="diagnose">診断する</button>
+    </div>
+  </section>
+
+  <section id="result">
+    <div class="result-card">
+      <p class="label">Result — あなたの現在地</p>
+
+      <div class="dawn"><div class="marker" id="marker" style="left:0%"></div></div>
+      <div class="dawn-scale"><span>夜明け前</span><span>薄明</span><span>朝焼け</span><span>日の出</span></div>
+
+      <h2 class="stage" id="stageName"></h2>
+      <p class="score-line" id="scoreLine"></p>
+      <p class="stage-msg" id="stageMsg"></p>
+
+      <div class="cat">
+        <div class="cat-top"><b>コミュニケーション</b><span id="c0label"></span></div>
+        <div class="bar"><i id="c0bar"></i></div>
+      </div>
+      <div class="cat">
+        <div class="cat-top"><b>1on1</b><span id="c1label"></span></div>
+        <div class="bar"><i id="c1bar"></i></div>
+      </div>
+      <div class="cat">
+        <div class="cat-top"><b>チームミーティング</b><span id="c2label"></span></div>
+        <div class="bar"><i id="c2bar"></i></div>
+      </div>
+      <div class="cat">
+        <div class="cat-top"><b>四半期・年間アクション</b><span id="c3label"></span></div>
+        <div class="bar"><i id="c3bar"></i></div>
+      </div>
+
+      <div class="focus-note" id="focusNote"></div>
+
+      <div class="cta">
+        <p>スコアは今日の現在地にすぎません。行動は、明日から変えられます。悩みを一緒に言葉にするところから始めませんか。</p>
+        <div class="links">
+          <a class="primary" href="https://morgenrotadvisory.com/coaching.html">無料セッションについて見る</a>
+          <a class="secondary" href="https://note.com/morgenrotadv">noteで連載を読む</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="retry">
+      <button id="retry">もう一度チェックする</button>
+    </div>
+  </section>
+
+  <footer>© 2025 Morgenrot Advisory</footer>
+</div>
+
+<script>
+(function(){
+  var items = Array.prototype.slice.call(document.querySelectorAll('.item'));
+  var checkedEl = document.getElementById('checked');
+
+  items.forEach(function(it){
+    it.setAttribute('tabindex','0');
+    it.setAttribute('role','checkbox');
+    it.setAttribute('aria-checked','false');
+    function toggle(){
+      it.classList.toggle('on');
+      it.setAttribute('aria-checked', it.classList.contains('on') ? 'true' : 'false');
+      checkedEl.textContent = document.querySelectorAll('.item.on').length;
+    }
+    it.addEventListener('click', toggle);
+    it.addEventListener('keydown', function(e){
+      if(e.key===' '||e.key==='Enter'){ e.preventDefault(); toggle(); }
+    });
+  });
+
+  var catNames = ['コミュニケーション','1on1','チームミーティング','四半期・年間アクション'];
+  var catAdvice = [
+    'コミュニケーションは、施策より先に日常の接点から。まずは明日の朝、自分から「おはよう」を言うところからで十分です。',
+    '1on1は「教える時間」ではなく「聞く時間」。次の1on1は業務以外の話から始めて、自分の考えを言う前に部下の考えを聞く、と決めてみてください。',
+    'チームミーティングは報告の場ではなく、方向を合わせる場。次の定例の最初の5分で、チームの現状と今週の方向性を自分の言葉で示すことから始めてみてください。',
+    '評価やキャリアの対話は、期末にまとめてやるものではなく、日々仕込むもの。まずは次の1on1で、部下のキャリアの希望を一度聞いてみることから始めてみてください。'
+  ];
+
+  var stages = [
+    { min:0,  name:'夜明け前', msg:'今は暗闇の中にいるかもしれません。でも、それはダメなマネージャーの証拠ではなく、誰にも教わっていないだけです。私自身、Googleでマネージャーになったばかりの頃は、このチェックのほとんどが空欄でした。ここから夜は明けていきます。' },
+    { min:6,  name:'薄明',     msg:'空が白み始めています。できていることが確かにある一方で、手つかずの領域も見えている状態。焦らなくて大丈夫です。行動は一つずつしか変わりませんし、一つ変われば景色は変わります。' },
+    { min:11, name:'朝焼け',   msg:'地平線が赤く染まり始めています。基本の行動がかなり回っている状態です。ここから先は「量」より「質」——同じ1on1でも、問いの深さが変わると部下の動きが変わります。' },
+    { min:16, name:'日の出',   msg:'太陽は昇っています。日々の行動が高いレベルで習慣化されているマネージャーです。次のテーマは、この行動を「自分のチームの文化」にすること。あなたの背中が、次のマネージャーを育てます。' }
+  ];
+
+  document.getElementById('diagnose').addEventListener('click', function(){
+    var cats = [0,0,0,0];
+    document.querySelectorAll('.item.on').forEach(function(it){
+      cats[+it.getAttribute('data-cat')]++;
+    });
+    var total = cats[0]+cats[1]+cats[2]+cats[3];
+
+    var stage = stages[0];
+    stages.forEach(function(s){ if(total >= s.min) stage = s; });
+
+    document.getElementById('stageName').innerHTML = 'あなたは今、<em>「'+stage.name+'」</em>';
+    document.getElementById('scoreLine').textContent = '合計 '+total+' / 20('+catNames.map(function(n,i){return n+' '+cats[i];}).join('・')+')';
+    document.getElementById('stageMsg').textContent = stage.msg;
+
+    for(var i=0;i<4;i++){
+      document.getElementById('c'+i+'label').textContent = cats[i]+' / 5';
+      document.getElementById('c'+i+'bar').style.width = (cats[i]/5*100)+'%';
+    }
+
+    var minIdx = 0;
+    for(var j=1;j<4;j++){ if(cats[j] < cats[minIdx]) minIdx = j; }
+    document.getElementById('focusNote').innerHTML =
+      '<b>今週の伸びしろ:'+catNames[minIdx]+'</b><br>'+catAdvice[minIdx];
+
+    var pct = total/20*100;
+    document.getElementById('result').style.display = 'block';
+    requestAnimationFrame(function(){
+      document.getElementById('marker').style.left = pct+'%';
+    });
+    document.getElementById('result').scrollIntoView({behavior:'smooth'});
+  });
+
+  document.getElementById('retry').addEventListener('click', function(){
+    items.forEach(function(it){ it.classList.remove('on'); it.setAttribute('aria-checked','false'); });
+    checkedEl.textContent = '0';
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('marker').style.left = '0%';
+    document.getElementById('quiz').scrollIntoView({behavior:'smooth'});
+  });
+})();
+</script>
+
+</body>
+</html>
