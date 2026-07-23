@@ -23,7 +23,6 @@
 <meta name="twitter:image" content="https://morgenrotadvisory.com/Logo_Morgenrot.png">
 <meta name="twitter:title" content="Morgenrot Advisory | リーダーシップ・キャリアコーチング">
 <meta name="twitter:description" content="あなたらしいリーダーシップを、ここから。リーダーの隣で、共に夜明けを。">
-<title>Morgenrot Advisory</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -490,6 +489,39 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
   footer { flex-direction: column; gap: 1rem; text-align: center; padding: 1.5rem 5vw; }
   footer p { font-size: 0.52rem; }
 }
+
+/* FLOATING LINE WIDGET */
+#float-line-widget {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 999;
+  background: #fff; border-left: 3px solid #e8334a;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  padding: 1.1rem 1.4rem 1.1rem 1.2rem; max-width: 240px;
+  font-family: 'Noto Sans JP', sans-serif;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity 0.4s, transform 0.4s;
+  pointer-events: none;
+}
+#float-line-widget.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+#float-line-widget .flw-close {
+  position: absolute; top: 0.3rem; right: 0.5rem;
+  background: none; border: none; color: #bbb; font-size: 1rem;
+  cursor: pointer; line-height: 1; padding: 0.2rem;
+}
+#float-line-widget .flw-close:hover { color: #e8334a; }
+#float-line-widget .flw-text {
+  font-size: 0.78rem; color: #444; line-height: 1.6; margin-bottom: 0.7rem;
+}
+#float-line-widget .flw-btn {
+  display: block; text-align: center; width: 100%;
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #fff; background: #e8334a; text-decoration: none;
+  padding: 0.7rem 0.5rem; transition: background 0.25s;
+}
+#float-line-widget .flw-btn:hover { background: #c0192e; }
+@media (max-width: 480px) {
+  #float-line-widget { right: 0.7rem; bottom: 0.7rem; max-width: 200px; padding: 0.9rem 1.1rem 0.9rem 1rem; }
+}
 </style>
 </head>
 <body>
@@ -719,9 +751,9 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
 
 <!-- CTA -->
 <section style="background:#faf8f8; padding: 4rem 5vw; text-align:center;">
-  <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="btn-cta reveal">公式LINEで気軽にご相談ください</a>
+  <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="btn-cta reveal">LINEで相談</a>
   <p class="reveal" style="font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; color:#666; margin-top:1.2rem;">
-    友だち追加で「マネージャー行動セルフチェック20」をプレゼント
+    友達登録でセルフ診断質問集プレゼント
   </p>
 </section>
 
@@ -790,6 +822,25 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+<!-- FLOATING LINE WIDGET -->
+<div id="float-line-widget">
+  <button class="flw-close" id="flw-close" aria-label="閉じる">×</button>
+  <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="flw-btn">LINEで相談</a>
+  <div class="flw-text" style="margin-bottom:0; margin-top:0.7rem;">友達登録でセルフ診断質問集プレゼント</div>
+</div>
+
+<script>
+(function() {
+  var widget = document.getElementById('float-line-widget');
+  var closeBtn = document.getElementById('flw-close');
+  if (localStorage.getItem('flwDismissedV2') === '1') return;
+  setTimeout(function() { widget.classList.add('show'); }, 600);
+  closeBtn.addEventListener('click', function() {
+    widget.classList.remove('show');
+    localStorage.setItem('flwDismissedV2', '1');
+  });
+})();
 </script>
 </body>
 </html>
