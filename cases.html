@@ -171,6 +171,39 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
   #cases { padding: 2rem 5vw 4rem; }
   footer { flex-direction: column; gap: 1rem; text-align: center; }
 }
+
+/* FLOATING LINE WIDGET */
+#float-line-widget {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 999;
+  background: #fff; border-left: 3px solid #e8334a;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  padding: 1.1rem 1.4rem 1.1rem 1.2rem; max-width: 240px;
+  font-family: 'Noto Sans JP', sans-serif;
+  opacity: 0; transform: translateY(12px);
+  transition: opacity 0.4s, transform 0.4s;
+  pointer-events: none;
+}
+#float-line-widget.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+#float-line-widget .flw-close {
+  position: absolute; top: 0.3rem; right: 0.5rem;
+  background: none; border: none; color: #bbb; font-size: 1rem;
+  cursor: pointer; line-height: 1; padding: 0.2rem;
+}
+#float-line-widget .flw-close:hover { color: #e8334a; }
+#float-line-widget .flw-text {
+  font-size: 0.78rem; color: #444; line-height: 1.6; margin-bottom: 0.7rem;
+}
+#float-line-widget .flw-btn {
+  display: block; text-align: center; width: 100%;
+  font-family: 'Raleway', sans-serif; font-size: 0.62rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: #fff; background: #e8334a; text-decoration: none;
+  padding: 0.7rem 0.5rem; transition: background 0.25s;
+}
+#float-line-widget .flw-btn:hover { background: #c0192e; }
+@media (max-width: 480px) {
+  #float-line-widget { right: 0.7rem; bottom: 0.7rem; max-width: 200px; padding: 0.9rem 1.1rem 0.9rem 1rem; }
+}
 </style>
 </head>
 <body>
@@ -191,6 +224,49 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
 
 <section id="cases">
   <div class="cases-inner">
+    <article class="case-card reveal" id="case-02">
+      <span class="case-tag">リーダーシップコーチング</span>
+      <h2>山積み組織課題を、<br>「自分のアクション」へ繋げる</h2>
+      <p class="case-profile">40代・大手日系企業 部門長</p>
+
+      <div class="case-block">
+        <p class="case-label">Before — ご相談時</p>
+        <p>20名を超える部門を統括し、配下2名のマネージャーがそれぞれ約10名を見る体制。ただしメンバーの約6割は入社3年以内の若手で、マネージャー2人は報告書や提案書のチェックに常に追われている状態でした。マネージャーの手が回らない分、部門長であるご本人も直接クライアントを担当せざるを得ません。</p>
+        <p>さらに、既存クライアントのパフォーマンス・満足度を高めるというチームのミッションは、新規獲得部門に比べて社内評価につながりにくい構造。マネージャー2人との1on1では「目の前の課題が多すぎて、やりたいことに進めない」という声も出ており、育成・評価・モチベーションの課題が絡み合っていました。</p>
+      </div>
+
+      <div class="case-block">
+        <p class="case-label">Session — 対話の実際</p>
+        <p>セッションは、抱えている課題を一つずつ言葉にするところから始めました。マネージャーの育成負荷、マネジメント人材の不足、業務量に対して増えない人員、評価されにくいミッション、上司との関係——出てきた課題は、どれか一つを解けば済む話ではなく、相互に絡み合っていました。</p>
+        <p>課題を出し切ったところで、視点を変える問いを置きました。</p>
+        <div class="case-dialog">
+          <p><span class="q">コーチ：</span>そもそも、マネージャーのお二人には、どうあってほしいのでしょうか？</p>
+          <p><span class="q">ご本人：</span>この会社でどうか、というより——二人が幸せに、楽しく生きてくれればいいんです。新しいことにチャレンジする時間を確保して、スキルが上がっている実感を持ってほしい。</p>
+          <p><span class="q">コーチ：</span>その姿から見ると、いま挙げていただいた課題の中で、どれが一番の壁ですか？</p>
+          <p><span class="q">ご本人：</span>……やっぱり育成です。二人の時間が、そこにほぼ全部吸われている。</p>
+        </div>
+        <p>ゴールが言葉になると、山積みに見えていた課題に優先順位がつき始めました。マネージャーの時間を取り戻すことが起点であり、そのためには「自分の裁量でできること」と「上に動いてもらうこと」を分ける必要がある——打ち手は自然と三つの階層に整理されていきました。役員に相談すべき体制の問題（シニアとジュニアのバランス、マネジメント人材の補強）。自分の裁量で進められる育成の仕組み化と業務委譲。そして、チームの成果を可視化して評価の構造に働きかけること。</p>
+      </div>
+
+      <div class="case-block">
+        <p class="case-label">After — 決まった行動計画</p>
+        <ul class="case-steps">
+          <li><strong>短期：</strong>すでに成果の出ている研修プログラムに加え、運用自動化ツールや外部研修の導入も継続。同時に、次世代リーダー候補へマネージャー業務の一部を徐々に委譲</li>
+          <li><strong>並行：</strong>担当役員との面談を設定。シニア・ジュニアの人員バランスとスパン・オブ・コントロールの再調整を、データを揃えて相談</li>
+          <li><strong>中期：</strong>チームの成果を積み上げ・可視化し、評価と希望が通りやすい環境をつくる</li>
+        </ul>
+        <p>課題を全部一人で背負うのではなく、「どこに、どの順番で働きかけるか」を持って動く。部下を思う気持ちの強さはそのままに、その想いが実行可能な計画に変わったセッションでした。</p>
+      </div>
+
+      <div class="case-block">
+        <p class="case-label">Voice — ご本人の感想</p>
+        <div class="case-quote case-quote--voice">
+          <p>「担当役員とはいつか話しをしないといけないなと思っていたので、いろいろとクリアになってよかったです。ありがとうございました」</p>
+          <span>40代・大手日系企業 部門長</span>
+        </div>
+      </div>
+    </article>
+
     <article class="case-card reveal" id="case-01">
       <span class="case-tag">キャリアコーチング</span>
       <h2>「人生迷子」だったキャリアが、<br>行動計画に変わるまで。</h2>
@@ -252,8 +328,8 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
     <p class="cta-eyebrow reveal">Contact</p>
     <h2 class="cta-title reveal d1">まずは、<em>話す</em>ことから。</h2>
     <p class="cta-text reveal d2">キャリアの迷い、マネジメントの悩み、まだ言葉になっていないモヤモヤ。それを一緒に言葉にするところから始めましょう。</p>
-    <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="cta-btn reveal d3">公式LINEで気軽にご相談ください</a>
-    <p style="font-size:0.8rem;color:#aaa;margin-top:1rem;">友だち追加で「マネージャー行動セルフチェック20」をプレゼント</p>
+    <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="cta-btn reveal d3">LINEで相談</a>
+    <p style="font-size:0.8rem;color:#aaa;margin-top:1rem;">友達登録でセルフ診断質問集プレゼント</p>
   </div>
 </section>
 
@@ -272,6 +348,25 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+<!-- FLOATING LINE WIDGET -->
+<div id="float-line-widget">
+  <button class="flw-close" id="flw-close" aria-label="閉じる">×</button>
+  <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="flw-btn">LINEで相談</a>
+  <div class="flw-text" style="margin-bottom:0; margin-top:0.7rem;">友達登録でセルフ診断質問集プレゼント</div>
+</div>
+
+<script>
+(function() {
+  var widget = document.getElementById('float-line-widget');
+  var closeBtn = document.getElementById('flw-close');
+  if (localStorage.getItem('flwDismissedV2') === '1') return;
+  setTimeout(function() { widget.classList.add('show'); }, 600);
+  closeBtn.addEventListener('click', function() {
+    widget.classList.remove('show');
+    localStorage.setItem('flwDismissedV2', '1');
+  });
+})();
 </script>
 </body>
 </html>
