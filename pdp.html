@@ -45,11 +45,8 @@
     display:flex;justify-content:flex-end;gap:10px;
     padding:12px 22px;
   }
-  .toolbar .brandmark{
-    margin-right:auto;font-family:"Raleway",sans-serif;
-    font-size:12px;letter-spacing:.28em;text-transform:uppercase;
-    color:var(--sub);align-self:center;
-  }
+  .toolbar .logo{margin-right:auto;display:inline-flex;align-items:center;line-height:0;}
+  .toolbar .logo img{height:28px;width:auto;display:block;}
   .btn{
     font-family:"Raleway",sans-serif;font-size:13px;letter-spacing:.06em;
     border:1px solid var(--accent);color:var(--accent);background:transparent;
@@ -201,6 +198,15 @@
     font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--ink);
     font-style:normal;display:block;margin-bottom:8px;
   }
+  footer .support-text{margin:0;}
+  footer .line-btn{
+    display:inline-block;margin-top:20px;
+    font-family:"Raleway",sans-serif;font-size:14px;letter-spacing:.06em;
+    background:var(--accent);color:#fff;text-decoration:none;
+    padding:13px 34px;border-radius:8px;transition:filter .18s ease;
+  }
+  footer .line-btn:hover{filter:brightness(1.06);}
+  footer .line-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
   footer .sig{
     font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:.28em;
     text-transform:uppercase;color:var(--accent);margin-top:22px;
@@ -215,7 +221,7 @@
     html,body{background:#fff;margin:0;}
     .toolbar{display:none;}
     .print-header{
-      display:block;position:fixed;top:6mm;right:12mm;
+      display:block;position:fixed;top:6mm;right:8mm;
       font-family:"Raleway",sans-serif;font-size:9px;letter-spacing:.16em;
       text-transform:uppercase;color:#9a908a;
     }
@@ -259,7 +265,9 @@
 <div class="print-header">PDP｜Morgenrot Advisory</div>
 
 <div class="toolbar">
-  <span class="brandmark">Morgenrot Advisory</span>
+  <a class="logo" href="https://morgenrotadvisory.com/" target="_blank" rel="noopener">
+    <img src="Logo_Morgenrot.png" alt="Morgenrot Advisory">
+  </a>
   <button class="btn" onclick="window.print()">印刷 / PDF保存</button>
 </div>
 
@@ -274,7 +282,7 @@
   </header>
 
   <div class="intro">
-    この計画書は、あなた自身のリーダーシップを育てるための地図です。いまの自分を書き出し、ありたい姿を定め、最初の一歩を決める——それだけで、成長は動き始めます。書けるところから、正直に。
+    本シートは、ご自身のリーダーシップを継続的に育てるための開発計画です。現在地を言語化し、ありたい姿を定め、そこへ向かう最初の一歩を設計します。まずは書ける項目から、率直に記入してください。
     <div class="steps">
       <span><b>1</b> 記入する</span>
       <span><b>2</b> 印刷 / PDFで保存</span>
@@ -286,19 +294,19 @@
   <section class="sec">
     <div class="sec-head">
       <div class="num">01</div>
-      <div><h2>現在地を知る</h2></div>
+      <div><h2>自分の現在地</h2></div>
     </div>
-    <p class="lead">まず、いまの自分をありのままに。</p>
+    <p class="lead">まず、現在のご自身をありのままに書き出します。</p>
     <div class="field">
-      <label class="q">リーダーとして、自然にできている強みは？<span class="hint">まわりから頼られること、うまくいっていること</span></label>
+      <label class="q">リーダーとして、自然に発揮できている強みは何ですか？<span class="hint">周囲から頼られること、手応えを感じていること</span></label>
       <textarea rows="2"></textarea>
     </div>
     <div class="field">
-      <label class="q">もう一段、うまくやりたいところは？<span class="hint">「マネージャー行動セルフチェック20」の結果があれば、ここに転記してください</span></label>
+      <label class="q">さらに高めたい点はどこですか？<span class="hint">「マネージャー行動セルフチェック20」の結果があれば、あわせてご記入ください</span></label>
       <textarea rows="2"></textarea>
     </div>
     <div class="field">
-      <label class="q">いま、一番モヤモヤしていることは？<span class="hint">明確に整理されていなくても構いません。感じていることを、ありのまま書きましょう。</span></label>
+      <label class="q">いま、最も課題に感じていることは何ですか？<span class="hint">整理されていなくても構いません。感じていることを、そのまま書き出してください。</span></label>
       <textarea rows="2"></textarea>
     </div>
   </section>
@@ -309,17 +317,17 @@
       <div class="num">02</div>
       <div><h2>ありたい自身の姿</h2></div>
     </div>
-    <p class="lead">どのような自分になっていたいか。将来的になりたい姿を思い描きましょう。</p>
+    <p class="lead">将来的にどのような自分でありたいか、なりたい姿を描きます。</p>
     <div class="field">
-      <label class="q">6〜12ヶ月後、どんな自分でありたいですか？</label>
+      <label class="q">6〜12ヶ月後、どのような自分でありたいですか？</label>
       <textarea rows="2"></textarea>
     </div>
     <div class="field">
-      <label class="q">そのとき、まわりからどんな言葉をかけられていたいですか？</label>
+      <label class="q">そのとき、周囲からどのような評価や言葉を得ていたいですか？</label>
       <textarea rows="2"></textarea>
     </div>
     <div class="field">
-      <label class="q">なぜ、それがあなたにとって大切ですか？<span class="hint">自分の価値観とつながる理由を、一行でも</span></label>
+      <label class="q">なぜ、それがあなたにとって大切ですか？<span class="hint">ご自身の価値観とつながる理由を、一言でも</span></label>
       <textarea rows="2"></textarea>
     </div>
   </section>
@@ -328,9 +336,9 @@
   <section class="sec">
     <div class="sec-head">
       <div class="num">03</div>
-      <div><h2>伸ばしたい能力・スキルを明確にする</h2></div>
+      <div><h2>伸ばしたい能力・スキル</h2></div>
     </div>
-    <p class="lead">ありたい姿に近づくために、重点的に伸ばしていきたい能力・スキルを 3つ だけ選びましょう。</p>
+    <p class="lead">ありたい姿に近づくために、重点的に伸ばす能力・スキルを 3つ に絞ります。</p>
     <div class="focus-list">
       <div class="row"><span class="mk">Ⅰ</span><input type="text" class="line"></div>
       <div class="row"><span class="mk">Ⅱ</span><input type="text" class="line"></div>
@@ -344,7 +352,7 @@
       <div class="num">04</div>
       <div><h2>行動計画</h2></div>
     </div>
-    <p class="lead">選んだ能力・スキルを、具体的な行動に落とします。</p>
+    <p class="lead">選んだ能力・スキルを、具体的な行動に落とし込みます。</p>
     <table class="tbl">
       <thead>
         <tr>
@@ -379,19 +387,19 @@
       <div class="num">05</div>
       <div><h2>振り返りの仕組み</h2></div>
     </div>
-    <p class="lead">見直す頻度と次の見直し日を、先に決めておきます。</p>
+    <p class="lead">見直す頻度と次回の見直し日を、あらかじめ決めておきます。</p>
     <div class="two">
       <div class="field">
-        <label class="q">どのくらいの頻度で見直しますか？<span class="hint">例：月に1回、金曜の朝</span></label>
+        <label class="q">どのくらいの頻度で見直しますか？<span class="hint">例：毎月1回、金曜の朝に</span></label>
         <input type="text">
       </div>
       <div class="field">
-        <label class="q">次の見直し日は？<span class="hint">具体的な日付を、仮置きしましょう。</span></label>
+        <label class="q">次回の見直し日はいつですか？<span class="hint">具体的な日付を仮置きしてください。</span></label>
         <input type="text">
       </div>
     </div>
     <div class="field">
-      <label class="q">「進んでいる」と分かる指標・サインは？<span class="hint">数字でも、まわりの反応でも、自分の実感でも</span></label>
+      <label class="q">「進捗している」と判断できる指標・サインは何ですか？<span class="hint">数値でも、周囲の反応でも、ご自身の実感でも構いません</span></label>
       <textarea rows="2"></textarea>
     </div>
   </section>
@@ -402,13 +410,13 @@
       <div class="num">06</div>
       <div><h2>支えてくれる人</h2></div>
     </div>
-    <p class="lead">リーダーの成長は、ひとりでは進みません。頼れる相手を、意識して置きましょう。</p>
+    <p class="lead">成長は、ひとりでは進みません。支えとなる存在を、意識して確保しておきましょう。</p>
     <div class="field">
-      <label class="q">あなたを支えてくれる人は？<span class="hint">上司・メンター・同僚・コーチ など</span></label>
+      <label class="q">あなたを支えてくれる人は誰ですか？<span class="hint">上司・メンター・同僚・コーチ など</span></label>
       <input type="text">
     </div>
     <div class="field">
-      <label class="q">その人に、どんな支援をお願いしますか？</label>
+      <label class="q">その方に、どのような支援を求めますか？</label>
       <textarea rows="2"></textarea>
     </div>
   </section>
@@ -418,7 +426,8 @@
 
     <div class="support">
       <span class="brand">リーダーの隣で、共に夜明けを。</span>
-      ひとりで描くのが難しいとき、伴走が必要なとき——Morgenrot Advisory は、あなたの隣で共に夜明けを目指します。
+      <p class="support-text">ひとりで描くのが難しいとき、伴走が必要なとき——Morgenrot Advisory は、あなたの隣で共に夜明けを目指します。</p>
+      <a class="line-btn" href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener">LINEで相談</a>
       <div class="sig">Morgenrot Advisory</div>
     </div>
   </footer>
