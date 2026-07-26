@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PDP 自己成長プラン | Morgenrot Advisory</title>
+<title>PDP｜Morgenrot Advisory</title>
 <meta name="description" content="あなた自身のリーダーシップを育てるための開発計画（PDP）テンプレート。現在地を知り、ありたい姿を定め、一歩を決める。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -206,23 +206,57 @@
     text-transform:uppercase;color:var(--accent);margin-top:22px;
   }
 
+  .print-header{display:none;}
+
   /* ---- print ---- */
+  @page{margin:0;}
   @media print{
     :root{--bg:#fff;}
-    body{background:#fff;}
+    html,body{background:#fff;margin:0;}
     .toolbar{display:none;}
-    .wrap{max-width:none;padding:0 12px;}
-    header.hero{padding:12px 0 8px;}
-    .intro,.sec,footer .support{border:1px solid #ccc;box-shadow:none;break-inside:avoid;}
-    .sec{margin-bottom:14px;padding:18px 20px;}
-    h1{font-size:40px;}
-    textarea,input[type=text]{background:#fff;border:1px solid #ccc;}
-    input.line{border-bottom:1px solid #bbb;}
+    .print-header{
+      display:block;position:fixed;top:6mm;right:12mm;
+      font-family:"Raleway",sans-serif;font-size:9px;letter-spacing:.16em;
+      text-transform:uppercase;color:#9a908a;
+    }
+    .wrap{max-width:none;padding:15mm 12mm 9mm;}
+    header.hero{padding:0 0 4px;}
+    .eyebrow,.pdp-en{font-size:10px;letter-spacing:.24em;}
+    h1{font-size:32px;margin:2px 0 5px;}
+    .subja{font-size:12px;margin-top:3px;}
+    .tagline{font-size:14px;margin-top:7px;}
+    .horizon{margin-top:10px;height:3px;}
+    .intro{margin:12px 0;padding:11px 15px;font-size:11px;line-height:1.55;}
+    .intro .steps{margin-top:7px;gap:3px 16px;font-size:11px;}
+    .sec{margin-bottom:9px;padding:11px 15px;border:1px solid #ccc;box-shadow:none;break-inside:avoid;}
+    .sec-head{margin-bottom:2px;}
+    .num{font-size:23px;min-width:32px;}
+    .sec h2{font-size:18px;}
+    .lead{font-size:11px;margin:2px 0 7px 42px;}
+    .field{margin-bottom:8px;}
+    label.q{font-size:11px;margin-bottom:3px;}
+    label.q .hint{font-size:9.5px;margin-top:1px;}
+    textarea,input[type=text]{background:#fff;border:1px solid #ccc;font-size:11px;padding:5px 7px;}
+    textarea{min-height:32px;}
+    .tbl td textarea{min-height:32px;padding:5px 7px;font-size:11px;}
+    input.line{border:none;border-bottom:1px solid #bbb;padding:5px 2px;}
+    .focus-list{gap:6px;}
+    .focus-list .mk{font-size:16px;}
+    .two{gap:10px 18px;}
+    .tbl th{font-size:9px;padding:0 6px 5px;}
+    .tbl td{padding:5px 5px;}
+    footer{margin-top:10px;}
+    footer .horizon{margin-top:0;}
+    footer .support{margin-top:11px;padding:11px 15px;font-size:11px;border:1px solid #ccc;box-shadow:none;break-inside:avoid;}
+    footer .support .brand{font-size:15px;margin-bottom:4px;}
+    footer .sig{margin-top:9px;font-size:9px;}
     a{color:inherit;text-decoration:none;}
   }
 </style>
 </head>
 <body>
+
+<div class="print-header">PDP｜Morgenrot Advisory</div>
 
 <div class="toolbar">
   <span class="brandmark">Morgenrot Advisory</span>
@@ -380,7 +414,6 @@
   </section>
 
   <footer>
-    <p class="close">計画は、書いた瞬間から動き始めます。</p>
     <div class="horizon" aria-hidden="true"></div>
 
     <div class="support">
