@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDP 自己成長プラン | Morgenrot Advisory</title>
+<meta name="description" content="あなた自身のリーダーシップを育てるための開発計画（PDP）テンプレート。現在地を知り、ありたい姿を定め、一歩を決める。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2a2320;
+    --sub:#6b615c;
+    --accent:#e8334a;
+    --line:#e7ded9;
+    --paper:#ffffff;
+    --bg:#faf8f8;
+    --field:#fcfbfa;
+    /* dawn palette */
+    --dawn-night:#3b3550;
+    --dawn-glow:#e8334a;
+    --dawn-sun:#f4b24a;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Noto Sans JP",sans-serif;
+    font-weight:300;
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px 72px;}
+
+  /* ---- toolbar ---- */
+  .toolbar{
+    position:sticky;top:0;z-index:10;
+    background:rgba(250,248,248,.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+    display:flex;justify-content:flex-end;gap:10px;
+    padding:12px 22px;
+  }
+  .toolbar .brandmark{
+    margin-right:auto;font-family:"Raleway",sans-serif;
+    font-size:12px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--sub);align-self:center;
+  }
+  .btn{
+    font-family:"Raleway",sans-serif;font-size:13px;letter-spacing:.06em;
+    border:1px solid var(--accent);color:var(--accent);background:transparent;
+    padding:9px 18px;border-radius:999px;cursor:pointer;
+    transition:background .18s ease,color .18s ease;
+  }
+  .btn:hover{background:var(--accent);color:#fff;}
+  .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  .btn.solid{background:var(--accent);color:#fff;}
+  .btn.solid:hover{filter:brightness(1.06);}
+
+  /* ---- header ---- */
+  header.hero{padding:56px 0 20px;text-align:center;}
+  .eyebrow{
+    font-family:"Raleway",sans-serif;font-size:12px;font-weight:500;
+    letter-spacing:.34em;text-transform:uppercase;color:var(--accent);
+  }
+  h1{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(52px,10vw,88px);line-height:1;margin:4px 0 12px;
+    letter-spacing:.08em;
+  }
+  .pdp-en{
+    font-family:"Raleway",sans-serif;font-size:13px;font-weight:500;
+    letter-spacing:.32em;text-transform:uppercase;color:var(--accent);
+  }
+  .subja{font-size:15px;letter-spacing:.18em;color:var(--sub);font-weight:400;margin-top:7px;}
+  .tagline{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:20px;color:var(--sub);margin-top:18px;
+  }
+  /* dawn horizon */
+  .horizon{
+    height:4px;border-radius:4px;margin:30px auto 0;max-width:560px;
+    background:linear-gradient(90deg,var(--dawn-night) 0%,var(--dawn-glow) 55%,var(--dawn-sun) 100%);
+  }
+
+  .intro{
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:26px 30px;margin:38px 0 44px;
+    font-size:13.5px;color:var(--sub);
+  }
+  .intro strong{color:var(--ink);font-weight:500;}
+  .intro .steps{
+    display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:16px;
+    font-family:"Raleway",sans-serif;font-size:13px;letter-spacing:.04em;color:var(--ink);
+  }
+  .intro .steps span{display:inline-flex;align-items:center;gap:8px;}
+  .intro .steps b{color:var(--accent);font-family:"Cormorant Garamond",serif;font-size:18px;}
+
+  /* ---- sections ---- */
+  .sec{
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:30px 32px 34px;margin-bottom:26px;
+    break-inside:avoid;
+  }
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:6px;}
+  .num{
+    font-family:"Cormorant Garamond",serif;font-size:34px;line-height:1;
+    color:var(--accent);font-weight:500;min-width:44px;
+  }
+  .sec h2{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:27px;margin:0;line-height:1.2;
+  }
+  .sec .en{
+    font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--sub);display:block;margin-top:2px;
+  }
+  .lead{font-size:14px;color:var(--sub);margin:2px 0 18px 60px;}
+  @media(max-width:560px){.lead{margin-left:0;}}
+
+  .field{margin:0 0 20px;}
+  .field:last-child{margin-bottom:0;}
+  label.q{
+    display:block;font-size:14.5px;font-weight:500;color:var(--ink);
+    margin-bottom:8px;
+  }
+  label.q .hint{display:block;font-weight:300;font-size:12.5px;color:var(--sub);margin-top:2px;}
+  textarea,input[type=text]{
+    width:100%;font-family:inherit;font-weight:300;font-size:15px;color:var(--ink);
+    background:var(--field);border:1px solid var(--line);border-radius:9px;
+    padding:12px 14px;line-height:1.7;resize:vertical;
+    transition:border-color .16s ease,box-shadow .16s ease;
+  }
+  textarea{min-height:76px;}
+  textarea:focus,input[type=text]:focus{
+    outline:none;border-color:var(--accent);
+    box-shadow:0 0 0 3px rgba(232,51,74,.10);
+  }
+  input.line{background:transparent;border:none;border-bottom:1px solid var(--line);border-radius:0;padding:8px 2px;}
+  input.line:focus{box-shadow:none;border-bottom-color:var(--accent);}
+
+  .focus-list{display:flex;flex-direction:column;gap:12px;}
+  .focus-list .row{display:flex;align-items:center;gap:14px;}
+  .focus-list .mk{
+    font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--accent);
+    min-width:22px;text-align:center;
+  }
+
+  .note{
+    font-size:13px;color:var(--sub);font-style:normal;
+    border-left:2px solid var(--accent);padding-left:12px;margin-top:16px;
+  }
+
+  /* ---- action table ---- */
+  .tbl{width:100%;border-collapse:collapse;margin-top:4px;}
+  .tbl th{
+    font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--sub);font-weight:600;
+    text-align:left;padding:0 8px 10px;border-bottom:1px solid var(--line);
+  }
+  .tbl td{padding:8px 6px;vertical-align:top;border-bottom:1px solid var(--line);}
+  .tbl td input{background:transparent;border:none;padding:8px 4px;}
+  .tbl td input:focus{box-shadow:0 1px 0 var(--accent);border-radius:0;}
+  .tbl td textarea{
+    width:100%;background:var(--field);border:1px solid var(--line);border-radius:8px;
+    padding:9px 11px;font-family:inherit;font-weight:300;font-size:15px;color:var(--ink);
+    line-height:1.65;resize:vertical;min-height:60px;
+    transition:border-color .16s ease,box-shadow .16s ease;
+  }
+  .tbl td textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(232,51,74,.10);}
+  .tbl .cSkill{width:26%;}
+  .tbl .cWhen{width:15%;}
+  @media(max-width:600px){
+    .tbl,.tbl thead,.tbl tbody,.tbl tr,.tbl th,.tbl td{display:block;width:100%;}
+    .tbl thead{display:none;}
+    .tbl tr{border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:14px;}
+    .tbl td{border-bottom:1px solid var(--line);}
+    .tbl td:last-child{border-bottom:none;}
+    .tbl td::before{content:attr(data-l);font-family:"Raleway",sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--sub);display:block;}
+  }
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px;}
+  @media(max-width:560px){.two{grid-template-columns:1fr;}}
+
+  /* ---- footer ---- */
+  footer{text-align:center;margin-top:46px;}
+  footer .close{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:23px;color:var(--ink);
+  }
+  footer .horizon{margin-top:26px;}
+  footer .support{
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:26px 28px;margin-top:34px;font-size:14.5px;color:var(--sub);
+  }
+  footer .support .brand{
+    font-family:"Cormorant Garamond",serif;font-size:22px;color:var(--ink);
+    font-style:normal;display:block;margin-bottom:8px;
+  }
+  footer .sig{
+    font-family:"Raleway",sans-serif;font-size:11px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--accent);margin-top:22px;
+  }
+
+  /* ---- print ---- */
+  @media print{
+    :root{--bg:#fff;}
+    body{background:#fff;}
+    .toolbar{display:none;}
+    .wrap{max-width:none;padding:0 12px;}
+    header.hero{padding:12px 0 8px;}
+    .intro,.sec,footer .support{border:1px solid #ccc;box-shadow:none;break-inside:avoid;}
+    .sec{margin-bottom:14px;padding:18px 20px;}
+    h1{font-size:40px;}
+    textarea,input[type=text]{background:#fff;border:1px solid #ccc;}
+    input.line{border-bottom:1px solid #bbb;}
+    a{color:inherit;text-decoration:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span class="brandmark">Morgenrot Advisory</span>
+  <button class="btn" onclick="window.print()">印刷 / PDF保存</button>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="pdp-en">Personal Development Plan</div>
+    <h1>PDP</h1>
+    <div class="subja">自己成長プラン</div>
+    <p class="tagline">あなたらしいリーダーシップを、ここから。</p>
+    <div class="horizon" aria-hidden="true"></div>
+  </header>
+
+  <div class="intro">
+    この計画書は、あなた自身のリーダーシップを育てるための地図です。いまの自分を書き出し、ありたい姿を定め、最初の一歩を決める——それだけで、成長は動き始めます。書けるところから、正直に。
+    <div class="steps">
+      <span><b>1</b> 記入する</span>
+      <span><b>2</b> 印刷 / PDFで保存</span>
+      <span><b>3</b> 定期的に見直す</span>
+    </div>
+  </div>
+
+  <!-- 01 -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="num">01</div>
+      <div><h2>現在地を知る</h2></div>
+    </div>
+    <p class="lead">まず、いまの自分をありのままに。</p>
+    <div class="field">
+      <label class="q">リーダーとして、自然にできている強みは？<span class="hint">まわりから頼られること、うまくいっていること</span></label>
+      <textarea rows="2"></textarea>
+    </div>
+    <div class="field">
+      <label class="q">もう一段、うまくやりたいところは？<span class="hint">「マネージャー行動セルフチェック20」の結果があれば、ここに転記してください</span></label>
+      <textarea rows="2"></textarea>
+    </div>
+    <div class="field">
+      <label class="q">いま、一番モヤモヤしていることは？<span class="hint">明確に整理されていなくても構いません。感じていることを、ありのまま書きましょう。</span></label>
+      <textarea rows="2"></textarea>
+    </div>
+  </section>
+
+  <!-- 02 -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="num">02</div>
+      <div><h2>ありたい自身の姿</h2></div>
+    </div>
+    <p class="lead">どのような自分になっていたいか。将来的になりたい姿を思い描きましょう。</p>
+    <div class="field">
+      <label class="q">6〜12ヶ月後、どんな自分でありたいですか？</label>
+      <textarea rows="2"></textarea>
+    </div>
+    <div class="field">
+      <label class="q">そのとき、まわりからどんな言葉をかけられていたいですか？</label>
+      <textarea rows="2"></textarea>
+    </div>
+    <div class="field">
+      <label class="q">なぜ、それがあなたにとって大切ですか？<span class="hint">自分の価値観とつながる理由を、一行でも</span></label>
+      <textarea rows="2"></textarea>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="num">03</div>
+      <div><h2>伸ばしたい能力・スキルを明確にする</h2></div>
+    </div>
+    <p class="lead">ありたい姿に近づくために、重点的に伸ばしていきたい能力・スキルを 3つ だけ選びましょう。</p>
+    <div class="focus-list">
+      <div class="row"><span class="mk">Ⅰ</span><input type="text" class="line"></div>
+      <div class="row"><span class="mk">Ⅱ</span><input type="text" class="line"></div>
+      <div class="row"><span class="mk">Ⅲ</span><input type="text" class="line"></div>
+    </div>
+  </section>
+
+  <!-- 04 -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="num">04</div>
+      <div><h2>行動計画</h2></div>
+    </div>
+    <p class="lead">選んだ能力・スキルを、具体的な行動に落とします。</p>
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th class="cSkill">伸ばしたい能力・スキル</th>
+          <th>具体的なアクション</th>
+          <th class="cWhen">いつ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-l="伸ばしたい能力・スキル"><input type="text"></td>
+          <td data-l="具体的なアクション"><textarea rows="2"></textarea></td>
+          <td data-l="いつ"><input type="text"></td>
+        </tr>
+        <tr>
+          <td data-l="伸ばしたい能力・スキル"><input type="text"></td>
+          <td data-l="具体的なアクション"><textarea rows="2"></textarea></td>
+          <td data-l="いつ"><input type="text"></td>
+        </tr>
+        <tr>
+          <td data-l="伸ばしたい能力・スキル"><input type="text"></td>
+          <td data-l="具体的なアクション"><textarea rows="2"></textarea></td>
+          <td data-l="いつ"><input type="text"></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 05 -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="num">05</div>
+      <div><h2>振り返りの仕組み</h2></div>
+    </div>
+    <p class="lead">見直す頻度と次の見直し日を、先に決めておきます。</p>
+    <div class="two">
+      <div class="field">
+        <label class="q">どのくらいの頻度で見直しますか？<span class="hint">例：月に1回、金曜の朝</span></label>
+        <input type="text">
+      </div>
+      <div class="field">
+        <label class="q">次の見直し日は？<span class="hint">具体的な日付を、仮置きしましょう。</span></label>
+        <input type="text">
+      </div>
+    </div>
+    <div class="field">
+      <label class="q">「進んでいる」と分かる指標・サインは？<span class="hint">数字でも、まわりの反応でも、自分の実感でも</span></label>
+      <textarea rows="2"></textarea>
+    </div>
+  </section>
+
+  <!-- 06 -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="num">06</div>
+      <div><h2>支えてくれる人</h2></div>
+    </div>
+    <p class="lead">リーダーの成長は、ひとりでは進みません。頼れる相手を、意識して置きましょう。</p>
+    <div class="field">
+      <label class="q">あなたを支えてくれる人は？<span class="hint">上司・メンター・同僚・コーチ など</span></label>
+      <input type="text">
+    </div>
+    <div class="field">
+      <label class="q">その人に、どんな支援をお願いしますか？</label>
+      <textarea rows="2"></textarea>
+    </div>
+  </section>
+
+  <footer>
+    <p class="close">計画は、書いた瞬間から動き始めます。</p>
+    <div class="horizon" aria-hidden="true"></div>
+
+    <div class="support">
+      <span class="brand">リーダーの隣で、共に夜明けを。</span>
+      ひとりで描くのが難しいとき、伴走が必要なとき——Morgenrot Advisory は、あなたの隣で共に夜明けを目指します。
+      <div class="sig">Morgenrot Advisory</div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
