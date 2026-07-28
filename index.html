@@ -741,10 +741,20 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
 
 <!-- CTA -->
 <section style="background:#faf8f8; padding: 4rem 5vw; text-align:center;">
-  <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="btn-cta reveal">LINEで相談</a>
-  <p class="reveal" style="font-family:'Noto Sans JP',sans-serif; font-size:0.9rem; color:#666; margin-top:1.2rem;">
-    友達登録でセルフ診断質問集＆PDPテンプレートをプレゼント
-  </p>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1.8rem 1.6rem; max-width:680px; margin:0 auto;">
+    <div class="reveal" style="flex:1 1 260px; max-width:300px;">
+      <a href="/consult.html" class="btn-cta" style="display:block; width:100%; margin:0; padding-left:1rem; padding-right:1rem; letter-spacing:0.15em;">無料相談について詳しく</a>
+      <p style="font-family:'Noto Sans JP',sans-serif; font-size:0.8rem; line-height:1.8; color:#888; margin-top:0.9rem;">
+        45分・オンライン・無料。当日の流れをご紹介します
+      </p>
+    </div>
+    <div class="reveal d1" style="flex:1 1 260px; max-width:300px;">
+      <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="btn-cta" style="display:block; width:100%; margin:0; padding-left:1rem; padding-right:1rem; letter-spacing:0.15em;">LINEで相談</a>
+      <p style="font-family:'Noto Sans JP',sans-serif; font-size:0.8rem; line-height:1.8; color:#888; margin-top:0.9rem;">
+        友達登録でセルフ診断質問集＆PDPテンプレートをプレゼント
+      </p>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
@@ -812,8 +822,10 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 <!-- FLOATING LINE WIDGET -->
 <div id="float-line-widget">
   <button class="flw-close" id="flw-close" aria-label="閉じる">×</button>
-  <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="flw-btn">LINEで相談</a>
-  <div class="flw-text" style="margin-bottom:0; margin-top:0.7rem;">友達登録でセルフ診断質問集＆PDPテンプレートをプレゼント</div>
+  <a href="/consult.html" class="flw-btn">無料相談</a>
+  <div class="flw-text" style="margin-bottom:0; margin-top:0.5rem; font-size:0.7rem; text-align:center;">45分・オンライン・無料</div>
+  <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="flw-btn" style="margin-top:0.9rem;">LINEで相談</a>
+  <div class="flw-text" style="margin-bottom:0; margin-top:0.5rem; font-size:0.7rem; text-align:center;">セルフ診断＆PDPテンプレ進呈</div>
 </div>
 
 <script>
