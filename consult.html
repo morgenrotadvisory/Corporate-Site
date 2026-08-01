@@ -226,6 +226,22 @@ footer a, footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; let
 
 a:focus-visible { outline: 2px solid #e8334a; outline-offset: 3px; }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1663006501910032');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1663006501910032&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -370,12 +386,12 @@ a:focus-visible { outline: 2px solid #e8334a; outline-offset: 3px; }
     <h2 class="reveal d1">まずは、<em>45分</em>だけ。</h2>
     <p class="cta-lede reveal d1">話すだけ話して、終わっていただいて構いません。</p>
 
-    <a href="https://forms.gle/D3pjK2Y4F6BkKL4BA" target="_blank" rel="noopener" class="btn-main reveal d2">無料相談を申し込む</a>
+    <a href="https://forms.gle/D3pjK2Y4F6BkKL4BA" target="_blank" rel="noopener" class="btn-main reveal d2" onclick="if(window.fbq){fbq('track','Lead',{content_name:'無料相談申込'});}">無料相談を申し込む</a>
     <p class="cta-subnote reveal d2">45分・オンライン・無料</p>
 
     <div class="cta-or reveal d2">OR</div>
 
-    <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="btn-sub reveal d3">まずは公式LINEに登録する</a>
+    <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="btn-sub reveal d3" onclick="if(window.fbq){fbq('track','Lead',{content_name:'LINE登録'});}">まずは公式LINEに登録する</a>
     <p class="cta-subnote reveal d3">セルフチェック20 ＋ PDPテンプレートを進呈</p>
   </div>
 </section>
