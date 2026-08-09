@@ -160,6 +160,20 @@ section { padding: 6rem 5vw; }
 }
 .session-card-desc { font-size: 0.88rem; line-height: 2.0; color: #555; margin-bottom: 1.4rem; }
 .session-card-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.session-detail {
+  border-top: 1px solid #f0e8e8; margin-top: 1.8rem; padding-top: 0.4rem;
+}
+.fd-row {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  padding: 1rem 0; border-bottom: 1px solid #f0e8e8;
+}
+.fd-row:last-child { border-bottom: none; }
+.fd-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.58rem;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: #e8334a; width: 80px; flex-shrink: 0; padding-top: 0.1rem;
+}
+.fd-val { font-size: 0.9rem; color: #444; line-height: 1.7; }
 .session-card-list li {
   font-size: 0.85rem; color: #555; line-height: 1.7;
   display: flex; align-items: flex-start; gap: 0.8rem;
@@ -307,57 +321,6 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
   </div>
 </section>
 
-<!-- SESSION -->
-<section id="session">
-  <div class="section-inner">
-    <p class="section-label reveal">Program</p>
-    <h2 class="section-title reveal d1">セッション<em>構成</em></h2>
-    <div class="section-rule reveal d2"></div>
-
-    <div class="session-card reveal d2">
-      <div class="session-card-accent"></div>
-      <div class="session-card-label">First Session</div>
-      <h3 class="session-card-title">キャリア棚卸し<em>セッション</em></h3>
-      <div class="session-card-format">90分 / 初回セッション</div>
-      <p class="session-card-desc">まず、ここから始めましょう。90分で、あなたのキャリアの棚卸しから、ありたい姿の仮説まで一緒に辿り着きます。</p>
-      <ul class="session-card-list">
-        <li>これまでのキャリアの棚卸し</li>
-        <li>仕事に求めること・価値観の明確化</li>
-        <li>やりたいことの言語化</li>
-        <li>ありたいキャリアの姿・方向性の仮説</li>
-      </ul>
-    </div>
-
-    <div class="session-card reveal d2">
-      <div class="session-card-accent"></div>
-      <div class="session-card-label">Continuation</div>
-      <h3 class="session-card-title">インテンシブ<em>転職サポート</em></h3>
-      <div class="session-card-format">隔週 / 60分 / 3ヶ月</div>
-      <p class="session-card-desc">転職活動を集中的にサポートします。セッションとメール/チャットサポートで、書類から面接まで伴走します。</p>
-      <ul class="session-card-list">
-        <li>隔週60分コーチングセッション</li>
-        <li>メール/チャットによる随時サポート</li>
-        <li>職務経歴書・レジュメのアドバイス</li>
-        <li>面接対策・フィードバック</li>
-      </ul>
-    </div>
-
-    <div class="session-card reveal d2">
-      <div class="session-card-accent"></div>
-      <div class="session-card-label">Continuation</div>
-      <h3 class="session-card-title">長期キャリア<em>構築サポート</em></h3>
-      <div class="session-card-format">月1回 / 60分 / 6ヶ月</div>
-      <p class="session-card-desc">転職ではなく、社内でのキャリア構築や長期的なキャリア設計を支援します。PDPを共に構築し、ありたい姿に向けて伴走します。</p>
-      <ul class="session-card-list">
-        <li>月1回コーチングセッション</li>
-        <li>PDP（個人開発計画）の構築</li>
-        <li>社内キャリアの設計と実行支援</li>
-        <li>長期的なキャリアの軸づくり</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <!-- PHILOSOPHY -->
 <section id="philosophy">
   <div class="section-inner">
@@ -387,6 +350,99 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
   </div>
 </section>
 
+<!-- SESSION -->
+<section id="session">
+  <div class="section-inner">
+    <p class="section-label reveal">Program</p>
+    <h2 class="section-title reveal d1">セッション<em>構成</em></h2>
+    <div class="section-rule reveal d2"></div>
+
+    <div class="session-card reveal d2">
+      <div class="session-card-accent"></div>
+      <div class="session-card-label">First Session</div>
+      <h3 class="session-card-title">キャリア棚卸し<em>セッション</em></h3>
+      <div class="session-card-format">90分 / 初回セッション</div>
+      <p class="session-card-desc">まず、ここから始めましょう。90分で、あなたのキャリアの棚卸しから、ありたい姿の仮説まで一緒に辿り着きます。</p>
+      <ul class="session-card-list">
+        <li>これまでのキャリアの棚卸し</li>
+        <li>仕事に求めること・価値観の明確化</li>
+        <li>やりたいことの言語化</li>
+        <li>ありたいキャリアの姿・方向性の仮説</li>
+      </ul>
+      <div class="session-detail">
+        <div class="fd-row">
+          <span class="fd-label">形式</span>
+          <span class="fd-val">対面またはオンライン・90分</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">回数</span>
+          <span class="fd-val">1回完結</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">料金</span>
+          <span class="fd-val">35,000円（税込）／ 1回完結</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="session-card reveal d2">
+      <div class="session-card-accent"></div>
+      <div class="session-card-label">Continuation</div>
+      <h3 class="session-card-title">インテンシブ<em>転職サポート</em></h3>
+      <div class="session-card-format">隔週 / 60分 / 3ヶ月</div>
+      <p class="session-card-desc">転職活動を集中的にサポートします。セッションとメール/チャットサポートで、書類から面接まで伴走します。</p>
+      <ul class="session-card-list">
+        <li>隔週60分コーチングセッション</li>
+        <li>メール/チャットによる随時サポート</li>
+        <li>職務経歴書・レジュメのアドバイス</li>
+        <li>面接対策・フィードバック</li>
+      </ul>
+      <div class="session-detail">
+        <div class="fd-row">
+          <span class="fd-label">形式</span>
+          <span class="fd-val">オンライン・60分</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">頻度</span>
+          <span class="fd-val">隔週・全6回（3ヶ月）</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">料金</span>
+          <span class="fd-val">180,000円（税込）／ 全6回</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="session-card reveal d2">
+      <div class="session-card-accent"></div>
+      <div class="session-card-label">Continuation</div>
+      <h3 class="session-card-title">長期キャリア<em>構築サポート</em></h3>
+      <div class="session-card-format">月1回 / 60分 / 6ヶ月</div>
+      <p class="session-card-desc">転職ではなく、社内でのキャリア構築や長期的なキャリア設計を支援します。PDPを共に構築し、ありたい姿に向けて伴走します。</p>
+      <ul class="session-card-list">
+        <li>月1回コーチングセッション</li>
+        <li>PDP（個人開発計画）の構築</li>
+        <li>社内キャリアの設計と実行支援</li>
+        <li>長期的なキャリアの軸づくり</li>
+      </ul>
+      <div class="session-detail">
+        <div class="fd-row">
+          <span class="fd-label">形式</span>
+          <span class="fd-val">オンライン・60分</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">頻度</span>
+          <span class="fd-val">月1回・全6回（6ヶ月）</span>
+        </div>
+        <div class="fd-row">
+          <span class="fd-label">料金</span>
+          <span class="fd-val">180,000円（税込）／ 全6回</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" style="background:#1a1a1a; color:#fff; padding:6rem 5vw;">
   <div class="section-inner">
@@ -396,7 +452,7 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
     <div class="section-rule reveal d2"></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:start;margin-top:3rem;">
       <div class="reveal d2">
-        <p style="font-size:0.92rem;line-height:2.1;color:#aaa;margin-bottom:1.5rem;">どのプランが合うか、まずはお気軽にご連絡ください。料金・進め方など、詳細はご相談のうえご案内します。</p>
+        <p style="font-size:0.92rem;line-height:2.1;color:#aaa;margin-bottom:1.5rem;">どのプランが合うか、まずはお気軽にご連絡ください。お支払いは銀行振込（一括）、法人でのご契約・請求書払いにも対応しています。</p>
         <p style="font-size:0.92rem;line-height:2.1;color:#aaa;margin-bottom:2rem;">転職のこと、キャリアの方向性、管理職へのステップアップ——そんな話から始めましょう。</p>
         <div style="display:flex;flex-direction:column;gap:0.8rem;">
           <div style="display:flex;gap:2rem;align-items:baseline;">
@@ -417,14 +473,23 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
           </div>
         </div>
       </div>
-      <div class="reveal d3" style="display:flex;flex-direction:column;justify-content:center;gap:1.5rem;">
-        <p style="font-size:0.88rem;color:#aaa;line-height:1.9;">まずは公式LINEを友だち追加して、お気軽にご相談ください。</p>
-        <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener"
-          style="display:inline-block;font-family:'Raleway',sans-serif;font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:#fff;background:#e8334a;text-decoration:none;padding:1.1rem 2.4rem;transition:background 0.25s;text-align:center;"
-          onmouseover="this.style.background='#c0192e'" onmouseout="this.style.background='#e8334a'">
-          公式LINEで気軽にご相談ください
-        </a>
-        <p style="font-size:0.8rem;color:#aaa;text-align:center;">友達登録でセルフ診断質問集＆PDPテンプレートをプレゼント</p>
+      <div class="reveal d3" style="display:flex;flex-direction:column;justify-content:center;gap:2rem;">
+        <div>
+          <a href="/consult.html"
+            style="display:block;font-family:'Raleway',sans-serif;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#fff;background:#e8334a;text-decoration:none;padding:1.1rem 1.5rem;transition:background 0.25s;text-align:center;"
+            onmouseover="this.style.background='#c0192e'" onmouseout="this.style.background='#e8334a'">
+            無料相談
+          </a>
+          <p style="font-size:0.8rem;color:#aaa;text-align:center;margin-top:0.9rem;">45分・オンライン・無料</p>
+        </div>
+        <div>
+          <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener"
+            style="display:block;font-family:'Raleway',sans-serif;font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#fff;background:#e8334a;text-decoration:none;padding:1.1rem 1.5rem;transition:background 0.25s;text-align:center;"
+            onmouseover="this.style.background='#c0192e'" onmouseout="this.style.background='#e8334a'">
+            LINEで相談
+          </a>
+          <p style="font-size:0.8rem;color:#aaa;text-align:center;margin-top:0.9rem;">セルフ診断＆PDPテンプレ進呈</p>
+        </div>
       </div>
     </div>
   </div>
