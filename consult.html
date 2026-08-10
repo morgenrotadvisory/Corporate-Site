@@ -154,6 +154,39 @@ h1 em, h2 em { font-style: italic; color: #e8334a; }
   letter-spacing: 0.2em; text-transform: uppercase; color: #b0a49d; margin-top: 0.25rem;
 }
 
+.case-invite {
+  display: block; text-decoration: none; margin-top: 1.6rem;
+  background: #fff; border: 1px solid #f3ddd6; border-radius: 16px;
+  padding: 1.6rem 1.7rem; position: relative;
+  box-shadow: 0 6px 20px rgba(214,168,150,0.10);
+  transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+.case-invite:hover {
+  border-color: #e8334a; transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(214,168,150,0.18);
+}
+.case-invite .ci-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.56rem;
+  letter-spacing: 0.2em; text-transform: uppercase; color: #ef6a7a;
+  margin-bottom: 0.55rem;
+}
+.case-invite .ci-title {
+  font-size: 1rem; font-weight: 500; color: #453f3b; line-height: 1.6;
+  margin-bottom: 0.4rem; padding-right: 1.6rem;
+}
+.case-invite .ci-desc { font-size: 0.83rem; line-height: 1.9; color: #7a716b; }
+.case-invite::after {
+  content: '→'; position: absolute; right: 1.5rem; top: 50%;
+  transform: translateY(-50%); color: #e8334a; font-size: 1rem;
+}
+.svc-more {
+  display: inline-block; margin-top: 0.9rem; text-decoration: none;
+  font-size: 0.78rem; color: #d9455a;
+  border-bottom: 1px solid rgba(217,69,90,0.35); padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+.svc-more:hover { opacity: 0.7; }
+
 /* ---------- 特典 ---------- */
 .gift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-top: 1.8rem; }
 .gift-card {
@@ -226,13 +259,32 @@ footer a, footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; let
 
 a:focus-visible { outline: 2px solid #e8334a; outline-offset: 3px; }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2278161986253827');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2278161986253827&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
 <!-- ============ HERO ============ -->
 <section id="hero">
   <div class="hero-inner">
-    <img src="Logo_Morgenrot.png" alt="Morgenrot Advisory" class="hero-logo">
+    <a href="https://morgenrotadvisory.com" target="_blank" rel="noopener">
+      <img src="Logo_Morgenrot.png" alt="Morgenrot Advisory" class="hero-logo">
+    </a>
     <div class="hero-badge reveal">45分・オンライン・無料</div>
     <h1 class="reveal d1">ひとりで抱えている話を、<br><em>そのまま</em>話せる45分。</h1>
     <p class="hero-sub reveal d1">チームのことも、自分のキャリアのことも。<br>社内では言いにくい話って、ありますよね。<br>まとまっていなくて大丈夫です。話すところから始めましょう。</p>
@@ -313,10 +365,12 @@ a:focus-visible { outline: 2px solid #e8334a; outline-offset: 3px; }
       <div class="svc-card reveal d1">
         <p class="svc-name">リーダーシップ・<br>コーチング</p>
         <p class="svc-desc">部下が動かない、チームがまとまらない。症状に対処するのではなく、リーダーシップの構造から変えていきます。</p>
+        <a href="https://morgenrotadvisory.com/coaching.html" target="_blank" rel="noopener" class="svc-more">プログラムと料金を見る →</a>
       </div>
       <div class="svc-card reveal d2">
         <p class="svc-name">キャリア・<br>コーチング</p>
         <p class="svc-desc">これまでの棚卸しから、転職の判断軸づくり、管理職へのステップアップまで。「どうありたいか」から逆算して考えます。</p>
+        <a href="https://morgenrotadvisory.com/career.html" target="_blank" rel="noopener" class="svc-more">プログラムと料金を見る →</a>
       </div>
       <div class="svc-card reveal d3">
         <p class="svc-name">ビジネス戦略<br>コーチング</p>
@@ -341,6 +395,11 @@ a:focus-visible { outline: 2px solid #e8334a; outline-offset: 3px; }
       <p>その後、リーダーシップとコーチングを学び直し、Uber Eats・ADK・SmartNewsで実践すると、チームが動き始めました。あのつまずきがなければ、いまの自分はいません。</p>
       <p>転職も、昇進も、立ち止まった時期も経験しました。チームの悩みもキャリアの迷いも、どちらも通ってきた道です。</p>
     </div>
+    <a href="https://morgenrotadvisory.com/cases.html" target="_blank" rel="noopener" class="case-invite reveal d2">
+      <p class="ci-label">Case Studies</p>
+      <p class="ci-title">実際のセッションで、何が起きたか。</p>
+      <p class="ci-desc">ご本人の許可を得て、対話の中身と、そこから決まった行動までを公開しています。</p>
+    </a>
   </div>
 </section>
 
@@ -385,7 +444,12 @@ a:focus-visible { outline: 2px solid #e8334a; outline-offset: 3px; }
 
 <footer>
   <div class="f-links">
-    <a href="https://morgenrotadvisory.com">Morgenrot Advisory</a>
+    <a href="https://morgenrotadvisory.com" target="_blank" rel="noopener">サイトトップ ↗</a>
+    <a href="https://morgenrotadvisory.com/cases.html" target="_blank" rel="noopener">セッション事例 ↗</a>
+    <a href="https://morgenrotadvisory.com/coaching.html" target="_blank" rel="noopener">サービス・料金 ↗</a>
+    <a href="https://morgenrotadvisory.com/faq.html" target="_blank" rel="noopener">よくあるご質問 ↗</a>
+  </div>
+  <div class="f-links">
     <a href="https://note.com/morgenrotadv" target="_blank" rel="noopener">Note ↗</a>
     <a href="https://x.com/morgenrotadv" target="_blank" rel="noopener">X ↗</a>
   </div>
@@ -399,6 +463,15 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Meta Pixel: 無料相談の申し込みクリックを Lead として計測
+document.querySelectorAll('a[href*="forms.gle"]').forEach(function(a) {
+  a.addEventListener('click', function() {
+    if (typeof fbq === 'function') {
+      fbq('track', 'Lead', { content_name: '無料相談申込' });
+    }
+  });
+});
 </script>
 </body>
 </html>
