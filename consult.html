@@ -215,6 +215,30 @@ h1 em, h2 em { font-style: italic; color: #e8334a; }
 }
 @media (max-width: 700px) { .story-photo img { height: 200px; } }
 
+/* ---------- 回遊 ---------- */
+.browse-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.9rem; margin-top: 1.8rem; }
+.browse-card {
+  display: block; text-decoration: none;
+  background: #fff; border: 1px solid #f3ddd6; border-radius: 16px;
+  padding: 1.5rem 1.4rem; position: relative;
+  box-shadow: 0 6px 20px rgba(214,168,150,0.08);
+  transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+.browse-card:hover {
+  border-color: #e8334a; transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(214,168,150,0.18);
+}
+.browse-card .bc-label {
+  font-family: 'Raleway', sans-serif; font-size: 0.56rem;
+  letter-spacing: 0.2em; text-transform: uppercase; color: #ef6a7a;
+  margin-bottom: 0.5rem;
+}
+.browse-card .bc-title {
+  font-size: 0.95rem; font-weight: 500; color: #453f3b;
+  line-height: 1.6; margin-bottom: 0.4rem;
+}
+.browse-card .bc-desc { font-size: 0.8rem; line-height: 1.85; color: #7a716b; }
+
 /* ---------- CTA ---------- */
 #cta {
   text-align: center; padding-top: 4rem; padding-bottom: 4.6rem;
@@ -285,12 +309,10 @@ src="https://www.facebook.com/tr?id=2278161986253827&ev=PageView&noscript=1"
     <a href="https://morgenrotadvisory.com" target="_blank" rel="noopener">
       <img src="Logo_Morgenrot.png" alt="Morgenrot Advisory" class="hero-logo">
     </a>
-    <div class="hero-badge reveal">45分・オンライン・無料</div>
     <h1 class="reveal d1">ひとりで抱えている話を、<br><em>そのまま</em>話せる45分。</h1>
-    <p class="hero-sub reveal d1">チームのことも、自分のキャリアのことも。<br>社内では言いにくい話って、ありますよね。<br>まとまっていなくて大丈夫です。話すところから始めましょう。</p>
+    <p class="hero-sub reveal d1">チームのことも、自分のキャリアのことも。<br>社内では言いにくい話って、ありますよね。<br>まとまっていなくて大丈夫です。話すところから始めましょう。<br>話すことで、今の悩みが整理され、次に何をすべきかが見えてきます。</p>
     <div class="hero-cta reveal d2">
       <a href="https://forms.gle/D3pjK2Y4F6BkKL4BA" target="_blank" rel="noopener" class="btn-main">無料相談を申し込む</a>
-      <p class="hero-note">売り込みは一切ありません</p>
     </div>
   </div>
 </section>
@@ -310,7 +332,6 @@ src="https://www.facebook.com/tr?id=2278161986253827&ev=PageView&noscript=1"
       <div class="reveal d3">管理職を目指したいが、何が足りないかわからない</div>
       <div class="reveal d3">自分の強みを、うまく言葉にできない</div>
     </div>
-    <p class="pain-close reveal">ひとつでも当てはまったなら、話す価値はあります。</p>
   </div>
 </section>
 
@@ -319,7 +340,6 @@ src="https://www.facebook.com/tr?id=2278161986253827&ev=PageView&noscript=1"
   <div class="inner">
     <p class="eyebrow reveal">The 45 Minutes</p>
     <h2 class="reveal d1">45分、こんな流れです。</h2>
-    <p class="lede reveal d1">オンラインでお話しします。</p>
 
 
     <div class="timeline">
@@ -335,7 +355,7 @@ src="https://www.facebook.com/tr?id=2278161986253827&ev=PageView&noscript=1"
         <div class="tl-time">次の25分</div>
         <div>
           <p class="tl-head">課題を一緒に掘り下げる。</p>
-          <p class="tl-body">「部下が育たない」「昇進したが自信がない」「後継者やチームをどう育てるか」「組織をどう変えていくか」「この先のキャリアに迷っている」——どんな切り口でも構いません。まだ言葉にならないモヤモヤのままでも大丈夫です。私からの問いで、何が本当の問題なのかを一緒に整理していきます。</p>
+          <p class="tl-body">「部下が育たない」「昇進したが自信がない」「チームをどう育てるか」「このまま今の会社にいていいのか」「転職すべきか迷っている」「自分の強みが何かわからない」——どんな切り口でも構いません。まだ言葉にならないモヤモヤのままでも大丈夫です。私からの問いで、何が本当の問題なのかを一緒に整理していきます。</p>
           <p class="tl-body">これはコーチングの実際の進め方そのものなので、「コーチングとはこういうものか」を体験していただく時間にもなります。</p>
         </div>
       </div>
@@ -350,7 +370,6 @@ src="https://www.facebook.com/tr?id=2278161986253827&ev=PageView&noscript=1"
     </div>
 
     <p class="goal-note reveal">終わったときに、来たときより少しだけ前に進んでいる——それがこの45分のゴールです。</p>
-    <p class="no-sell reveal">無理な勧誘や継続の営業は一切しません。相談だけで終わっていただいて構いません。</p>
   </div>
 </section>
 
@@ -395,11 +414,6 @@ src="https://www.facebook.com/tr?id=2278161986253827&ev=PageView&noscript=1"
       <p>その後、リーダーシップとコーチングを学び直し、Uber Eats・ADK・SmartNewsで実践すると、チームが動き始めました。あのつまずきがなければ、いまの自分はいません。</p>
       <p>転職も、昇進も、立ち止まった時期も経験しました。チームの悩みもキャリアの迷いも、どちらも通ってきた道です。</p>
     </div>
-    <a href="https://morgenrotadvisory.com/cases.html" target="_blank" rel="noopener" class="case-invite reveal d2">
-      <p class="ci-label">Case Studies</p>
-      <p class="ci-title">実際のセッションで、何が起きたか。</p>
-      <p class="ci-desc">ご本人の許可を得て、対話の中身と、そこから決まった行動までを公開しています。</p>
-    </a>
   </div>
 </section>
 
@@ -425,13 +439,37 @@ src="https://www.facebook.com/tr?id=2278161986253827&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- ============ 回遊 ============ -->
+<section id="browse" class="bg-blush">
+  <div class="inner">
+    <p class="eyebrow reveal">Read More</p>
+    <h2 class="reveal d1">先に、<em>少し知って</em>もらえたら。</h2>
+    <p class="lede reveal d1">毎週noteに書いています。どんなことを考えている人間なのかは、記事や事例を読んでいただくのが一番早いかもしれません。</p>
+
+    <div class="browse-grid">
+      <a href="https://note.com/morgenrotadv" target="_blank" rel="noopener" class="browse-card reveal d1">
+        <p class="bc-label">Note</p>
+        <p class="bc-title">毎週、書いています。</p>
+        <p class="bc-desc">リーダーの孤独、キャリアの迷い、現場で転んで学んだこと。正直に書いた記事が読めます。</p>
+      </a>
+      <a href="https://morgenrotadvisory.com/cases.html" target="_blank" rel="noopener" class="browse-card reveal d2">
+        <p class="bc-label">Case Studies</p>
+        <p class="bc-title">セッション事例</p>
+        <p class="bc-desc">実際の対話の中身と、そこから決まった行動まで。ご本人の許可を得て公開しています。</p>
+      </a>
+      <a href="https://morgenrotadvisory.com" target="_blank" rel="noopener" class="browse-card reveal d3">
+        <p class="bc-label">Website</p>
+        <p class="bc-title">Morgenrot Advisory</p>
+        <p class="bc-desc">どんな考え方でコーチングをしているのか、プログラムと料金も含めて見られます。</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CTA ============ -->
 <section id="cta">
   <div class="inner">
-    <p class="eyebrow reveal">Get Started</p>
-    <h2 class="reveal d1">まずは、<em>45分</em>だけ。</h2>
-    <p class="cta-lede reveal d1">話すだけ話して、終わっていただいて構いません。</p>
-
+    <p class="eyebrow reveal" style="margin-bottom:2rem;">Get Started</p>
     <a href="https://forms.gle/D3pjK2Y4F6BkKL4BA" target="_blank" rel="noopener" class="btn-main reveal d2">無料相談を申し込む</a>
     <p class="cta-subnote reveal d2">45分・オンライン・無料</p>
 
