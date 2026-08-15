@@ -429,5 +429,34 @@ document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   });
 })();
 </script>
+   
+<script>
+// GA4 コンバージョン計測
+document.addEventListener('click', function(e) {
+  var a = e.target.closest ? e.target.closest('a') : null;
+  if (!a || !a.href || typeof gtag !== 'function') return;
+ 
+  // 無料相談フォームへ（＝申し込み）
+  if (a.href.indexOf('forms.gle') > -1) {
+    gtag('event', 'generate_lead', {
+      method: '無料相談フォーム',
+      page_location: location.pathname
+    });
+ 
+  // 公式LINE友だち追加へ
+  } else if (a.href.indexOf('line.me') > -1) {
+    gtag('event', 'line_friend_add', {
+      page_location: location.pathname
+    });
+ 
+  // サイト内から無料相談LPへ
+  } else if (a.href.indexOf('consult.html') > -1) {
+    gtag('event', 'view_consult_lp', {
+      page_location: location.pathname
+    });
+  }
+});
+</script>
+ 
 </body>
 </html>
