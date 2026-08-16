@@ -71,6 +71,15 @@ h1 em, h2 em { font-style: italic; color: #e8334a; }
 #hero h1 { margin-bottom: 1.1rem; }
 .hero-sub { font-size: 0.93rem; line-height: 2.05; color: #6d645e; }
 .hero-cta { margin-top: 2rem; }
+.hero-btns { display: flex; gap: 0.7rem; justify-content: center; flex-wrap: wrap; }
+.btn-mini {
+  display: inline-block; text-decoration: none; text-align: center;
+  background: transparent; color: #d9455a;
+  border: 1px solid #f0c4b8; border-radius: 100px;
+  font-size: 0.8rem; padding: 0.6rem 1.4rem;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.btn-mini:hover { background: #e8334a; color: #fff; border-color: #e8334a; }
 .hero-note {
   margin-top: 0.9rem; font-size: 0.76rem; color: #9a8f88; letter-spacing: 0.04em;
 }
@@ -138,6 +147,41 @@ h1 em, h2 em { font-style: italic; color: #e8334a; }
 .svc-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; line-height: 1.45; margin-bottom: 0.6rem; }
 .svc-desc { font-size: 0.83rem; line-height: 1.95; color: #6d645e; }
 
+/* ---------- セミナー ---------- */
+.offer-meta {
+  display: inline-block; background: #fff; border: 1px solid #ffd9cd;
+  border-radius: 100px; padding: 0.4rem 1.1rem; margin-top: 1.2rem;
+  font-size: 0.76rem; color: #d9455a;
+}
+.offer-list { list-style: none; margin-top: 1.6rem; }
+.offer-list li {
+  position: relative; padding: 1.1rem 0 1.1rem 1.6rem;
+  border-bottom: 1px dashed #eee0da;
+}
+.offer-list li:first-child { border-top: 1px dashed #eee0da; }
+.offer-list li::before {
+  content: ''; position: absolute; left: 0; top: 1.8rem;
+  width: 6px; height: 6px; border-radius: 50%; background: #e8334a;
+}
+.offer-list .ol-head { font-size: 0.92rem; font-weight: 500; color: #453f3b; line-height: 1.6; }
+.offer-list .ol-body { font-size: 0.85rem; line-height: 1.9; color: #6d645e; margin-top: 0.3rem; }
+.sem-dates { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.9rem; }
+.sem-dates span {
+  display: inline-block; background: #fff; border: 1px solid #f3ddd6;
+  border-radius: 10px; padding: 0.55rem 0.95rem;
+  font-size: 0.84rem; color: #453f3b;
+}
+.sem-dates b { font-weight: 500; color: #d9455a; margin-right: 0.4rem; }
+.sem-note { margin-top: 0.8rem; font-size: 0.78rem; color: #9a8f88; }
+.prose { margin-top: 1.6rem; }
+.prose p { font-size: 0.9rem; line-height: 2.05; color: #6d645e; }
+.prose p + p { margin-top: 1rem; }
+.prose strong { color: #453f3b; font-weight: 500; }
+.offer-cta { text-align: center; margin-top: 2.2rem; }
+.offer-cta .btn-main { min-width: 280px; }
+.offer-cta .cta-subnote { margin-top: 0.8rem; }
+@media (max-width: 700px) { .offer-cta .btn-main { min-width: 0; width: 100%; } }
+
 /* ---------- 物語 ---------- */
 .story-card {
   background: #fff; border-radius: 18px; padding: 2rem 1.9rem; margin-top: 1.6rem;
@@ -188,17 +232,6 @@ h1 em, h2 em { font-style: italic; color: #e8334a; }
 .svc-more:hover { opacity: 0.7; }
 
 /* ---------- 特典 ---------- */
-.gift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; margin-top: 1.8rem; }
-.gift-card {
-  background: #fff; border: 1px solid #f6e9e4; border-radius: 16px; padding: 1.6rem 1.5rem;
-}
-.gift-label {
-  font-family: 'Raleway', sans-serif; font-size: 0.56rem; letter-spacing: 0.2em;
-  text-transform: uppercase; color: #ef6a7a; margin-bottom: 0.6rem;
-}
-.gift-name { font-size: 0.94rem; font-weight: 500; color: #453f3b; margin-bottom: 0.45rem; line-height: 1.6; }
-.gift-desc { font-size: 0.82rem; line-height: 1.9; color: #7a716b; }
-
 /* ---------- 写真 ---------- */
 .story-photo {
   border-radius: 14px; overflow: hidden; line-height: 0; margin-bottom: 1.2rem;
@@ -239,19 +272,7 @@ h1 em, h2 em { font-style: italic; color: #e8334a; }
 }
 .browse-card .bc-desc { font-size: 0.8rem; line-height: 1.85; color: #7a716b; }
 
-/* ---------- CTA ---------- */
-#cta {
-  text-align: center; padding-top: 4rem; padding-bottom: 4.6rem;
-  background: linear-gradient(0deg, #fff1ea 0%, #fff8f4 55%, #fffdfb 100%);
-}
-#cta .inner { max-width: 560px; }
-.cta-lede { font-size: 0.9rem; line-height: 2; color: #6d645e; margin-bottom: 1.9rem; }
-.cta-or {
-  display: flex; align-items: center; gap: 0.9rem; justify-content: center;
-  margin: 1.5rem 0 1.1rem; color: #c3b7b0;
-  font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacing: 0.22em;
-}
-.cta-or::before, .cta-or::after { content: ''; flex: 1; height: 1px; background: #f0e2db; max-width: 90px; }
+/* ---------- 補足 ---------- */
 .cta-subnote { margin-top: 0.7rem; font-size: 0.76rem; color: #9a8f88; }
 
 footer { background: #fff; border-top: 1px solid #f6e9e4; padding: 2rem 6vw; text-align: center; }
@@ -274,7 +295,7 @@ footer a, footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; let
 @media (max-width: 700px) {
   section { padding: 3.4rem 6vw; }
   #hero { padding-top: 2.6rem; padding-bottom: 3rem; }
-  .pain-grid, .svc-grid, .gift-grid { grid-template-columns: 1fr; }
+  .pain-grid { grid-template-columns: 1fr; }
   .tl-row { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.3rem 0; }
   .tl-time { padding-top: 0; }
   .btn-main { display: block; padding-left: 1.2rem; padding-right: 1.2rem; }
@@ -312,7 +333,10 @@ src="https://www.facebook.com/tr?id=120248094793390576&ev=PageView&noscript=1"
     <h1 class="reveal d1">キャリア、<br><em>ちょっと迷子</em>かもしれない。</h1>
     <p class="hero-sub reveal d1">転職すべきか、このまま続けるべきか。<br>社内でも家でも、話しづらい話ってありますよね。<br>まとまっていなくて大丈夫です。話すところから始めましょう。<br>話すことで、今の迷いが整理され、次に何をすべきかが見えてきます。</p>
     <div class="hero-cta reveal d2">
-      <a href="https://forms.gle/D3pjK2Y4F6BkKL4BA" target="_blank" rel="noopener" class="btn-main">無料相談を申し込む</a>
+      <div class="hero-btns">
+        <a href="https://forms.gle/D3pjK2Y4F6BkKL4BA" target="_blank" rel="noopener" class="btn-mini" data-cv="consult">個別無料相談会</a>
+        <a href="https://forms.gle/wTVsjoDE7cWeGkNT9" target="_blank" rel="noopener" class="btn-mini" data-cv="seminar">少人数無料セミナー</a>
+      </div>
     </div>
   </div>
 </section>
@@ -328,55 +352,28 @@ src="https://www.facebook.com/tr?id=120248094793390576&ev=PageView&noscript=1"
       <div class="reveal d2">自分の強みを、うまく言葉にできない</div>
       <div class="reveal d2">やりたいことが、自分でもよくわからない</div>
       <div class="reveal d2">昇進したけれど、これが望んだ道か自信がない</div>
-      <div class="reveal d2">管理職を目指したいが、何が足りないかわからない</div>
       <div class="reveal d3">この先10年のキャリアが描けない</div>
-      <div class="reveal d3">市場価値が上がっている実感がない</div>
     </div>
   </div>
 </section>
 
-<!-- ============ 無料相談 ============ -->
-<section id="session" class="bg-blush">
+<!-- ============ キャリアコーチングとは ============ -->
+<section id="about-coaching" class="bg-blush">
   <div class="inner">
-    <p class="eyebrow reveal">The 45 Minutes</p>
-    <h2 class="reveal d1">45分、こんな流れです。</h2>
-
-
-    <div class="timeline">
-      <div class="tl-row reveal">
-        <div class="tl-time">最初の10分</div>
-        <div>
-          <p class="tl-head">おたがいを知る時間。</p>
-          <p class="tl-body">まず私自身のことをお話しします。どんなキャリアを歩み、なぜコーチングをしているのか。そのうえで、あなたのことを聞かせてください。いまの立場や課題だけでなく、仕事で何を大切にしているか、これからどうありたいか。この相互理解が、良い時間の土台になります。</p>
-        </div>
-      </div>
-
-      <div class="tl-row reveal">
-        <div class="tl-time">次の25分</div>
-        <div>
-          <p class="tl-head">課題を一緒に掘り下げる。</p>
-          <p class="tl-body">「このまま今の会社にいていいのか」「転職すべきか迷っている」「自分の強みが何かわからない」「やりたいことが見つからない」「昇進したが、これが望んだ道か分からない」——どんな切り口でも構いません。まだ言葉にならないモヤモヤのままでも大丈夫です。私からの問いで、何が本当の問題なのかを一緒に整理していきます。</p>
-          <p class="tl-body">これはコーチングの実際の進め方そのものなので、「コーチングとはこういうものか」を体験していただく時間にもなります。</p>
-        </div>
-      </div>
-
-      <div class="tl-row reveal">
-        <div class="tl-time">最後の10分</div>
-        <div>
-          <p class="tl-head">次の一歩を決める。</p>
-          <p class="tl-body">今日の気づきを言葉にし、明日から試せる小さな一歩を一つ、一緒に決めます。</p>
-        </div>
-      </div>
+    <p class="eyebrow reveal">What is Career Coaching</p>
+    <h2 class="reveal d1">キャリアコーチング<em>とは</em>。</h2>
+    <div class="prose reveal d1">
+      <p>「転職すべきかどうか」を、誰かに決めてもらう時間ではありません。</p>
+      <p>転職エージェントは、求人を紹介してくれます。コンサルタントは、答えを出してくれます。コーチングはそのどちらでもなく、<strong>あなたの中にすでにある判断の軸を、対話を通じて言葉にしていく</strong>時間です。</p>
+      <p>軸が言葉になると、転職する・しないを含めて、目の前の選択を自分で決められるようになります。誰かの正解ではなく、自分の納得で選べるようになること。それがキャリアコーチングのゴールです。</p>
     </div>
-
-    <p class="goal-note reveal">終わったときに、来たときより少しだけ前に進んでいる——それがこの45分のゴールです。</p>
   </div>
 </section>
 
 <!-- ============ 物語 ============ -->
-<section id="story" class="bg-blush">
+<section id="story" class="bg-cream">
   <div class="inner">
-    <p class="eyebrow reveal">Why Me</p>
+    <p class="eyebrow reveal">Why Morgenrot</p>
     <h2 class="reveal d1">私も、<em>同じところ</em>にいました。</h2>
     <div class="story-card reveal d1">
       <div class="story-photo">
@@ -387,29 +384,113 @@ src="https://www.facebook.com/tr?id=120248094793390576&ev=PageView&noscript=1"
       <p>なぜわからないんだ、と思っていた。今振り返れば、わからなかったのは私の方でした。</p>
       <p>その後、リーダーシップとコーチングを学び直し、Uber Eats・ADK・SmartNewsで実践すると、チームが動き始めました。あのつまずきがなければ、いまの自分はいません。</p>
       <p>転職も、昇進も、立ち止まった時期も経験しました。チームの悩みもキャリアの迷いも、どちらも通ってきた道です。</p>
+      <p>だから Morgenrot Advisory は、正解を渡す場所ではありません。迷っている時間そのものに、隣で付き合う場所です。</p>
     </div>
   </div>
 </section>
 
-<!-- ============ 特典 ============ -->
-<section id="gift" class="bg-cream">
+<!-- ============ 無料相談 ============ -->
+<section id="session" class="bg-blush">
   <div class="inner">
-    <p class="eyebrow reveal">Before We Talk</p>
-    <h2 class="reveal d1">相談前に、<em>考えを整理する</em>ツールを。</h2>
-    <p class="lede reveal d1">公式LINEの友だち登録で受け取れます。先に使っておくと、45分がもっと深くなります。</p>
+    <p class="eyebrow reveal">Option 01</p>
+    <h2 class="reveal d1">個別無料相談会</h2>
+    <p class="lede reveal d1">1対1で、じっくり話す時間です。まとまっていない状態のままで大丈夫です。</p>
+    <p class="offer-meta reveal d1">45分・オンライン・1対1・無料</p>
 
-    <div class="gift-grid" style="grid-template-columns:1fr; max-width:520px;">
-      <div class="gift-card reveal d2">
-        <p class="gift-label">Template</p>
-        <p class="gift-name">PDP｜自己成長プラン・テンプレート</p>
-        <p class="gift-desc">これまでの棚卸しと、これからの成長計画を書き出すためのテンプレート。頭の中にあるものを、一度紙の上に並べてみるための型です。</p>
-      </div>
+    <ul class="offer-list">
+      <li class="reveal d1">
+        <p class="ol-head">最初の10分 ─ おたがいを知る</p>
+        <p class="ol-body">まず私自身のことをお話しします。そのうえで、いまの立場や課題だけでなく、仕事で何を大切にしているかを聞かせてください。</p>
+      </li>
+      <li class="reveal d2">
+        <p class="ol-head">次の25分 ─ 課題を一緒に掘り下げる</p>
+        <p class="ol-body">まだ言葉にならないモヤモヤのままで構いません。私からの問いで、何が本当の問題なのかを一緒に整理していきます。コーチングの実際を体験していただく時間にもなります。</p>
+      </li>
+      <li class="reveal d3">
+        <p class="ol-head">最後の10分 ─ 次の一歩を決める</p>
+        <p class="ol-body">今日の気づきを言葉にし、明日から試せる小さな一歩を一つ、一緒に決めます。</p>
+      </li>
+    </ul>
+
+    <div class="offer-cta reveal d3">
+      <a href="https://forms.gle/D3pjK2Y4F6BkKL4BA" target="_blank" rel="noopener" class="btn-main" data-cv="consult">個別無料相談会に申し込む</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ セミナー ============ -->
+<section id="seminar" class="bg-cream">
+  <div class="inner">
+    <p class="eyebrow reveal">Option 02</p>
+    <h2 class="reveal d1">少人数無料セミナー</h2>
+    <p class="lede reveal d1">いきなり1対1は気が重い、という方へ。話さずに聞いているだけでも大丈夫です。</p>
+    <p class="offer-meta reveal d1">45分・オンライン・少人数・無料</p>
+    <div class="sem-dates reveal d1">
+      <span><b>8月30日（日）</b>10:00–10:45</span>
+      <span><b>9月1日（火）</b>20:00–20:45</span>
+    </div>
+    <p class="sem-note reveal d1">ご都合のよい回を、お申し込みフォームからお選びください。</p>
+
+    <ul class="offer-list">
+      <li class="reveal d1">
+        <p class="ol-head">コーチング事例の共有</p>
+        <p class="ol-body">実際のセッションで何が起きたのか。ご本人の許可を得た事例をご紹介します。</p>
+      </li>
+      <li class="reveal d2">
+        <p class="ol-head">コーチングセッションのご紹介</p>
+        <p class="ol-body">どんな流れで、どんな問いを扱うのか。進め方をご説明します。</p>
+      </li>
+      <li class="reveal d2">
+        <p class="ol-head">Morgenrot Advisory のご紹介</p>
+        <p class="ol-body">どんな考え方でコーチングをしているのかをお話しします。</p>
+      </li>
+      <li class="reveal d3">
+        <p class="ol-head">質疑応答</p>
+        <p class="ol-body">聞きたいことがあれば、その場でどうぞ。聞くだけの参加でも構いません。</p>
+      </li>
+      <li class="reveal d3">
+        <p class="ol-head">PDP｜自己成長プラン・テンプレートの進呈</p>
+        <p class="ol-body">ご参加の方に、これからの成長計画を書き出すためのテンプレートをお渡しします。</p>
+      </li>
+    </ul>
+
+    <div class="offer-cta reveal d3">
+      <a href="https://forms.gle/wTVsjoDE7cWeGkNT9" target="_blank" rel="noopener" class="btn-main" data-cv="seminar">少人数無料セミナーに申し込む</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 公式LINE ============ -->
+<section id="line" class="bg-blush">
+  <div class="inner">
+    <p class="eyebrow reveal">Option 03</p>
+    <h2 class="reveal d1">公式LINE</h2>
+    <p class="lede reveal d1">まだ人に話す段階ではない、という方へ。まずは情報だけ受け取っておく、という選び方もあります。</p>
+    <p class="offer-meta reveal d1">登録無料・いつでも解除できます</p>
+
+    <ul class="offer-list">
+      <li class="reveal d1">
+        <p class="ol-head">PDP｜自己成長プラン・テンプレートの進呈</p>
+        <p class="ol-body">これまでの棚卸しと、これからの成長計画を書き出すためのテンプレートです。</p>
+      </li>
+      <li class="reveal d2">
+        <p class="ol-head">セミナー日程のご案内</p>
+        <p class="ol-body">少人数セミナーの開催が決まったら、こちらからお知らせします。</p>
+      </li>
+      <li class="reveal d3">
+        <p class="ol-head">気になったときに、そのまま質問できます</p>
+        <p class="ol-body">申し込みの前に聞いておきたいことがあれば、トークからどうぞ。</p>
+      </li>
+    </ul>
+
+    <div class="offer-cta reveal d3">
+      <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="btn-main">公式LINEに登録する</a>
     </div>
   </div>
 </section>
 
 <!-- ============ 回遊 ============ -->
-<section id="browse" class="bg-blush">
+<section id="browse" class="bg-cream">
   <div class="inner">
     <p class="eyebrow reveal">Read More</p>
     <h2 class="reveal d1">先に、<em>少し知って</em>もらえたら。</h2>
@@ -425,26 +506,12 @@ src="https://www.facebook.com/tr?id=120248094793390576&ev=PageView&noscript=1"
         <p class="bc-title">セッション事例</p>
         <p class="bc-desc">実際の対話の中身と、そこから決まった行動まで。ご本人の許可を得て公開しています。</p>
       </a>
-      <a href="https://morgenrotadvisory.com" target="_blank" rel="noopener" class="browse-card reveal d3">
-        <p class="bc-label">Website</p>
-        <p class="bc-title">Morgenrot Advisory</p>
-        <p class="bc-desc">どんな考え方でコーチングをしているのか、プログラムと料金も含めて見られます。</p>
+      <a href="https://morgenrotadvisory.com/career.html" target="_blank" rel="noopener" class="browse-card reveal d3">
+        <p class="bc-label">Program</p>
+        <p class="bc-title">キャリア・コーチング</p>
+        <p class="bc-desc">実際にご一緒する場合のプログラムと料金。無料相談のあとに続けるかどうかは、読んでから決めていただけます。</p>
       </a>
     </div>
-  </div>
-</section>
-
-<!-- ============ CTA ============ -->
-<section id="cta">
-  <div class="inner">
-    <p class="eyebrow reveal" style="margin-bottom:2rem;">Get Started</p>
-    <a href="https://forms.gle/D3pjK2Y4F6BkKL4BA" target="_blank" rel="noopener" class="btn-main reveal d2">無料相談を申し込む</a>
-    <p class="cta-subnote reveal d2">45分・オンライン・無料</p>
-
-    <div class="cta-or reveal d2">OR</div>
-
-    <a href="https://line.me/R/ti/p/@452hrzax" target="_blank" rel="noopener" class="btn-sub reveal d3">まずは公式LINEに登録する</a>
-    <p class="cta-subnote reveal d3">PDP｜自己成長プラン・テンプレートを進呈</p>
   </div>
 </section>
 
@@ -452,7 +519,7 @@ src="https://www.facebook.com/tr?id=120248094793390576&ev=PageView&noscript=1"
   <div class="f-links">
     <a href="https://morgenrotadvisory.com" target="_blank" rel="noopener">サイトトップ ↗</a>
     <a href="https://morgenrotadvisory.com/cases.html" target="_blank" rel="noopener">セッション事例 ↗</a>
-    <a href="https://morgenrotadvisory.com/coaching.html" target="_blank" rel="noopener">サービス・料金 ↗</a>
+    <a href="https://morgenrotadvisory.com/career.html" target="_blank" rel="noopener">サービス・料金 ↗</a>
     <a href="https://morgenrotadvisory.com/faq.html" target="_blank" rel="noopener">よくあるご質問 ↗</a>
   </div>
   <div class="f-links">
@@ -489,7 +556,7 @@ document.addEventListener('click', function(e) {
   // 無料相談フォームへ（＝申し込み）
   if (a.href.indexOf('forms.gle') > -1) {
     gtag('event', 'generate_lead', {
-      method: '無料相談フォーム',
+      method: a.dataset.cv === 'seminar' ? '少人数セミナー' : '個別無料相談',
       page_location: location.pathname
     });
   // 公式LINE友だち追加へ
