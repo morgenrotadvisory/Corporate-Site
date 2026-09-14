@@ -334,7 +334,7 @@ src="https://www.facebook.com/tr?id=120248094793370576&ev=PageView&noscript=1"
     <p class="hero-sub reveal d1">仕事では、それなりに成果を出してきた。でも、この先どうする？ まとまっていなくて大丈夫です。45分、一緒にキャリアを整理します。</p>
     <div class="hero-cta reveal d2">
       <div class="hero-btns">
-        <a href="https://forms.gle/D3pjK2Y4F6BkKL4BA" target="_blank" rel="noopener" class="btn-mini" data-cv="consult">個別無料相談会</a>
+        <a href="consult-career-form.html" class="btn-mini" data-cv="consult">個別無料相談会</a>
         <a href="https://forms.gle/8E8qfmn6qw23RcE48" target="_blank" rel="noopener" class="btn-mini" data-cv="seminar">少人数無料セミナー</a>
       </div>
     </div>
@@ -417,7 +417,7 @@ src="https://www.facebook.com/tr?id=120248094793370576&ev=PageView&noscript=1"
     </ul>
 
     <div class="offer-cta reveal d3">
-      <a href="https://forms.gle/D3pjK2Y4F6BkKL4BA" target="_blank" rel="noopener" class="btn-main" data-cv="consult">個別無料相談会に申し込む</a>
+      <a href="consult-career-form.html" class="btn-main" data-cv="consult">個別無料相談会に申し込む</a>
     </div>
   </div>
 </section>
@@ -540,7 +540,7 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
 // Meta Pixel: 無料相談の申し込みクリックを Lead として計測
-document.querySelectorAll('a[href*="forms.gle"]').forEach(function(a) {
+document.querySelectorAll('a[href*="forms.gle"], a[href*="consult-career-form"]').forEach(function(a) {
   a.addEventListener('click', function() {
     if (typeof fbq === 'function') {
       fbq('track', 'Lead', { content_name: '無料相談申込' });
@@ -556,7 +556,7 @@ document.addEventListener('click', function(e) {
   if (!a || !a.href || typeof gtag !== 'function') return;
  
   // 無料相談フォームへ（＝申し込み）
-  if (a.href.indexOf('forms.gle') > -1) {
+  if (a.href.indexOf('forms.gle') > -1 || a.href.indexOf('consult-career-form') > -1) {
     gtag('event', 'generate_lead', {
       method: a.dataset.cv === 'seminar' ? '少人数セミナー' : '個別無料相談',
       page_location: location.pathname
