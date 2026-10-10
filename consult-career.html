@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>キャリアの無料相談 | Morgenrot Advisory</title>
-<meta name="description" content="転職すべきか、このまま続けるべきか。キャリアの迷いを45分話してみませんか。Morgenrot Advisoryの無料オンライン相談">
+<meta name="description" content="成果を出してきたのに、この先のキャリアに迷う30〜40代の管理職へ。45分の無料オンライン相談で、仕事の軸・選択肢・次の一歩を整理します。Morgenrot Advisory">
 <meta property="og:title" content="キャリアの無料相談（45分・オンライン） | Morgenrot Advisory">
 <meta property="og:description" content="キャリア、ちょっと迷子かもしれない。そんな話を45分だけ、そのまま話せます。">
 <meta property="og:image" content="https://morgenrotadvisory.com/Logo_Morgenrot.png">
@@ -331,6 +331,36 @@ a:focus-visible { outline: 2px solid #e8334a; outline-offset: 3px; }
 #final-cta .lede { margin-bottom:0; }
 .line-compact .lede { margin-bottom:1rem; }
 @media (max-width:700px){ .ba-grid{ grid-template-columns:1fr; } .ba-arrow{ transform:rotate(90deg); padding:0.2rem 0; } }
+
+/* --- LP改善 2026-10: ファーストビュー／持ち帰り／差別化 --- */
+.hero-take { margin:1.6rem auto 0; max-width:440px; background:rgba(255,255,255,0.75); border:1px solid #f6ddd4; border-radius:14px; padding:1rem 1.2rem 0.9rem; text-align:left; }
+.ht-label { font-size:0.72rem; letter-spacing:0.12em; color:#d9455a; font-weight:500; margin-bottom:0.4rem; text-align:center; }
+.hero-take ul { list-style:none; }
+.hero-take li { position:relative; padding:0.3rem 0 0.3rem 1.4rem; font-size:0.86rem; line-height:1.6; color:#453f3b; }
+.hero-take li::before { content:'✓'; position:absolute; left:0.1rem; top:0.3rem; color:#e8334a; font-weight:500; }
+.sv-lead { margin-top:1.6rem !important; font-weight:500; color:#453f3b !important; }
+.story-values { list-style:none; margin-top:0.6rem; }
+.story-values li { padding:1rem 0 1rem 1.1rem; border-left:2px solid #f3c8bf; margin-top:0.7rem; }
+.story-card .story-values p + p { margin-top:0.3rem; }
+.sv-head { font-size:0.93rem !important; font-weight:500; color:#453f3b !important; line-height:1.6 !important; }
+.sv-body { font-size:0.85rem !important; line-height:1.9 !important; }
+.diff-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem; margin-top:1.8rem; }
+.diff-col { background:#fff; border:1px solid #f0e2da; border-radius:14px; padding:1.3rem 1.2rem; }
+.diff-col.is-us { border:1.5px solid #e8334a; box-shadow:0 8px 22px rgba(232,51,74,0.10); }
+.dc-name { font-size:0.88rem; font-weight:500; color:#7a716b; margin-bottom:0.8rem; padding-bottom:0.6rem; border-bottom:1px dashed #eee0da; }
+.is-us .dc-name { color:#e8334a; }
+.diff-col dt { font-family:'Raleway',sans-serif; font-size:0.56rem; letter-spacing:0.2em; text-transform:uppercase; color:#b3a89f; margin-top:0.7rem; }
+.diff-col dt:first-child { margin-top:0; }
+.diff-col dd { font-size:0.85rem; line-height:1.65; color:#55504c; }
+.is-us dd { color:#453f3b; font-weight:500; }
+.takeaway { margin-top:2.2rem; }
+.tk-label { text-align:center; font-size:0.95rem; font-weight:500; color:#453f3b; margin-bottom:1rem; }
+.tk-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem; }
+.tk-card { background:#fff; border:1px solid #ffd9cd; border-radius:14px; padding:1.2rem 1.1rem; }
+.tk-no { font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:#e8334a; line-height:1; }
+.tk-head { font-size:0.9rem; font-weight:500; color:#453f3b; line-height:1.55; margin:0.5rem 0 0.4rem; }
+.tk-body { font-size:0.82rem; line-height:1.85; color:#6d645e; }
+@media (max-width:700px){ .diff-grid, .tk-grid { grid-template-columns:1fr; } .hero-sub br { display:none; } }
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -358,10 +388,18 @@ src="https://www.facebook.com/tr?id=120248094793370576&ev=PageView&noscript=1"
     <a href="https://morgenrotadvisory.com" target="_blank" rel="noopener">
       <img src="Logo_Morgenrot.png" alt="Morgenrot Advisory" class="hero-logo">
     </a>
-    <span class="hero-badge reveal d1">30〜40代のキャリア相談</span>
-    <h1 class="reveal d1">キャリア、<br><em>ちょっと迷子</em>かもしれない。</h1>
-    <p class="hero-sub reveal d1">仕事では、それなりに成果を出してきた。でも、この先どうする？ まとまっていなくて大丈夫です。45分、一緒にキャリアを整理します。</p>
-    <p class="hero-credit reveal d1">Google・Uber Eats・ADKで事業と組織を率いてきたコーチが伴走します。</p>
+    <span class="hero-badge reveal d1">成果を出してきた管理職のための、キャリア相談</span>
+    <h1 class="reveal d1">キャリア、<br><em>ちょっと迷子</em><span style="white-space:nowrap">かもしれない。</span></h1>
+    <p class="hero-sub reveal d1">管理職として、成果は出してきた。<br>なのに、この先のキャリアだけが見えない。<br>そんな30〜40代の方と、45分で考えを整理します。</p>
+    <div class="hero-take reveal d1">
+      <p class="ht-label">45分で持ち帰れるもの</p>
+      <ul>
+        <li>仕事で大切にしたい「軸」</li>
+        <li>残る／動く、それぞれの選択肢</li>
+        <li>明日から試せる、次の一歩</li>
+      </ul>
+    </div>
+    <p class="hero-credit reveal d1">Google・Uber Eatsで事業と組織を率い、自らも昇進と転職のたびに迷ってきたコーチが、1対1でお話しします。</p>
     <div class="hero-cta reveal d2">
       <a href="consult-career-form.html" class="btn-main" data-cv="consult">45分の無料相談を予約する</a>
     </div>
@@ -374,10 +412,10 @@ src="https://www.facebook.com/tr?id=120248094793370576&ev=PageView&noscript=1"
     <p class="eyebrow reveal">Your Situation</p>
     <h2 class="reveal d1">こんな悩み、<em>ありませんか</em>？</h2>
     <div class="pain-grid">
-      <div class="reveal d1">このまま今の会社にいていいのか</div>
-      <div class="reveal d1">転職した方がいいのか</div>
-      <div class="reveal d2">管理職を目指すべきなのか</div>
-      <div class="reveal d2">自分の経験を、この先どう活かすのか</div>
+      <div class="reveal d1">管理職になったが、この先の目標が見えない</div>
+      <div class="reveal d1">このまま今の会社にいていいのか、わからない</div>
+      <div class="reveal d2">転職すべきか、残るべきか決めきれない</div>
+      <div class="reveal d2">自分の経験が社外で通用するのか不安</div>
       <div class="reveal d3">40代・50代のキャリアがイメージできない</div>
     </div>
   </div>
@@ -425,15 +463,63 @@ src="https://www.facebook.com/tr?id=120248094793370576&ev=PageView&noscript=1"
       </div>
       <p class="story-who">信濃 伸明<span>Morgenrot Advisory 代表 / エグゼクティブコーチ</span></p>
       <p class="career-path">Google <span>→</span> Uber Eats <span>→</span> ADK</p>
-      <p><strong>Google</strong>でチームを持ち、<strong>Uber Eats Japan</strong>で営業組織を率い、<strong>ADK</strong>で経営変革に関わってきました。どの現場でも、「人を通じて成果を出す」難しさに向き合う日々でした。</p>
-      <p>昇進も、複数回の転職も経験しています。順調に見える裏側で、「このままでいいのか」と何度も立ち止まってきました。答えがすぐに出たことは、一度もありません。</p>
-      <p>だからこそ、資格よりもこの回り道そのものが、相談相手としての財産だと思っています。同じように迷い、選んできた一人として、あなたの「次の一手」を隣で一緒に考えます。</p>
+      <p><strong>Google</strong>でチームを持ち、<strong>Uber Eats Japan</strong>で営業組織を率い、<strong>ADK</strong>で経営変革に関わってきました。昇進も、複数回の転職も経験し、そのたびに「このままでいいのか」と立ち止まってきました。</p>
+      <p class="sv-lead">この経験が、相談でこう活きます。</p>
+      <ul class="story-values">
+        <li>
+          <p class="sv-head">管理職の迷いを、内側から知っている</p>
+          <p class="sv-body">Googleで最年少のマネージャーになり、リーダーとして壁にぶつかりました。「成果は出しているのに迷う」状態を、実感として理解しています。</p>
+        </li>
+        <li>
+          <p class="sv-head">残る判断も、動く判断もしてきた</p>
+          <p class="sv-body">外資・日系・スタートアップを渡ってきました。転職を勧めるのでも引き止めるのでもなく、両方の現実を踏まえて一緒に考えます。</p>
+        </li>
+        <li>
+          <p class="sv-head">迷う管理職を、上司として育ててきた</p>
+          <p class="sv-body">悩む管理職を直属の部下として育成してきました。組織の中でキャリアをどう開くか、評価する側の視点も含めてお話しできます。</p>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
+<!-- ============ ④-2 一般的なキャリア相談との違い ============ -->
+<section id="difference" class="bg-blush">
+  <div class="inner">
+    <p class="eyebrow reveal">Difference</p>
+    <h2 class="reveal d1">一般的なキャリア相談との、<br><em>違い</em>。</h2>
+    <div class="diff-grid reveal d1">
+      <div class="diff-col">
+        <p class="dc-name">転職エージェント</p>
+        <dl>
+          <dt>目的</dt><dd>求人の紹介</dd>
+          <dt>前提</dt><dd>転職すること</dd>
+          <dt>相談相手</dt><dd>人材紹介の担当者</dd>
+        </dl>
+      </div>
+      <div class="diff-col">
+        <p class="dc-name">一般的なキャリア相談</p>
+        <dl>
+          <dt>目的</dt><dd>キャリアの棚卸し</dd>
+          <dt>前提</dt><dd>理論やフレームで整理</dd>
+          <dt>相談相手</dt><dd>キャリア支援の専門家</dd>
+        </dl>
+      </div>
+      <div class="diff-col is-us">
+        <p class="dc-name">Morgenrot Advisory</p>
+        <dl>
+          <dt>目的</dt><dd>あなたの判断の軸を言葉にする</dd>
+          <dt>前提</dt><dd>転職ありき・残留ありきではない</dd>
+          <dt>相談相手</dt><dd>事業と組織を率いてきた元管理職</dd>
+        </dl>
+      </div>
+    </div>
+    <p class="lede reveal d1">誰かの正解ではなく、自分の納得で選べるようになること。それがここでの相談のゴールです。</p>
+  </div>
+</section>
+
 <!-- ============ ⑤ ケーススタディ ============ -->
-<section id="cases" class="bg-blush">
+<section id="cases" class="bg-cream">
   <div class="inner">
     <p class="eyebrow reveal">Case Studies</p>
     <h2 class="reveal d1">実際に、<em>こんな相談</em>がありました。</h2>
@@ -456,25 +542,12 @@ src="https://www.facebook.com/tr?id=120248094793370576&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ============ ⑥ キャリアコーチングとは ============ -->
-<section id="about-coaching" class="bg-cream">
-  <div class="inner">
-    <p class="eyebrow reveal">What is Career Coaching</p>
-    <h2 class="reveal d1">キャリアコーチング<em>とは</em>。</h2>
-    <div class="prose reveal d1">
-      <p>「転職すべきかどうか」を、誰かに決めてもらう時間ではありません。</p>
-      <p>転職エージェントは、求人を紹介してくれます。コンサルタントは、答えを出してくれます。コーチングはそのどちらでもなく、<strong>あなたの中にすでにある判断の軸を、対話を通じて言葉にしていく</strong>時間です。</p>
-      <p>軸が言葉になると、転職する・しないを含めて、目の前の選択を自分で決められるようになります。誰かの正解ではなく、自分の納得で選べるようになること。それがキャリアコーチングのゴールです。</p>
-    </div>
-  </div>
-</section>
-
 <!-- ============ ⑦ 45分の無料相談ですること ============ -->
 <section id="session" class="bg-blush">
   <div class="inner">
     <p class="eyebrow reveal">Free Session</p>
-    <h2 class="reveal d1">45分の無料相談で、<em>すること</em>。</h2>
-    <p class="lede reveal d1">1対1で、じっくり話す時間です。まとまっていない状態のままで大丈夫です。</p>
+    <h2 class="reveal d1">45分で、<em>何が整理できるのか</em>。</h2>
+    <p class="lede reveal d1">まとまっていない状態のままで大丈夫です。45分を3つに分けて、迷いを言葉にしていきます。</p>
     <p class="offer-meta reveal d1">45分・オンライン・1対1・無料</p>
 
     <ul class="offer-list">
@@ -491,6 +564,27 @@ src="https://www.facebook.com/tr?id=120248094793370576&ev=PageView&noscript=1"
         <p class="ol-body">今日の気づきを言葉にし、明日から試せる小さな一歩を一つ、一緒に決めます。</p>
       </li>
     </ul>
+
+    <div class="takeaway reveal d1">
+      <p class="tk-label">45分後、持ち帰れるもの</p>
+      <div class="tk-grid">
+        <div class="tk-card">
+          <p class="tk-no">01</p>
+          <p class="tk-head">仕事で大切にしたい「軸」</p>
+          <p class="tk-body">何に納得し、何に違和感があるのか。これからの判断の基準を、自分の言葉で持ち帰れます。</p>
+        </div>
+        <div class="tk-card">
+          <p class="tk-no">02</p>
+          <p class="tk-head">残る／動く、それぞれの選択肢</p>
+          <p class="tk-body">転職か現職かの二択ではなく、取りうる選択肢と、それぞれを選ぶ条件を整理します。</p>
+        </div>
+        <div class="tk-card">
+          <p class="tk-no">03</p>
+          <p class="tk-head">明日から試せる、次の一歩</p>
+          <p class="tk-body">大きな決断ではなく、来週までにできる小さな行動をひとつ決めて終わります。</p>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
