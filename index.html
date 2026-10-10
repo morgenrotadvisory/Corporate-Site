@@ -640,6 +640,21 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
 @media (max-width: 480px) {
   #float-line-widget { right: 0.7rem; bottom: 0.7rem; max-width: 200px; padding: 0.9rem 1.1rem 0.9rem 1rem; }
 }
+
+/* ILLUSTRATIONS */
+#hero { padding-bottom: clamp(120px, 16vw, 230px); }
+.hero-scene { position: absolute; left: 0; right: 0; bottom: 0; height: clamp(120px, 16vw, 230px); z-index: 0; pointer-events: none; }
+.hero-scene svg { width: 100%; height: 100%; display: block; }
+.about-grid { display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: center; }
+.about-illust svg { width: 100%; height: auto; display: block; }
+.pain-col-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.pain-col-head svg { width: 56px; height: 56px; flex-shrink: 0; stroke: #e8334a; fill: none; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; }
+.pain-col-head .pain-col-title { margin-bottom: 0; }
+.ridge-divider { display: block; width: 100%; max-width: 960px; height: 28px; margin: 0 auto; }
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-illust { max-width: 260px; margin: 0 auto; }
+}
 </style>
 </head>
 <body>
@@ -665,6 +680,18 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
       コーチングと企業研修・講演を通じて、リーダーとチームの夜明けに伴走します。
     </p>
   </div>
+  <div class="hero-scene" aria-hidden="true">
+    <svg viewBox="0 0 1440 230" preserveAspectRatio="xMidYMax slice">
+      <circle cx="860" cy="118" r="70" fill="#fbd9c4"/>
+      <circle cx="860" cy="118" r="46" fill="#f7b89a"/>
+      <path d="M0 230 L0 150 L140 110 L260 135 L400 70 L520 120 L640 95 L760 140 L900 85 L1040 125 L1180 75 L1300 115 L1440 90 L1440 230 Z" fill="#fbe4e7"/>
+      <path d="M0 230 L0 175 L180 140 L330 168 L470 118 L600 160 L720 128 L880 172 L1010 136 L1150 165 L1290 130 L1440 158 L1440 230 Z" fill="#f4b3bc"/>
+      <path d="M0 230 L0 200 L220 182 L380 196 L560 168 L700 190 L860 176 L1040 198 L1220 180 L1440 194 L1440 230 Z" fill="#e8576a"/>
+      <path d="M470 118 L486 129 L478 132 L470 126 L462 133 L455 128 Z" fill="#fff" opacity="0.8"/>
+      <line x1="470" y1="118" x2="470" y2="96" stroke="#c0192e" stroke-width="2"/>
+      <path d="M470 96 L488 102 L470 108 Z" fill="#e8334a"/>
+    </svg>
+  </div>
 </section>
 
 <!-- ABOUT -->
@@ -673,10 +700,30 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
     <p class="section-label reveal">About</p>
     <h2 class="section-title reveal d1">リーダーの隣で、<br><em>共に夜明けを。</em></h2>
     <div class="section-rule reveal d2"></div>
-    <div class="about-text reveal d2">
+    <div class="about-grid">
+      <div class="about-text reveal d2">
       <p>Morgenrot とはドイツ語で「夜明けの赤み」を意味し、登山者が夜明けに山頂で見る赤く染まる空の色を指す言葉です。様々なチャレンジに向き合うリーダーに寄り添い、共に夜明けを迎えること——そうした思いで、代表信濃伸明が立ち上げました。</p>
       <p>孤独な意思決定、チームとのすれ違い、孤独、自分らしいリーダーシップが見えない夜——そんな夜の中にいるリーダーの隣に。</p>
       <p>あなたの中にある本質的な強さと、ありたい姿に向き合いながら、共に夜明けへ歩みます。</p>
+    </div>
+      <div class="about-illust reveal d3" aria-hidden="true">
+        <svg viewBox="0 0 300 260">
+          <circle cx="150" cy="130" r="118" fill="#fdf0f1"/>
+          <circle cx="214" cy="118" r="30" fill="#fbd9c4"/>
+          <path d="M32 200 L92 150 L130 172 L176 128 L226 170 L268 152 L268 200 Z" fill="#f4b3bc"/>
+          <path d="M40 226 C 60 206, 100 196, 150 120 C 200 196, 240 206, 260 226 Z" fill="#e8576a"/>
+          <path d="M150 120 L166 144 L150 138 L136 146 Z" fill="#fff" opacity="0.75"/>
+          <g fill="#7a1c2a">
+            <circle cx="141" cy="83" r="6"/>
+            <path d="M134 91 Q141 88 148 91 L150 116 L144 116 L141 104 L138 116 L132 116 Z"/>
+            <circle cx="160" cy="86" r="5.5"/>
+            <path d="M153 93 Q160 90 167 93 L168 116 L163 116 L160 105 L157 116 L152 116 Z"/>
+            <rect x="166" y="94" width="6" height="11" rx="2"/>
+          </g>
+          <path d="M148 96 L156 98" stroke="#7a1c2a" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M152 99 L176 92" stroke="#7a1c2a" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
@@ -688,7 +735,7 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
     <div class="pain-cols">
       <div class="reveal d1">
         <p class="pain-col-label">Individual</p>
-        <p class="pain-col-title">リーダーとして、こんな壁に直面していませんか？</p>
+        <div class="pain-col-head" aria-hidden="false"><svg viewBox="0 0 56 56"><circle cx="22" cy="17" r="7"/><path d="M9 46 C9 33 35 33 35 46"/><path d="M38 14 Q46 14 46 21 Q46 27 40 27 L38 31 L37 27"/><circle cx="42" cy="21" r="0.6"/></svg><p class="pain-col-title">リーダーとして、こんな壁に直面していませんか？</p></div>
         <div class="pain-list">
           <div class="pain-item">マネージャーになったが、何から手をつけるべきかわからない</div>
           <div class="pain-item">自分が答えを出さないと、仕事が前に進まない</div>
@@ -699,7 +746,7 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
       </div>
       <div class="reveal d2">
         <p class="pain-col-label">Corporate</p>
-        <p class="pain-col-title">組織として、こんな課題を抱えていませんか？</p>
+        <div class="pain-col-head"><svg viewBox="0 0 56 56"><circle cx="28" cy="14" r="6"/><circle cx="13" cy="26" r="5"/><circle cx="43" cy="26" r="5"/><path d="M18 46 C18 36 38 36 38 46"/><path d="M5 46 C5 38 21 38 21 44"/><path d="M51 46 C51 38 35 38 35 44"/></svg><p class="pain-col-title">組織として、こんな課題を抱えていませんか？</p></div>
         <div class="pain-list">
           <div class="pain-item">管理職が一人で抱え込み、部下が育たない</div>
           <div class="pain-item">会議で意見が出ず、上司の判断を待つ空気がある</div>
@@ -714,6 +761,7 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
 
 <!-- SERVICES -->
 <section id="services">
+  <svg class="ridge-divider" style="margin-bottom:3rem" viewBox="0 0 960 28" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26 L140 18 L230 22 L330 8 L420 20 L520 12 L600 22 L700 4 L790 18 L880 14 L960 24" fill="none" stroke="#f0c4ca" stroke-width="1.2"/></svg>
   <div class="section-inner">
     <p class="section-label reveal">Services</p>
     <h2 class="section-title reveal d1">提供する<em>サービス</em></h2>
@@ -807,6 +855,7 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
       <div class="services-grid two">
         <div class="svc reveal d2">
           <p class="svc-num">02</p>
+          <div class="svc-icon"><svg viewBox="0 0 48 48"><path d="M4 40 L24 10 L44 40"/><circle cx="16" cy="32" r="3"/><circle cx="24" cy="26" r="3"/><circle cx="32" cy="32" r="3"/><path d="M24 10 L24 4 L31 6 L24 8"/></svg></div>
           <h3 class="svc-name">チーム・組織<em>コーチング</em></h3>
           <p class="svc-desc">リーダーシップチームが一枚岩となり同じ頂を目指せるよう、対話と変革を支援。組織文化を根付かせ、チームが自走できる状態をつくります。</p>
           <ul class="svc-list">
@@ -818,6 +867,7 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
         </div>
         <div class="svc reveal d3">
           <p class="svc-num">03</p>
+          <div class="svc-icon"><svg viewBox="0 0 48 48"><path d="M6 10 H28 V26 H16 L10 31 V26 H6 Z"/><path d="M42 18 H32 V30 H36 V35 L41 30 H42 Z"/></svg></div>
           <h3 class="svc-name">管理職向け<em>1on1コーチング</em></h3>
           <p class="svc-desc">会社が管理職・次世代リーダーに外部コーチをつける形の継続支援。対話力と部下育成力を高め、現場での行動変容につなげます。</p>
           <ul class="svc-list">
@@ -834,6 +884,7 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
 
 <!-- PROFILE -->
 <section id="profile">
+  <svg class="ridge-divider" style="margin-bottom:3rem" viewBox="0 0 960 28" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26 L140 18 L230 22 L330 8 L420 20 L520 12 L600 22 L700 4 L790 18 L880 14 L960 24" fill="none" stroke="#f0c4ca" stroke-width="1.2"/></svg>
   <div class="section-inner">
     <p class="section-label reveal">Representative</p>
     <h2 class="section-title reveal d1">代表<em>紹介</em></h2>
