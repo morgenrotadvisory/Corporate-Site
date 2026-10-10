@@ -939,7 +939,7 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
         <ul class="record-list">
           <li><span class="record-date">講義</span><span>慶應義塾大学SFC「組織戦略」ゲスト講義<span class="record-sub">学部生向け・オンライン</span></span></li>
           <li><span class="record-date">執筆</span><span>Speakers.jp コラム「『自分がやったほうが早い』をやめた日」</span></li>
-          <li><span class="record-date">講師登録</span><span><a href="https://www.speakers.jp/speaker/shinano-nobuaki/" target="_blank" rel="noopener">Speakers.jp</a>／<a href="https://kouen-dx.com/databox/data.php?code=code-02156" target="_blank" rel="noopener">講演依頼ナビDX</a>／日本講師協会</span></li>
+          <li><span class="record-date">講師登録</span><span><a href="https://www.koushi-select.com/list/2020260930-000002/" target="_blank" rel="noopener">講師セレクト</a>／<a href="https://kouen-dx.com/databox/data.php?code=code-02156&amp;query=%E4%BF%A1%E6%BF%83" target="_blank" rel="noopener">講演依頼ナビDX</a>／<a href="https://www.speakers.jp/speaker/shinano-nobuaki/" target="_blank" rel="noopener">Speakers.jp</a></span></li>
         </ul>
       </div>
 
@@ -1012,8 +1012,8 @@ footer p { font-family: 'Raleway', sans-serif; font-size: 0.58rem; letter-spacin
       <p class="cta-col-label">For Organizations</p>
       <p class="cta-col-title">法人・団体の方へ</p>
       <p class="cta-col-text">企業研修・講演・管理職育成・組織づくりについて、ご要望をお聞かせください。テーマや形式は、貴社の課題に合わせてご提案します。</p>
-      <a href="https://forms.gle/aj4UTm1Gv7iic37s5" target="_blank" rel="noopener" class="btn-cta">研修・講演のご依頼・ご相談</a>
-      <p class="cta-col-note">メールでも承ります：Info@morgenrotadvisory.com</p>
+      <a href="mailto:info@morgenrotadvisory.com?subject=%E7%A0%94%E4%BF%AE%E3%83%BB%E8%AC%9B%E6%BC%94%E3%81%AE%E3%81%94%E4%BE%9D%E9%A0%BC%E3%83%BB%E3%81%94%E7%9B%B8%E8%AB%87" class="btn-cta">研修・講演のご依頼・ご相談（メール）</a>
+      <p class="cta-col-note">宛先：info@morgenrotadvisory.com</p>
     </div>
   </div>
 </section>
@@ -1108,8 +1108,8 @@ document.addEventListener('click', function(e) {
   var a = e.target.closest ? e.target.closest('a') : null;
   if (!a || !a.href || typeof gtag !== 'function') return;
  
-  // 法人問い合わせフォームへ
-  if (a.href.indexOf('aj4UTm1Gv7iic37s5') > -1) {
+  // 法人問い合わせメールへ
+  if (a.href.indexOf('mailto:info@morgenrotadvisory.com') > -1) {
     gtag('event', 'generate_lead', {
       method: '法人問い合わせ',
       page_location: location.pathname
