@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>リーダーシップの無料相談 | Morgenrot Advisory</title>
-<meta name="description" content="「自分がやったほうが早い」から、チームが自律的に動くリーダーシップへ。初めてチームを持った管理職のための、45分の無料オンライン相談。">
+<meta name="description" content="プレイヤーとして成果を出してきたのに、マネジメントで行き詰まる新任マネージャーへ。45分の無料オンライン相談で、課題の原因・次の打ち手・最初の一歩を整理します。Morgenrot Advisory">
 <meta property="og:title" content="リーダーシップの無料相談（45分・オンライン） | Morgenrot Advisory">
 <meta property="og:description" content="マネージャーになって、急に難しくなった。プレイヤーでは優秀だったのに——そんな詰まりを、45分話してみませんか。">
 <meta property="og:image" content="https://morgenrotadvisory.com/Logo_Morgenrot.png">
@@ -332,6 +332,38 @@ a:focus-visible { outline: 2px solid #e8334a; outline-offset: 3px; }
 #final-cta .lede { margin-bottom:0; }
 .line-compact .lede { margin-bottom:1rem; }
 @media (max-width:700px){ .ba-grid{ grid-template-columns:1fr; } .ba-arrow{ transform:rotate(90deg); padding:0.2rem 0; } }
+/* --- LP改善 2026-10: ファーストビュー／持ち帰り／差別化 --- */
+.hero-take { margin:1.6rem auto 0; max-width:440px; background:rgba(255,255,255,0.75); border:1px solid #f6ddd4; border-radius:14px; padding:1rem 1.2rem 0.9rem; text-align:left; }
+.ht-label { font-size:0.72rem; letter-spacing:0.12em; color:#d9455a; font-weight:500; margin-bottom:0.4rem; text-align:center; }
+.hero-take ul { list-style:none; }
+.hero-take li { position:relative; padding:0.3rem 0 0.3rem 1.4rem; font-size:0.86rem; line-height:1.6; color:#453f3b; }
+.hero-take li::before { content:'✓'; position:absolute; left:0.1rem; top:0.3rem; color:#e8334a; font-weight:500; }
+.sv-lead { margin-top:1.6rem !important; font-weight:500; color:#453f3b !important; }
+.story-values { list-style:none; margin-top:0.6rem; }
+.story-values li { padding:1rem 0 1rem 1.1rem; border-left:2px solid #f3c8bf; margin-top:0.7rem; }
+.story-card .story-values p + p { margin-top:0.3rem; }
+.sv-head { font-size:0.93rem !important; font-weight:500; color:#453f3b !important; line-height:1.6 !important; }
+.sv-body { font-size:0.85rem !important; line-height:1.9 !important; }
+.diff-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem; margin-top:1.8rem; }
+.diff-col { background:#fff; border:1px solid #f0e2da; border-radius:14px; padding:1.3rem 1.2rem; }
+.diff-col.is-us { border:1.5px solid #e8334a; box-shadow:0 8px 22px rgba(232,51,74,0.10); }
+.dc-name { font-size:0.88rem; font-weight:500; color:#7a716b; margin-bottom:0.8rem; padding-bottom:0.6rem; border-bottom:1px dashed #eee0da; }
+.is-us .dc-name { color:#e8334a; }
+.diff-col dt { font-family:'Raleway',sans-serif; font-size:0.56rem; letter-spacing:0.2em; text-transform:uppercase; color:#b3a89f; margin-top:0.7rem; }
+.diff-col dt:first-child { margin-top:0; }
+.diff-col dd { font-size:0.85rem; line-height:1.65; color:#55504c; }
+.is-us dd { color:#453f3b; font-weight:500; }
+.takeaway { margin-top:2.2rem; }
+.tk-label { text-align:center; font-size:0.95rem; font-weight:500; color:#453f3b; margin-bottom:1rem; }
+.tk-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem; }
+.tk-card { background:#fff; border:1px solid #ffd9cd; border-radius:14px; padding:1.2rem 1.1rem; }
+.tk-no { font-family:'Cormorant Garamond',serif; font-size:1.3rem; color:#e8334a; line-height:1; }
+.tk-head { font-size:0.9rem; font-weight:500; color:#453f3b; line-height:1.55; margin:0.5rem 0 0.4rem; }
+.tk-body { font-size:0.82rem; line-height:1.85; color:#6d645e; }
+@media (max-width:700px){ .diff-grid, .tk-grid { grid-template-columns:1fr; } .hero-sub br { display:none; } }
+.case-more { text-align:center; margin-top:1.4rem; }
+#hero .hero-inner > a:first-child { display:block; width:max-content; margin:0 auto 1.4rem; text-decoration:none; line-height:0; }
+#hero .hero-logo { display:block; height:38px; width:auto; margin:0; }
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -359,10 +391,18 @@ src="https://www.facebook.com/tr?id=120248094793370576&ev=PageView&noscript=1"
     <a href="https://morgenrotadvisory.com" target="_blank" rel="noopener">
       <img src="Logo_Morgenrot.png" alt="Morgenrot Advisory" class="hero-logo">
     </a>
-    <span class="hero-badge reveal d1">はじめてのマネジメント相談</span>
+    <span class="hero-badge reveal d1">成果を出してきた、新任マネージャーへ</span>
     <h1 class="reveal d1">マネージャーになって、<br><em>急に難しくなった</em>。</h1>
-    <p class="hero-sub reveal d1">プレイヤーでは、うまくいっていた。でも、人を動かすのは別の仕事でした。「自分がやったほうが早い」から抜け出して、チームが自律的に動くように。まとまっていなくて大丈夫です。45分、一緒に整理します。</p>
-    <p class="hero-credit reveal d1">Google・Uber Eats・ADKで事業と組織を率いてきたコーチが伴走します。</p>
+    <p class="hero-sub reveal d1">プレイヤーとしては、うまくいっていた。<br>でも、人を動かすのは別の仕事でした。<br>はじめてチームを持った方と、45分でいまの課題を整理します。</p>
+    <div class="hero-take reveal d1">
+      <p class="ht-label">45分で持ち帰れるもの</p>
+      <ul>
+        <li>「部下が動かない」の本当の原因</li>
+        <li>任せ方・関わり方の、次の打ち手</li>
+        <li>次の1on1で試せる、最初の一歩</li>
+      </ul>
+    </div>
+    <p class="hero-credit reveal d1">Googleで最年少マネージャーとして壁にぶつかり、その後Uber Eatsなどで組織を率いてきたコーチが、1対1でお話しします。</p>
     <div class="hero-cta reveal d2">
       <a href="consult-leadership-form.html" class="btn-main" data-cv="consult">45分の無料相談を予約する</a>
     </div>
@@ -428,46 +468,76 @@ src="https://www.facebook.com/tr?id=120248094793370576&ev=PageView&noscript=1"
       <p class="story-who">信濃 伸明<span>Morgenrot Advisory 代表 / エグゼクティブコーチ</span></p>
       <p class="career-path">Google <span>→</span> Uber Eats <span>→</span> ADK</p>
       <p><strong>Google</strong>でチームを持ち、<strong>Uber Eats Japan</strong>で営業組織を率い、<strong>ADK</strong>で経営変革に関わってきました。数十人規模のマネジメントも経験しています。</p>
-      <p>でも、初めて人を率いた頃は、私も「自分がやったほうが早い」の罠にいました。任せられずに巻き取り、チームは育たず、自分だけが忙しい。プレイヤーとしての成功体験が、そのままマネージャーの足かせになる感覚も知っています。</p>
-      <p>だからこそ、資格よりもこの回り道そのものが、相談相手としての財産だと思っています。同じ罠にいた一人として、あなたの「次の一歩」を、隣で一緒に考えます。</p>
+      <p>でも、初めて人を率いた頃は、私も「自分がやったほうが早い」の罠にいました。任せられずに巻き取り、チームは育たず、自分だけが忙しい。その感覚を知っています。</p>
+      <p class="sv-lead">この経験が、相談でこう活きます。</p>
+      <ul class="story-values">
+        <li>
+          <p class="sv-head">つまずく理由を、内側から知っている</p>
+          <p class="sv-body">Googleで最年少のマネージャーになり、リーダーとして壁にぶつかりました。プレイヤーの成功体験が足かせになる瞬間を、実感として理解しています。</p>
+        </li>
+        <li>
+          <p class="sv-head">複数の組織で、やり方を組み直してきた</p>
+          <p class="sv-body">外資・日系・スタートアップと、会社が変われば効くマネジメントも変わります。教科書ではなく、現場で通用したやり方からお話しします。</p>
+        </li>
+        <li>
+          <p class="sv-head">悩むマネージャーを、上司として育ててきた</p>
+          <p class="sv-body">迷う管理職を直属の部下として育成してきました。上司の側から見て何が期待されているかも踏まえて、一緒に考えます。</p>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
+<!-- ============ ④-2 研修・社内相談との違い ============ -->
+<section id="difference" class="bg-blush">
+  <div class="inner">
+    <p class="eyebrow reveal">Difference</p>
+    <h2 class="reveal d1">研修や社内の相談との、<br><em>違い</em>。</h2>
+    <div class="diff-grid reveal d1">
+      <div class="diff-col">
+        <p class="dc-name">マネジメント研修・本</p>
+        <dl>
+          <dt>目的</dt><dd>一般的な手法を学ぶ</dd>
+          <dt>前提</dt><dd>誰にでも当てはまる型</dd>
+          <dt>相談相手</dt><dd>講師・著者</dd>
+        </dl>
+      </div>
+      <div class="diff-col">
+        <p class="dc-name">社内の上司・先輩</p>
+        <dl>
+          <dt>目的</dt><dd>社内での助言をもらう</dd>
+          <dt>前提</dt><dd>評価や人間関係が絡む</dd>
+          <dt>相談相手</dt><dd>同じ組織の人</dd>
+        </dl>
+      </div>
+      <div class="diff-col is-us">
+        <p class="dc-name">Morgenrot Advisory</p>
+        <dl>
+          <dt>目的</dt><dd>あなたのチームで起きていることを解く</dd>
+          <dt>前提</dt><dd>社外だから、本音で話せる</dd>
+          <dt>相談相手</dt><dd>事業と組織を率いてきた元管理職</dd>
+        </dl>
+      </div>
+    </div>
+    <p class="lede reveal d1">正解を教わるのではなく、あなたのチームに合ったやり方を自分で見つけること。それがここでの相談のゴールです。</p>
+  </div>
+</section>
+
 <!-- ============ ⑤ ケーススタディ ============ -->
-<section id="cases" class="bg-blush">
+<section id="cases" class="bg-cream">
   <div class="inner">
     <p class="eyebrow reveal">Case Studies</p>
     <h2 class="reveal d1">実際に、<em>こんな相談</em>がありました。</h2>
     <div class="case-card reveal d1">
       <p class="case-no">CASE 01</p>
-      <p class="case-q">「自分でやったほうが早くて、仕事を手放せない」</p>
-      <p class="case-who">30代・マネージャー</p>
-      <div class="case-row"><span class="cr-label">Before</span><span class="cr-body">プレイヤーとして優秀だったが、マネージャーになって仕事を抱え込み、チームが育たなかった。</span></div>
-      <div class="case-row"><span class="cr-label">対話したこと</span><span class="cr-body">「なぜ手放せないのか」を掘り下げ、任せることへの不安の正体を一緒に言葉にした。</span></div>
-      <div class="case-row"><span class="cr-label">After</span><span class="cr-body"><span class="case-fill">○○</span></span></div>
+      <p class="case-q">「課題が山積みで、どこから手をつければいいかわからない」</p>
+      <p class="case-who">40代・大手日系企業 部門長</p>
+      <div class="case-row"><span class="cr-label">Before</span><span class="cr-body">20名を超える部門を統括。メンバーの約6割が入社3年以内の若手で、配下のマネージャー2人は育成とチェック業務に追われ、自身も現場対応を抱えていた。</span></div>
+      <div class="case-row"><span class="cr-label">対話したこと</span><span class="cr-body">課題を出し切ったうえで「マネージャーの2人に、どうあってほしいか」を問い、一番の壁が育成の負荷であることを言葉にした。</span></div>
+      <div class="case-row"><span class="cr-label">After</span><span class="cr-body">打ち手を「自分の裁量で進めること」と「上に動いてもらうこと」に分け、<span class="case-fill">次世代リーダー候補への業務委譲と、担当役員との面談設定</span>に動き出した。</span></div>
+      <div class="case-row"><span class="cr-label">ご本人の声</span><span class="cr-body">「担当役員とはいつか話しをしないといけないなと思っていたので、いろいろとクリアになってよかったです」</span></div>
     </div>
-    <div class="case-card reveal d2">
-      <p class="case-no">CASE 02</p>
-      <p class="case-q">「指示しないと動かないチームを、どうするか」</p>
-      <p class="case-who">30代・管理職</p>
-      <div class="case-row"><span class="cr-label">Before</span><span class="cr-body">細かく指示を出すほどメンバーが受け身になり、自分の負担が増える悪循環に陥っていた。</span></div>
-      <div class="case-row"><span class="cr-label">対話したこと</span><span class="cr-body">「答えを渡す関わり」から「問いを渡す関わり」へ、日々の声かけを一緒に見直した。</span></div>
-      <div class="case-row"><span class="cr-label">After</span><span class="cr-body"><span class="case-fill">○○</span></span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ⑥ リーダーシップ・コーチングとは ============ -->
-<section id="about-coaching" class="bg-cream">
-  <div class="inner">
-    <p class="eyebrow reveal">What is Leadership Coaching</p>
-    <h2 class="reveal d1">リーダーシップ・コーチング<em>とは</em>。</h2>
-    <div class="prose reveal d1">
-      <p>「良いマネージャーの正解」を、誰かに教わる時間ではありません。</p>
-      <p>プレイヤーとして成果を出してきたあなたが詰まるのは、能力が足りないからではなく、<strong>「自分でやる」から「人を通じて成果を出す」へ、仕事の種類が変わった</strong>からです。優秀な人ほど、この切り替えでつまずきます。</p>
-      <p>コーチングは、その切り替えを一緒に進める時間です。あなたのチームで実際に起きていることを題材に、「自分がやったほうが早い」から、チームが自律的に動く状態へ。少しずつ、確実に移していきます。</p>
-    </div>
+    <p class="case-more reveal d1"><a href="https://morgenrotadvisory.com/cases.html" target="_blank" rel="noopener" class="svc-more">対話の中身まで、事例をくわしく読む ↗</a></p>
   </div>
 </section>
 
@@ -475,14 +545,35 @@ src="https://www.facebook.com/tr?id=120248094793370576&ev=PageView&noscript=1"
 <section id="session" class="bg-blush">
   <div class="inner">
     <p class="eyebrow reveal">Free Session</p>
-    <h2 class="reveal d1">45分の無料相談で、<em>すること</em>。</h2>
-    <p class="lede reveal d1">1対1で、いまチームで起きていることをそのまま話す時間です。整理できていない状態のままで大丈夫です。</p>
+    <h2 class="reveal d1">45分で、<em>何が整理できるのか</em>。</h2>
+    <p class="lede reveal d1">整理できていない状態のままで大丈夫です。45分を3つに分けて、いまチームで起きていることを解きほぐします。</p>
     <p class="offer-meta reveal d1">45分・オンライン・1対1・無料</p>
     <ul class="offer-list">
       <li class="reveal d1"><p class="ol-head">最初の10分 ─ おたがいを知る</p><p class="ol-body">まず私自身のことをお話しします。そのうえで、いまのチームの状況と、マネージャーとして何に一番困っているかを聞かせてください。</p></li>
       <li class="reveal d2"><p class="ol-head">次の25分 ─ 課題を一緒に掘り下げる</p><p class="ol-body">「部下が動かない」の裏で本当は何が起きているのか。私からの問いで、一緒に解きほぐしていきます。コーチングの実際を体験していただく時間にもなります。</p></li>
       <li class="reveal d3"><p class="ol-head">最後の10分 ─ 次の一歩を決める</p><p class="ol-body">今日の気づきを言葉にし、明日から試せる小さな一歩を一つ、一緒に決めます。</p></li>
     </ul>
+
+    <div class="takeaway reveal d1">
+      <p class="tk-label">45分後、持ち帰れるもの</p>
+      <div class="tk-grid">
+        <div class="tk-card">
+          <p class="tk-no">01</p>
+          <p class="tk-head">「部下が動かない」の本当の原因</p>
+          <p class="tk-body">起きていることを分解し、どこから手をつけるべきかが見えるようになります。</p>
+        </div>
+        <div class="tk-card">
+          <p class="tk-no">02</p>
+          <p class="tk-head">任せ方・関わり方の、次の打ち手</p>
+          <p class="tk-body">指示を出す・巻き取る以外の選択肢を、あなたのチームに合わせて整理します。</p>
+        </div>
+        <div class="tk-card">
+          <p class="tk-no">03</p>
+          <p class="tk-head">次の1on1で試せる、最初の一歩</p>
+          <p class="tk-body">大きな改革ではなく、来週の1on1や会議で試せる小さな行動をひとつ決めて終わります。</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
